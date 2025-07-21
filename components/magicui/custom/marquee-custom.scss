@@ -1,0 +1,25 @@
+/* Horizontal marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee var(--duration, 15s) linear infinite;
+}
+
+/* Vertical marquee */
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration, 15s) linear infinite;
+}
