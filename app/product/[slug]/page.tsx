@@ -1,7 +1,6 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Navbar from "@/components/Layout/Navbar/Navbar";
 import { botData } from "@/data/groupsData";
 import Image from "next/image";
 
@@ -12,7 +11,6 @@ const CategoryPage = () => {
 
   return (
     <>
-      <Navbar />
       
       <div className="container !mt-[180px] mx-auto p-4">
         {currentBot ? (

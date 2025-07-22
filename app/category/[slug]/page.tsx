@@ -1,51 +1,58 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Fuse from 'fuse.js';
-import { categories, botData } from "@/data/groupsData";
-// import { BreadcrumbCustom } from "@/components/Layout/Breadcrumb/Breadcrum";
-import {CardItem} from "@/components/Elements/Card/Card";
+import { useParams } from "next/navigation";
+import Fuse from "fuse.js";
+import { botData, categories } from "@/data/groupsData";
+import { RadioGroupCustom } from "@/components/magicui/custom/radio-group-custom";
+import { BotList } from "@/components/Layout/BotList/BotList";
+
+function getBotsByCategory(slug: string) {
+  if (!slug || slug === "all") return botData;
+  const category = categories.find(c => c.key === slug);
+  if (!category) return [];
+  const toolKeys = (category.tags ?? [])
+    .flatMap(tag => tag.tools?.map(tool => tool.key) ?? []);
+  return botData.filter(bot => toolKeys.includes(bot.key));
+}
 
 const CategoryPage = () => {
-const [query, setQuery] = useState("");
+  const params = useParams();
+  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
+  const [query, setQuery] = useState("");
 
-const fuse = useMemo(() => {
-  return new Fuse(botData, {
-    keys: ["key", "title", "desc"],
-    threshold: 0.3, // càng thấp càng chính xác
-  });
-}, []);
+  const botsInCategory = useMemo(() => getBotsByCategory(slug || "all"), [slug]);
 
-const results = query ? fuse.search(query).map(r => r.item) : botData;
+  const fuse = useMemo(
+    () =>
+      new Fuse(botsInCategory, {
+        keys: ["name", "key"],
+        threshold: 0.3,
+      }),
+    [botsInCategory]
+  );
+  const results = query
+    ? fuse.search(query).map(r => r.item)
+    : botsInCategory;
 
-return (
-  <>
-    <div className="breadcrumb mt-[120px]">
-      {/* <BreadcrumbCustom /> */}
-    </div>
-    <div>
-      
-      <input
-        type="text"
-        value={query}
-        onChange={e => setQuery(e.target.value)}
-        placeholder="Search..."
-      />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
-        {results.length === 0 && <p>No results found</p>}
-        {results.length > 0 && results.map(item => (
-          <CardItem 
-            key={item.key}
-            keyItem={item.key}
-            cardTitle={item.name}
-            price={Array.isArray(item.price) ? item.price.map(p => p.price).join(", ") : item.price}
-            image={item.logo}
+  return (
+    <>
+      <div className="breadcrumb mt-[120px]">{/* <BreadcrumbCustom /> */}</div>
+      <div className="flex gap-4 mt-[160px] relative">
+        <div className="mr-6 sticky top-0 ">
+          <input
+            type="text"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            placeholder="Search..."
+            className="mb-4 border w-full p-2 rounded-md"
           />
-        ))}
+          <RadioGroupCustom />
         </div>
-    </div>
-  </>
-);
+        <BotList bots={results} />
+      </div>
+    </>
+  );
 };
 
 export default CategoryPage;

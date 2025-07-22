@@ -36,7 +36,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="sticky top-0 left-1/2 transform -translate-x-1/2 z-10">
           <NavBar />
         </div>
           <main className="main-content">

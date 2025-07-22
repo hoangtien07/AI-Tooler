@@ -107,10 +107,11 @@ export function DockCustom() {
                     aria-label={item.label}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full",
+                      "size-16 rounded-full",
                     )}
                   >
                     <item.icon className="size-4" />
+                    <span>{item.label}</span>
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>
@@ -129,10 +130,11 @@ export function DockCustom() {
                     aria-label={social.name}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full",
+                      "size-16 rounded-full",
                     )}
                   >
                     <social.icon className="size-4" />
+                    <span>{social.name}</span>
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>

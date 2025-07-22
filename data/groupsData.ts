@@ -41,7 +41,7 @@ export const botData = [
     link: "http://www.dupdub.com/?via=inami",
     headquarters: "",
     founded: "",
-    summary: "",
+    summary: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     tag: [],
     features: [
       "AI Writing: Powered by GPT, DupDub offers advanced AI writing capabilities that assist in creating engaging content in a variety of styles and languages. This feature is ideal for creating creative copy, podcasts, and creative compositions with ease.",
@@ -1139,7 +1139,7 @@ export const categories = [
     key: "customer-support",
     title: "Customer Service & Support",
     desc: "Tools for communicating with customers, handling inquiries, and automating support.",
-    categories: [
+    tags: [
       {
         key: "customer-support-ai-chatbot",
         name: "AI Chatbot",
@@ -1161,7 +1161,7 @@ export const categories = [
     key: "ai-education",
     title: "AI Education",
     desc: "Transforming the way students learn and teachers teach, making education more personalized and efficient",
-    categories: [
+    tagses: [
       {
         key: "ai-education-ai-education",
         name: "AI Education",
@@ -1178,7 +1178,7 @@ export const categories = [
     key: "office-ai",
     title: "Office AI",
     desc: "Boost productivity, manage notes and documents in a professional setting.",
-    categories: [
+    tags: [
       {
         key: "office-ai-ai-productivity",
         name: "AI Productivity",
@@ -1200,7 +1200,7 @@ export const categories = [
     key: "growth-marketing",
     title: "Growth & Marketing AI",
     desc: "Support brand growth, content creation, and digital marketing.",
-    categories: [
+    tags: [
       {
         key: "growth-marketing-ai-seo",
         name: "AI SEO",
@@ -1239,7 +1239,7 @@ export const categories = [
     key: "writing-editing",
     title: "Writing & Editing AI",
     desc: "For blogging, copywriting, editing, and document generation.",
-    categories: [
+    tags: [
       {
         key: "writing-editing-ai-writing",
         name: "AI Writing",
@@ -1264,7 +1264,7 @@ export const categories = [
     key: "technology-it",
     title: "Technology & IT",
     desc: "For developers, data analysts, and IT teams to build, analyze, and test systems.",
-    categories: [
+    tags: [
       {
         key: "technology-it-ai-all-in-one",
         name: "AI All In One",
@@ -1291,7 +1291,7 @@ export const categories = [
     key: "design-creative",
     title: "Design & Creative AI",
     desc: "For creators producing visuals, videos, music, and digital art.",
-    categories: [
+    tags: [
       {
         key: "design-creative-ai-design",
         name: "AI Design",
@@ -1349,7 +1349,7 @@ export const categories = [
     key: "workflow-automation",
     title: "Workflow Automation",
     desc: "Automate repetitive tasks and streamline operational processes.",
-    categories: [
+    tags: [
       {
         key: "workflow-automation-ai-workflow",
         name: "AI Workflow",
