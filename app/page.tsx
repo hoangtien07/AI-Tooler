@@ -3,7 +3,7 @@ import {FlickeringGridCustom} from "@/components/magicui/custom/flickering-grid-
 import {MorphingTextCustom} from "@/components/magicui/custom/morphing-text-custom";
 import {BentoCustom} from "@/components/magicui/custom/bento-grid-custom";
 import TitleHome from "@/public/title-home.png";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
           <FlickeringGridCustom /> {/* Background flickering grid */}
         </div>
         <div className="container flex items-center h-fit w-full relative">
-          <div className="mt-[160px] mb-[32px]">
+          <div className="mt-[160px] ">
             <MorphingTextCustom />
             <p className="text-[40px] mt-[80px] font-bold">Effortlessly create with </p>
             <p className="text-[40px] font-bold mt-[-8px]">Our <span className="text-[#6938ef]">AI Tools</span></p>

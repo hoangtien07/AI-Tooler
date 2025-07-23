@@ -6,6 +6,7 @@ import Fuse from "fuse.js";
 import { botData, categories } from "@/data/groupsData";
 import { RadioGroupCustom } from "@/components/magicui/custom/radio-group-custom";
 import { BotList } from "@/components/Layout/BotList/BotList";
+import { BreadcrumbCustom } from "@/components/Layout/Breadcrumb/Breadcrum";
 
 function getBotsByCategory(slug: string) {
   if (!slug || slug === "all") return botData;
@@ -37,9 +38,9 @@ const CategoryPage = () => {
 
   return (
     <>
-      <div className="breadcrumb mt-[120px]">{/* <BreadcrumbCustom /> */}</div>
-      <div className="flex gap-4 mt-[160px] relative">
-        <div className="mr-6 sticky top-0 ">
+      <div className="breadcrumb mt-[120px]"><BreadcrumbCustom /></div>
+      <div className="sm:flex md:flex-row lg:flex-row gap-4 mt-[20px] relative">
+        <div className="mt-4 mr-6">
           <input
             type="text"
             value={query}

@@ -3,8 +3,6 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
-  // BreadcrumbPage,
-  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
@@ -22,21 +20,25 @@ export const  BreadcrumbCustom = () => {
   }, [pathParts]);
 
   return (
-    <Breadcrumb className="bg-white p-4 rounded-lg shadow-md">
+    <Breadcrumb className="bg-inherit p-4 rounded-lg shadow-md">
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink href="/" className="flex items-center">
             <HomeIcon className="mr-2" />
             Home
           </BreadcrumbLink>
+          <span className="mx-2">/</span>
         </BreadcrumbItem>
         {breadcrumbItems.map((item, index) => (
           <BreadcrumbItem key={index}>
-            <BreadcrumbLink href={item.href} className="capitalize">
+            {index===0 ? <BreadcrumbLink href={'#'} className="capitalize">
+              {item.label}
+            </BreadcrumbLink> : <BreadcrumbLink href={item.href} className="capitalize">
               {item.label}
             </BreadcrumbLink>
+            }            
             {index < breadcrumbItems.length - 1 && (
-              <BreadcrumbSeparator className="mx-2">/</BreadcrumbSeparator>
+              <span className="mx-2">/</span>
             )}
           </BreadcrumbItem>
         ))}

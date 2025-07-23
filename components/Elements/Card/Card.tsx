@@ -8,8 +8,8 @@ import {
   CardDescription,
   CardFooter
 } from "@/components/ui/card";
-import { RainbowButtonCustom } from "@/components/magicui/custom/rainbow-button-custom";
-import Image, { StaticImageData } from "next/image";
+import { Button } from "@/components/ui/button";
+import Image, { StaticImageData } from "next/legacy/image";
 
 type CardItemProps = React.ComponentProps<typeof Card> & {
   cardTitle?: React.ReactNode;
@@ -35,7 +35,7 @@ export function CardItem({ cardTitle, desc, price, className = "", keyItem, imag
     <div>
       <Card className={`overflow-hidden border bg-gradient-to-br from-slate-50 to-slate-100 transition-all dark:from-slate-900 dark:to-slate-800 shadow-none flex-row items-center px-6 py-4 h-full ${className}`} {...props} >
         <div className="w-[25%]">
-          <Image src={image ?? "/default-image.png"} objectFit="cover" alt={typeof cardTitle === "string" ? cardTitle : "Card image"} />
+          <Image src={image ?? "/default-image.png"} objectFit="cover" priority={true} alt={typeof cardTitle === "string" ? cardTitle : "Card image"} />
         </div>
         <div className="flex-col flex-1">
           <CardContent className="flex-col h-fit items-center justify-center p-2">
@@ -51,10 +51,10 @@ export function CardItem({ cardTitle, desc, price, className = "", keyItem, imag
               </p>
             ) : null}      
           </CardContent>
-          <CardFooter className="flex-col gap-2">
-            <RainbowButtonCustom className="w-full" onClick={handleClick}>
+          <CardFooter className="flex-col gap-2 px-2">
+            <Button className="w-full cursor-pointer py-0" onClick={handleClick}>
               Details
-            </RainbowButtonCustom>
+            </Button>
           </CardFooter>
         </div>
       </Card>

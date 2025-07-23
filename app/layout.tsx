@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/Layout/Themes/theme-provider";
 import NavBar from "@/components/Layout/Navbar/Navbar";
+import Services from "./services";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,12 +37,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-        <div className="sticky top-0 left-1/2 transform -translate-x-1/2 z-10">
-          <NavBar />
-        </div>
-          <main className="main-content">
+          <div className="sticky top-0 left-1/2 transform -translate-x-1/2 z-10">
+            <NavBar />
+          </div>
+          <main className="main-content pb-[80px]">
             <div className="container">{children}</div>
           </main>
+          <Services />
           {/* <footer className="footer">
             <p>© 2025 LIAM. All rights reserved.</p>
           </footer> */}
