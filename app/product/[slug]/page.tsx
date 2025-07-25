@@ -8,34 +8,49 @@ import { Avatar } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { ShieldPlus, ShieldMinus, MoveRight, CircleDollarSign } from 'lucide-react';
 import { Button } from "@/components/ui/button"
+import Link from "next/link";
 
 const CategoryPage = () => {
   const pathname = usePathname();
 
   const currentBot = botData.find((bot) => bot.key === pathname.split("/").pop());
-  const currentCategory = categories.map((category) =>
-    category.tags?.some((tag) => tag.tools?.some((tool) => tool.key === currentBot?.key))
+   const currentCategory = categories.filter((category) =>
+    category.tags?.some((tag) =>
+      tag.tools?.some((tool) => tool.key === currentBot?.key)
+    )
   );
+
   const goOriginBot = () => {
       window.open(currentBot?.link, "_blank");
   }
 
   return (
-      <div className="container !mt-[140px] mx-auto p-4">
+      <div className="container !mt-[120px] mx-auto p-4">
         <BreadcrumbCustom />
         {currentBot ? (                 
         <div className="flex flex-col gap-6 mt-[40px]">
           <div className="grid grid-cols-1 items-stretch gap-x-0 gap-y-4 lg:grid-cols-3 lg:gap-4">
             <Image src={currentBot.logo} alt={currentBot.name} className="h-72 w-full rounded-md object-cover lg:h-auto" />
-            <Card className="col-span-2 flex items-center justify-center p-6">
+            <Card className="col-span-2 justify-center p-6">
               <div className="flex flex-col gap-4 px-4">
-                <p className="text-xl font-medium lg:text-3xl pl-5">
-                  {currentBot.name}
-                </p>
+                <div className="flex justify-between pr-4">
+                  <p className="text-xl font-medium lg:text-3xl pl-5">{currentBot.name}</p> 
+                  <p className="flex items-end">
+                    {currentCategory.length > 0
+                      ? (<>
+                        <p className="ml-[20px] mr-[8px]">Category: </p>
+                        {currentCategory.map((category, index) => (
+                          <span key={category.key} className="text-blue-600">
+                            <Link href={`/category/${category.key}`}>{category.title}</Link>
+                            {index < currentCategory.length - 1 && ", "}
+                          </span>
+                        ))}
+                        </>)
+                      : ""}
+                  </p>
+                </div>
                 <div className="flex flex-col items-start">
                   <p>{currentBot.features.map((feature, index) => <li key={index}>{feature}</li>)}</p>
-                  <p>{currentCategory}</p>
-                  {/* <p>{currentCategory.length > 0 ? currentCategory.map(category => category !== undefined ? category.title : "").join(", ") : "Uncategorized"}</p> */}
                 </div>
                 <Button className="cursor-pointer py-4 transition-all text-base duration-300 hover:opacity-90" onClick={goOriginBot}>Go to website <MoveRight /></Button>
               </div>

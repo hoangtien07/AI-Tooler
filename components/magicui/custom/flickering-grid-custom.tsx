@@ -2,21 +2,38 @@
 
 import { useEffect, useState } from "react";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+interface FlickeringGridCustomProps {
+  width?: number;
+  height?: number;
+}
 
-export function FlickeringGridCustom() {
-  const [size, setSize] = useState({ width: 800, height: 800 });
+export function FlickeringGridCustom({
+  width,
+  height,
+}: FlickeringGridCustomProps) {
+  const [size, setSize] = useState({
+    width: width ?? 800,
+    height: height ?? 800,
+  });
 
   useEffect(() => {
+    if (width !== undefined && height !== undefined) {
+      setSize({ width, height });
+      return;
+    }
+
     function handleResize() {
       setSize({
         width: window.innerWidth,
         height: window.innerHeight,
       });
     }
+
     handleResize();
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [width, height]);
 
   return (
     <div className="relative h-full w-full overflow-hidden">

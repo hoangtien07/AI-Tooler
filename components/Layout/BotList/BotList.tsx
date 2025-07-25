@@ -1,9 +1,5 @@
 import { CardItem } from "@/components/Elements/Card/Card";
 import { StaticImageData } from "next/legacy/image";
-// import NoDataImg from "@/public/nodata.jpg";
-// import Image from "next/legacy/image";
-import { Button } from "@/components/ui/button";
-import { setTimeout } from "timers/promises";
 
 type Bot = {
   key: string;
@@ -29,11 +25,6 @@ export function BotList({ bots }: BotListProps) {
           key={item.key}
           keyItem={item.key}
           cardTitle={item.name}
-          // price={
-          //   Array.isArray(item.price)
-          //     ? item.price.map(p => p.price).join(", ")
-          //     : item.price
-          // }
           image={item.logo}
           desc={item.summary || "No description available"}
         />
