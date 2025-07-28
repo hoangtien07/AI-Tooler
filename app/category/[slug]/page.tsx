@@ -7,6 +7,7 @@ import { botData, categories } from "@/data/groupsData";
 import { RadioGroupCustom } from "@/components/magicui/custom/radio-group-custom";
 import { BotList } from "@/components/Layout/BotList/BotList";
 import { BreadcrumbCustom } from "@/components/Layout/Breadcrumb/Breadcrum";
+import { GalleryBotSuggest } from "@/components/Layout/BotSuggest/BotSuggest";
 
 function getBotsByCategory(slug: string) {
   if (!slug || slug === "all") return botData;

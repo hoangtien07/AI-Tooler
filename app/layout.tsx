@@ -4,8 +4,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/Layout/Themes/theme-provider";
 import NavBar from "@/components/Layout/Navbar/Navbar";
-import Services from "./services";
-import {FlickeringGridCustom} from "@/components/magicui/custom/flickering-grid-custom";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,14 +43,10 @@ export default function RootLayout({
           <main className="main-content pb-[80px]">
             <div className="container">{children}</div>
           </main>
-          <Services />
           {/* <footer className="footer">
             <p>© 2025 LIAM. All rights reserved.</p>
           </footer> */}
         </ThemeProvider>
-        <div className="absolute inset-0 -z-10">
-          <FlickeringGridCustom />
-        </div>
       </body>
     </html>
   );
