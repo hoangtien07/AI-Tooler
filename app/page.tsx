@@ -14,7 +14,7 @@ export default function Home() {
           <FlickeringGridCustom />
         </div>
         <div className="container flex items-center h-fit w-full relative">
-          <div className="mt-[160px] ">
+          <div className="mt-[160px] mb-2">
             <MorphingTextCustom />
             <p className="text-[38px] mt-[80px] font-bold">Effortlessly create with </p>
             <p className="text-[38px] font-bold mt-[-8px]">Our <span className="text-[#6938ef]">AI Tools</span></p>
@@ -59,7 +59,9 @@ export default function Home() {
         </div>
         <BentoCustom />
       </div>
-      <GalleryBotSuggest />
+      <div className="container">
+        <GalleryBotSuggest />
+      </div>
       <Services />
     </div>
   );

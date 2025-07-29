@@ -23,13 +23,13 @@ interface GalleryItem {
 
 interface GalleryBotSuggestProps {
   heading?: string;
-  demoUrl?: string;
+  toolUrl?: string;
   items?: GalleryItem[];
 }
 
 const GalleryBotSuggest = ({
   heading = "GALLERY",
-  demoUrl = "/category/all",
+  toolUrl = "/category/all",
 }: GalleryBotSuggestProps) => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
@@ -49,7 +49,7 @@ const GalleryBotSuggest = ({
     };
   }, [carouselApi]);
   return (
-    <section className="py-32">
+    <section className="py-32 mt-8">
       <div className="container">
         <div className="mb-8 flex flex-col justify-between md:mb-14 md:flex-row md:items-center lg:mb-16">
           <div className="flex flex-col justify-self-center-center">
@@ -57,7 +57,7 @@ const GalleryBotSuggest = ({
               {heading}
             </h2>
             <a
-              href={demoUrl}
+              href={toolUrl}
               className="group flex items-center gap-1 text-sm font-medium md:text-base lg:text-lg"
             >
               Explore all AI Tools

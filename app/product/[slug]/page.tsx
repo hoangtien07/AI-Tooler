@@ -26,95 +26,95 @@ const CategoryPage = () => {
   }
 
   return (
-  <div className="container !mt-[120px] mx-auto p-4">
-    <BreadcrumbCustom />
-    {currentBot ? (                 
-    <div className="flex flex-col gap-6 mt-[40px]">
-      <div className="grid grid-cols-1 items-stretch gap-x-0 gap-y-4 lg:grid-cols-3 lg:gap-4">
-        <Image src={currentBot.logo} alt={currentBot.name} className="h-72 w-full rounded-md object-cover lg:h-auto" />
-        <Card className="col-span-2 justify-center p-6">
-          <div className="flex flex-col gap-4 px-4">
-            <div className="flex justify-between pr-4">
-              <p className="text-xl font-medium lg:text-3xl pl-5">{currentBot.name}</p> 
-              <p className="flex items-end">
-                {currentCategory.length > 0
-                  ? (<>
-                    <p className="ml-[20px] mr-[8px]">Category: </p>
-                    {currentCategory.map((category, index) => (
-                      <span key={category.key} className="text-blue-600">
-                        <Link href={`/category/${category.key}`}>{category.title}</Link>
-                        {index < currentCategory.length - 1 && ", "}
-                      </span>
-                    ))}
-                    </>)
-                  : ""}
-              </p>
-            </div>
-            <div className="flex flex-col items-start">
-              <p>{currentBot.features.map((feature, index) => <li key={index}>{feature}</li>)}</p>
-            </div>
-            <Button className="cursor-pointer py-4 transition-all text-base duration-300 hover:opacity-90" onClick={goOriginBot}>Go to website <MoveRight /></Button>
-          </div>
-        </Card>
-      </div>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-        <Card>
-          <CardHeader>
-            <div className="flex gap-4 leading-5 justify-center items-center">
-              <Avatar className="size-10 rounded-full ring-1 ring-input flex items-center justify-center">
-                <ShieldPlus />
-              </Avatar>
-              <div className="text-xl">
-                <p className="font-medium">Strengths</p>
+    <div className="container !mt-[120px] mx-auto p-4 min-h-[100vh]">
+      <BreadcrumbCustom />
+      {currentBot ? (                 
+      <div className="flex flex-col gap-6 mt-[40px]">
+        <div className="grid grid-cols-1 items-stretch gap-x-0 gap-y-4 lg:grid-cols-3 lg:gap-4">
+          <Image src={currentBot.logo} alt={currentBot.name} className="h-72 w-full rounded-md object-cover lg:h-auto" />
+          <Card className="col-span-2 justify-center p-6">
+            <div className="flex flex-col gap-4 px-4">
+              <div className="flex justify-between pr-4">
+                <p className="text-xl font-medium lg:text-3xl pl-5">{currentBot.name}</p> 
+                <p className="flex items-end">
+                  {currentCategory.length > 0
+                    ? (<>
+                      <span className="ml-[20px] mr-[8px]">Category: </span>
+                      {currentCategory.map((category, index) => (
+                        <span key={category.key} className="text-blue-600">
+                          <Link href={`/category/${category.key}`}>{category.title}</Link>
+                          {index < currentCategory.length - 1 && ", "}
+                        </span>
+                      ))}
+                      </>)
+                    : ""}
+                </p>
               </div>
-            </div>
-          </CardHeader>
-          <CardContent className="pb-6 leading-7 text-foreground/70">
-            <p>{currentBot.strengths.map((strength, index) => <li key={index}>{strength}</li>)}</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <div className="flex gap-4 leading-5 justify-center items-center">
-              <Avatar className="size-10 rounded-full ring-1 ring-input flex items-center justify-center">
-                <ShieldMinus />
-              </Avatar>
-              <div className="text-xl">
-                <p className="font-medium">Weaknesses</p>
+              <div className="flex flex-col items-start">
+                <p>{currentBot.features.map((feature, index) => <li key={index}>{feature}</li>)}</p>
               </div>
+              <Button className="cursor-pointer py-4 transition-all text-base duration-300 hover:opacity-90" onClick={goOriginBot}>Go to website <MoveRight /></Button>
             </div>
-          </CardHeader>
-          <CardContent className="pb-6 leading-7 text-foreground/70">
-            <p>{currentBot.weaknesses.map((weakness, index) => <li key={index}>{weakness}</li>)}</p>
-          </CardContent>
-        </Card>
-        <Card className="pb-0 overflow-hidden">
-          <CardHeader>
-            <div className="flex gap-4 leading-5 justify-center items-center">
-              <Avatar className="size-10 rounded-full ring-1 ring-input flex items-center justify-center">
-                <CircleDollarSign />
-              </Avatar>
-              <div className="text-xl">
-                <p className="font-medium">Price</p>
+          </Card>
+        </div>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+          <Card>
+            <CardHeader>
+              <div className="flex gap-4 leading-5 justify-center items-center">
+                <Avatar className="size-10 rounded-full ring-1 ring-input flex items-center justify-center">
+                  <ShieldPlus />
+                </Avatar>
+                <div className="text-xl">
+                  <p className="font-medium">Strengths</p>
+                </div>
               </div>
-            </div>
-          </CardHeader>
-          <CardContent className="px-0 leading-7 text-foreground/70 flex flex-col text-center h-full">
-            {currentBot.price.map((item, index) =>
-              <div key={index} className="flex-1 flex h-[33%]">
-                <div className="w-[40%] h-full flex items-center justify-center bg-[#18181b] text-white dark:text-inherit border py-[12px]">{item.service}</div>
-                <div className="flex-1 flex items-center justify-center text-inherit border">{item.price}</div>
+            </CardHeader>
+            <CardContent className="pb-6 leading-7 text-foreground/70">
+              <p>{currentBot.strengths.map((strength, index) => <li key={index}>{strength}</li>)}</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <div className="flex gap-4 leading-5 justify-center items-center">
+                <Avatar className="size-10 rounded-full ring-1 ring-input flex items-center justify-center">
+                  <ShieldMinus />
+                </Avatar>
+                <div className="text-xl">
+                  <p className="font-medium">Weaknesses</p>
+                </div>
               </div>
-              )}
-          </CardContent>
-        </Card>
-      </div>
-      </div>
-    ) : (
-      <p className="text-center">Bot not found</p>
-    )}
-    <GalleryBotSuggest />
-  </div>
+            </CardHeader>
+            <CardContent className="pb-6 leading-7 text-foreground/70">
+              <p>{currentBot.weaknesses.map((weakness, index) => <li key={index}>{weakness}</li>)}</p>
+            </CardContent>
+          </Card>
+          <Card className="pb-0 overflow-hidden">
+            <CardHeader>
+              <div className="flex gap-4 leading-5 justify-center items-center">
+                <Avatar className="size-10 rounded-full ring-1 ring-input flex items-center justify-center">
+                  <CircleDollarSign />
+                </Avatar>
+                <div className="text-xl">
+                  <p className="font-medium">Price</p>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="px-0 leading-7 text-foreground/70 flex flex-col text-center h-full">
+              {currentBot.price.map((item, index) =>
+                <div key={index} className="flex-1 flex h-[33%]">
+                  <div className="w-[40%] h-full flex items-center justify-center bg-[#18181b] text-white dark:text-inherit border py-[12px]">{item.service}</div>
+                  <div className="flex-1 flex items-center justify-center text-inherit border">{item.price}</div>
+                </div>
+                )}
+            </CardContent>
+          </Card>
+        </div>
+        </div>
+      ) : (
+        <p className="text-center">Bot not found</p>
+      )}
+      <GalleryBotSuggest />
+    </div>
   );
 };
 

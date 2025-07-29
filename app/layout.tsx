@@ -40,12 +40,12 @@ export default function RootLayout({
           <div className="sticky top-0 left-1/2 transform -translate-x-1/2 z-10">
             <NavBar />
           </div>
-          <main className="main-content pb-[80px]">
-            <div className="container">{children}</div>
+          <main className="main-content">
+            <div>{children}</div>
           </main>
-          {/* <footer className="footer">
-            <p>© 2025 LIAM. All rights reserved.</p>
-          </footer> */}
+          <footer className="footer flex justify-center items-center py-3 text-center bg-black text-white">
+            <p>© 2025 AI Tooler. All rights reserved.</p>
+          </footer>
         </ThemeProvider>
       </body>
     </html>

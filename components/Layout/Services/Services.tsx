@@ -19,7 +19,7 @@ interface ServicesProps {
 }
 
 const Services = ({
-  heading = "SERVICES",
+  heading = "OUR SERVICES",
   reasons = [
     {
       title: "AI Tool Explorer",
@@ -60,10 +60,10 @@ const Services = ({
   ],
 }: ServicesProps) => {
   return (
-    <section className="py-32">
+    <section className="py-48 bg-[#f5f5f5]">
       <div className="container">
         <div className="mb-10 md:mb-20">
-          <h2 className="mb-2 text-center text-3xl font-semibold lg:text-5xl">
+          <h2 className="mb-2 text-center text-3xl font-semibold lg:text-5xl dark:text-gray-900">
             {heading}
           </h2>
         </div>
@@ -73,8 +73,8 @@ const Services = ({
               <div className="mb-5 flex size-16 items-center justify-center rounded-full bg-accent">
                 {reason.icon}
               </div>
-              <h3 className="mb-2 text-xl font-semibold">{reason.title}</h3>
-              <p className="text-muted-foreground">{reason.description}</p>
+              <h3 className="mb-2 text-xl font-semibold dark:text-gray-700">{reason.title}</h3>
+              <p className="text-muted-foreground dark:text-gray-600">{reason.description}</p>
             </div>
           ))}
         </div>

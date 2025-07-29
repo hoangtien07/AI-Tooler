@@ -4,6 +4,7 @@ import {
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import {HeartPlus, Dock, Cpu, LineSquiggle, ChartColumnIncreasing, Workflow, School } from "lucide-react";
 
+
 const features = [
   {
     Icon: ChartColumnIncreasing,
@@ -79,11 +80,10 @@ const features = [
   },
 ];
 
-
 export function BentoCustom() {
   return (
-    <div>
-     <BentoGrid className="lg:grid-rows-2 scale-80">
+    <div className="container">
+     <BentoGrid className="lg:grid-rows-2 scale-85">
        {features.map((feature) => (
          <BentoCard key={feature.name} {...feature} />
        ))}

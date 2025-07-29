@@ -39,19 +39,21 @@ const CategoryPage = () => {
 
   return (
     <>
-      <div className="breadcrumb mt-[120px]"><BreadcrumbCustom /></div>
-      <div className="sm:flex md:flex-row lg:flex-row gap-4 mt-[20px] relative">
-        <div className="mt-4 mr-6">
-          <input
-            type="text"
-            value={query}
-            onChange={e => setQuery(e.target.value)}
-            placeholder="Search..."
-            className="mb-4 border w-full p-2 rounded-md"
-          />
-          <RadioGroupCustom />
+      <div className="container mb-24 min-h-[100vh]">
+        <div className="breadcrumb mt-[120px]"><BreadcrumbCustom /></div>
+        <div className="sm:flex md:flex-row lg:flex-row gap-4 mt-[20px] relative">
+          <div className="mt-4 mr-6">
+            <input
+              type="text"
+              value={query}
+              onChange={e => setQuery(e.target.value)}
+              placeholder="Search..."
+              className="mb-4 border w-full p-2 rounded-md"
+            />
+            <RadioGroupCustom />
+          </div>
+          <BotList bots={results} />
         </div>
-        <BotList bots={results} />
       </div>
     </>
   );

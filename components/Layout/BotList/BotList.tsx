@@ -1,5 +1,8 @@
 import { CardItem } from "@/components/Elements/Card/Card";
 import { StaticImageData } from "next/legacy/image";
+import Image from "next/image";
+import DataNotFound from "@/public/nodata-img.jpg"
+import { Button } from "@/components/ui/button";
 
 type Bot = {
   key: string;
@@ -16,7 +19,12 @@ interface BotListProps {
 
 export function BotList({ bots }: BotListProps) {
   if (!bots.length) {
-    return <p>No results found.</p>
+    // return <p>No results found.</p>
+    return <div className="flex-1 flex justify-center items-center flex-wrap">
+      <Image src={DataNotFound} alt="no-data" />
+      <div className="w-full"></div>
+      <Button className="cursor-pointer mt-8">Back to Category</Button>
+    </div>
   }
   return (
     <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-4 pr-0">
