@@ -5,12 +5,12 @@ import {DockCustom} from "@/components/magicui/custom/dock-custom";
  
 const NavBar = () => {
   return (
-    <nav className="navbar flex justify-between w-[1200]">
-        <div className="absolute top-0 left-[100%] transform translate-x-[-50%]" suppressHydrationWarning>
-          <div className="relative">
-            <DockCustom />
-          </div>
+    <nav className="navbar flex justify-between w-[1200px]">
+      <div className="absolute top-0 left-[100%] transform translate-x-[-50%]" suppressHydrationWarning>
+        <div className="relative">
+          <DockCustom />
         </div>
+      </div>
     </nav>
   );
 };
