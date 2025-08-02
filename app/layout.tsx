@@ -34,6 +34,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
+        <div className="absolute bottom-[100%]">
+        Impact-Site-Verification: b94e4353-3cd6-40b7-a0ef-00378e410a02
+        </div>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
