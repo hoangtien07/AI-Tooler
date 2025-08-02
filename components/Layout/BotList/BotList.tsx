@@ -3,6 +3,7 @@ import { StaticImageData } from "next/legacy/image";
 import Image from "next/image";
 import DataNotFound from "@/public/nodata-img.jpg"
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 type Bot = {
   key: string;
@@ -23,7 +24,7 @@ export function BotList({ bots }: BotListProps) {
     return <div className="flex-1 flex justify-center items-center flex-wrap">
       <Image src={DataNotFound} alt="no-data" />
       <div className="w-full"></div>
-      <Button className="cursor-pointer mt-8">Back to Category</Button>
+      <Button className="cursor-pointer mt-8"><Link href="/category/all">Back to Category</Link></Button>
     </div>
   }
   return (

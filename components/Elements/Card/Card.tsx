@@ -35,7 +35,7 @@ export function CardItem({ cardTitle, desc, price, className = "", keyItem, imag
     <div>
       <Card className={`overflow-hidden border bg-gradient-to-br from-slate-50 to-slate-100 transition-all dark:from-slate-900 dark:to-slate-800 shadow-none flex-row items-center px-6 py-4 h-full ${className}`} {...props} >
         <div className="w-[25%]">
-          <Image src={image ?? "/default-image.png"} objectFit="cover" priority={true} alt={typeof cardTitle === "string" ? cardTitle : "Card image"} />
+          <Image src={image ?? "/default-image.png"} width={300} height={300} objectFit="cover" priority={true} alt={typeof cardTitle === "string" ? cardTitle : "Card image"} />
         </div>
         <div className="flex-col flex-1">
           <CardContent className="flex-col h-fit items-center justify-center p-2">

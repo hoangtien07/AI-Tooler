@@ -43,8 +43,11 @@ export default function RootLayout({
           <main className="main-content">
             <div>{children}</div>
           </main>
-          <footer className="footer flex justify-center items-center py-3 text-center bg-black text-white">
-            <p>© 2025 AI Tooler. All rights reserved.</p>
+          <footer className="footer bg-black text-white">
+            <div className="container flex justify-between items-center py-3 text-center">
+              <p>Email contact: support@aitooler.io</p>
+              <p>© 2025 AI Tooler. All rights reserved.</p>
+            </div>
           </footer>
         </ThemeProvider>
       </body>

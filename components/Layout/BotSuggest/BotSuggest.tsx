@@ -115,6 +115,8 @@ const GalleryBotSuggest = ({
                         <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
                           <Image src={item.logo}
                             alt={item.key}
+                            width={300}
+                            height={300}
                             className="h-full w-full object-contain object-center"
                           />
                         </div>

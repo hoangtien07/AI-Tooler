@@ -31,7 +31,7 @@ const CategoryPage = () => {
       {currentBot ? (                 
       <div className="flex flex-col gap-6 mt-[40px]">
         <div className="grid grid-cols-1 items-stretch gap-x-0 gap-y-4 lg:grid-cols-3 lg:gap-4">
-          <Image src={currentBot.logo} alt={currentBot.name} className="h-72 w-full rounded-md object-cover lg:h-auto" />
+          <Image src={currentBot.logo} alt={currentBot.name} width={300} height={440} className="h-72 w-full rounded-md object-cover lg:h-auto" />
           <Card className="col-span-2 justify-center p-6">
             <div className="flex flex-col gap-4 px-4">
               <div className="flex justify-between pr-4">
@@ -50,8 +50,8 @@ const CategoryPage = () => {
                     : ""}
                 </p>
               </div>
-              <div className="flex flex-col items-start">
-                <p>{currentBot.features.map((feature, index) => <li key={index}>{feature}</li>)}</p>
+              <div className="flex flex-col items-start min-h-[200px] justify-center mb-2">
+                <div>{currentBot.features.map((feature, index) => <li key={index}>{feature}</li>)}</div>
               </div>
               <Button className="cursor-pointer py-4 transition-all text-base duration-300 hover:opacity-90" onClick={goOriginBot}>Go to website <MoveRight /></Button>
             </div>

@@ -9,6 +9,11 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { usePathname } from "next/navigation";
 
+// const count = categories.length;
+// type Tool = { key: string; name: string };
+// type Tag = { key: string; name: string; tools: Tool[] };
+// type Category = { key: string; title: string; desc: string; tags?: Tag[] };
+
 export function RadioGroupCustom() {
   const router = useRouter();
   const handleChange = (value: string) => {
@@ -19,7 +24,10 @@ export function RadioGroupCustom() {
     }
   };
   const pathname = usePathname();
-  const [selectedValue, setSelectedValue] = useState(pathname.split("/").pop() || "all");
+  const [selectedValue] = useState(pathname.split("/").pop() || "all");
+//  const getTotalTools = (category: Category) =>
+//   (category.tags ?? []).reduce((acc, tag) => acc + (tag.tools?.length || 0), 0);
+
 
   return (
     <RadioGroup defaultValue={selectedValue} onValueChange={handleChange} className="mb-4">
@@ -29,14 +37,29 @@ export function RadioGroupCustom() {
       <div className="flex flex-col gap-4">
           <div key="all" className="flex items-center gap-3">
             <RadioGroupItem value="all" id="all" />
-            <Label htmlFor="all" className="flex-1 mb-1">All</Label>
+            <Label htmlFor="all" className="flex-1 mb-1">All
+               {/* <span className="text-blue-600">({count})</span> */}
+               </Label>
           </div>
-        {categories.map((category) => (
-          <div key={category.key} className="flex items-center gap-3">
-            <RadioGroupItem value={category.key} id={category.key} />
-            <Label htmlFor={category.key} className="flex-1 mb-1">{category.title}</Label>
-          </div>
-        ))}
+      {categories.map((category) => (
+  <div key={category.key}>
+    <div className="flex items-center gap-3">
+      <RadioGroupItem value={category.key} id={category.key} />
+      <Label htmlFor={category.key} className="flex-1 mb-1">
+        {category.title} 
+        {/* <span className="text-blue-600">({getTotalTools(category)})</span> */}
+      </Label>
+    </div>
+    {/* <div className="pl-8">
+      {(category.tags ?? []).map(tag => (
+        <div key={tag.key}>
+          {tag.name} <span>({tag.tools.length})</span>
+        </div>
+      ))}
+    </div> */}
+  </div>
+))}
+
       </div>
     </RadioGroup>
   )

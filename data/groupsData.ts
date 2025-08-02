@@ -1,44 +1,8 @@
-import flikiLogo from "@/data/logo_tools/fliki_logo.png";
-import magiclightlogo from "@/data/logo_tools/MagicLight_logo.png";
-import makeugclogo from "@/data/logo_tools/MakeUGC_logo.jpg";
-import syllapylogo from "@/data/logo_tools/syllaby_logo.jpg";
-import klaplogo from "@/data/logo_tools/klap_logo.png";
-import videogenlogo from "@/data/logo_tools/videogen_logo.png";
-import invideologo from "@/data/logo_tools/invideo_logo.png";
-import heygenlogo from "@/data/logo_tools/heygen_logo.png";
-import synthesialogo from "@/data/logo_tools/synthesia_logo.png";
-import elaiiologo from "@/data/logo_tools/Elaiio_logo.png";
-import makelogo from "@/data/logo_tools/make_logo.png";
-import monicalogo from "@/data/logo_tools/monica_logo.png";
-import beehiivlogo from "@/data/logo_tools/beehiiv_logo.jpg";
-import pikzelslogo from "@/data/logo_tools/pikzels_logo.jpg";
-import logomelogo from "@/data/logo_tools/logome_logo.png";
-import logoailogo from "@/data/logo_tools/logoai_logo.png";
-import dupdublogo from "@/data/logo_tools/dupdub_logo.png";
-import vidailogo from "@/data/logo_tools/vidai_logo.jpeg";
-import foreplaylogo from "@/data/logo_tools/foreplay_logo.png";
-import quickadslogo from "@/data/logo_tools/quickads_logo.jpg";
-import raskailogo from "@/data/logo_tools/rask_logo.png";
-import adcreativelogo from "@/data/logo_tools/adcreative_logo.png";
-import turbologo from "@/data/logo_tools/turbo_logo.png";
-import vidnozlogo from "@/data/logo_tools/vidnoz_logo.jpg";
-import saneboxlogo from "@/data/logo_tools/sanebox_logo.png";
-import qusologo from "@/data/logo_tools/quso_logo.png";
-import speakailogo from "@/data/logo_tools/speak_ai_logo.png";
-import lattesociallogo from "@/data/logo_tools/latte_social_logo.png";
-import promeailogo from "@/data/logo_tools/prome_ai_logo.png";
-import deepbrainlogo from "@/data/logo_tools/deepbrain_logo.png";
-import vizardlogo from "@/data/logo_tools/vizard_logo.jpg";
-import elevenlabslogo from "@/data/logo_tools/elevenlabs_logo.png";
-import munchlogo from "@/data/logo_tools/munch_logo.jpg";
-import imagineartlogo from "@/data/logo_tools/imagine_art_logo.jpg";
-import pictorylogo from "@/data/logo_tools/pictory_logo.jpg";
-
 export const botData = [
   {
     key: "dupdub",
     name: "DupDub",
-    logo: dupdublogo,
+    logo: "https://drive.google.com/uc?export=view&id=1lpPZ8NcDrtcecL46OdA6sERtdd9YsRbA",
     price: [
       {
         service: "Personal",
@@ -56,7 +20,8 @@ export const botData = [
     link: "http://www.dupdub.com/?via=inami",
     headquarters: "United States",
     founded: "2012",
-    summary: "Dupdub is an AI-powered platform that creates engaging content with text-to-speech, video editing, and social media tools, ideal for creators and marketers.",
+    summary:
+      "Dupdub is an AI-powered platform that creates engaging content with text-to-speech, video editing, and social media tools, ideal for creators and marketers.",
     tag: [],
     features: [
       "AI Writing: Powered by GPT, DupDub offers advanced AI writing capabilities that assist in creating engaging content in a variety of styles and languages. This feature is ideal for creating creative copy, podcasts, and creative compositions with ease.",
@@ -85,7 +50,7 @@ export const botData = [
   {
     key: "makeugc",
     name: "MakeUGC",
-    logo: makeugclogo,
+    logo: "https://drive.google.com/uc?export=view&id=195pqAxmKaKx_B7JMutnB-zQBp6aYd9Lz",
     price: [
       {
         service: "Startup",
@@ -103,7 +68,8 @@ export const botData = [
     link: "https://www.makeugc.ai/?ref=nam6w",
     headquarters: "United Kingdom (GB)",
     founded: "2023",
-    summary: "MakeUGC is a trailblazing AI platform that crafts authentic user-generated-style content for ads and social media, helping brands build trust and engagement.",
+    summary:
+      "MakeUGC is a trailblazing AI platform that crafts authentic user-generated-style content for ads and social media, helping brands build trust and engagement.",
     tag: [],
     features: [
       "AI-powered video generation",
@@ -146,7 +112,7 @@ export const botData = [
   {
     key: "foreplay",
     name: "ForePlay",
-    logo: foreplaylogo,
+    logo: "https://drive.google.com/uc?export=view&id=12w-p-qJ7sfHtah4lORq4dD68R_FdXRKA",
     price: [
       {
         service: "Basic",
@@ -164,7 +130,8 @@ export const botData = [
     link: "https://foreplay.co/?via=inami",
     headquarters: "Canada",
     founded: "2021",
-    summary: "Foreplay is an AI-powered ad creative platform that streamlines ad creation and competitor analysis, helping marketers build high-performing campaigns with ease.",
+    summary:
+      "Foreplay is an AI-powered ad creative platform that streamlines ad creation and competitor analysis, helping marketers build high-performing campaigns with ease.",
     tag: [],
     features: [
       "Save & organize ads: One-click Chrome extension or mobile app lets you save ads from TikTok, Facebook, Instagram, and LinkedIn into boards with tags and comments",
@@ -196,7 +163,7 @@ export const botData = [
   {
     key: "quickads",
     name: "QuickAds",
-    logo: quickadslogo,
+    logo: "https://drive.google.com/uc?export=view&id=1wCa5fJic3jKLOoVOJbKyWMeGDQSoFa99",
     price: [
       {
         service: "Starter",
@@ -214,7 +181,8 @@ export const botData = [
     link: "https://www.quickads.ai/?ref=namt4",
     headquarters: "Singapore",
     founded: "2023",
-    summary: "Quickads is an AI-driven platform that creates professional ad visuals and copy in minutes, enabling small businesses and marketers to launch campaigns swiftly with high-quality results.",
+    summary:
+      "Quickads is an AI-driven platform that creates professional ad visuals and copy in minutes, enabling small businesses and marketers to launch campaigns swiftly with high-quality results.",
     tag: [],
     features: [
       "Extensive Ad Library: Access to over 10 million ads from platforms like TikTok, Meta, and YouTube, allowing users to analyze top-performing creatives and gain insights into successful ad strategies.",
@@ -244,7 +212,7 @@ export const botData = [
   {
     key: "beehiiv-ai",
     name: "Beehiiv AI",
-    logo: beehiivlogo,
+    logo: "https://drive.google.com/uc?export=view&id=1eRhOwGGjkKiJKoCytwvuGpiOHPYLSrCQ",
     price: [
       {
         service: "Scale",
@@ -258,7 +226,8 @@ export const botData = [
     link: "https://www.beehiiv.com?via=Nam-Nguyen",
     headquarters: "",
     founded: "2023",
-    summary: "Beehiiv AI is an integrated content assistant that empowers newsletter creators to write, edit, and translate faster with AI-driven tools.",
+    summary:
+      "Beehiiv AI is an integrated content assistant that empowers newsletter creators to write, edit, and translate faster with AI-driven tools.",
     tag: [],
     features: [
       "All-in-one newsletter platform: Offers writing tools, email delivery, website hosting, and blogging features combined",
@@ -294,108 +263,9 @@ export const botData = [
     ],
   },
   {
-    key: "writing-editing-beehiiv-ai",
-    name: "beehiiv AI",
-    logo: beehiivlogo,
-    price: [
-      {
-        service: "Scale",
-        price: "$43/month",
-      },
-      {
-        service: "Max",
-        price: "$96/month",
-      },
-    ],
-    link: "https://www.beehiiv.com?via=Nam-Nguyen",
-    headquarters: "",
-    founded: "2023",
-    summary: "Beehiiv AI is an integrated content assistant that empowers newsletter creators to write, edit, and translate faster with AI-driven tools.",
-    tag: [],
-    features: [
-      "All-in-one newsletter platform: Offers writing tools, email delivery, website hosting, and blogging features combined",
-      "Monetization tools built-in: Includes paid subscriptions, Ad Network, referral (Boost) system, and sponsorship management",
-      "Advanced analytics: 3D dashboards show open rates, click rates, subscriber growth, revenue attribution, and acquisition sources",
-      "Automation & segmentation: Supports drip sequences, subscriber tagging, dynamic segments, and autoresponders",
-      "Growth tools: Referral programs, embeddable forms, pop-ups, and custom domains with SSL support",
-      "Integrations: Zapier, WordPress, Webflow, Shopify, and Mailchimp/Substack import for seamless workflows",
-      "AI writing assistant: Helps with idea generation and draft creation on paid plans",
-    ],
-    strengths: [
-      "Creator-focused monetization: Ideal for turning newsletters into revenue streams with no platform commission",
-      "User-friendly interface: Clean, intuitive, and fast to learn—even for beginners",
-      "Growth-first tools: Referral Boost and ad placements help scale subscriber base and earnings",
-      "Robust analytics & SEO: Revenue tracking integrated with performance data; SEO-friendly web archive posts",
-      "Generous free tier: Free for up to 2,500 subscribers, with website and core features included",
-      "Frequent innovation: Rapid product development and new features, backed by responsive support",
-      "Trust & institutional backing: Founded by Morning Brew alumni; launched journalism fund to support independent writers",
-    ],
-    weaknesses: [
-      "Pricing gap: Transitioning from free to paid ($39–$69+/mo) may be steep for creators in between tiers",
-      "Limited website builder: Basic site capabilities; lacks flexibility compared to dedicated CMS like WordPress",
-      "Deliverability concerns: Reports of bouncing issues due to aggressive growth tactics",
-      "Feature complexity: Rich toolset can overwhelm new users; some advanced SEO and CRM features are missing",
-      "Customization constraints: Website design and multi-language UI support are limited",
-      "Integration depth: Few native integrations beyond basics; Zapier required for advanced workflows",
-    ],
-    targetUsers: [
-      "Individual creators & solopreneurs: Early-stage creators wanting to write, grow, and monetize their newsletters.",
-      "Marketing teams & agencies: Need tracking, sponsored content tools, and growth features under one platform.",
-      "Small businesses & media brands: Want newsletters + SEO-friendly web presence under a unified system.",
-      "Publishers/journalists: Benefiting from the journalism fund, monetization suite, and scalable growth tools.",
-    ],
-  },
-  {
-    key: "writing-editing-dupdub",
-    name: "DupDub",
-    logo: dupdublogo,
-    price: [
-      {
-        service: "Personal",
-        price: "$11/month",
-      },
-      {
-        service: "Professional",
-        price: "$30/month",
-      },
-      {
-        service: "Ultimate",
-        price: "$110/month",
-      },
-    ],
-    link: "http://www.dupdub.com/?via=inami",
-    headquarters: "United States",
-    founded: "2012",
-    summary: "Dupdub is an AI-powered platform that creates engaging content with text-to-speech, video editing, and social media tools, ideal for creators and marketers.",
-    tag: [],
-    features: [
-      "AI Writing: Powered by GPT, DupDub offers advanced AI writing capabilities that assist in creating engaging content in a variety of styles and languages. This feature is ideal for creating creative copy, podcasts, and creative compositions with ease.",
-      "Text to Speech: Transform written content into vivid speech with over 500 realistic AI voices in over 70 languages ​​and accents. Perfect for creating engaging voiceovers without the need for professional voiceover artists.",
-      "AI Avatars: Bring still images to life with talking and emotive AI avatars, adding dynamic elements to storytelling and visual content.",
-      "AI Video Editing: Enhance video content with professional editing tools, including automatic captioning, video translation and localization in over 70 languages. This feature simplifies the process of creating complete video content.",
-    ],
-    strengths: [
-      "Cost Savings: Significantly save on production costs by eliminating the need for studios and recording artists.",
-      "Save time: Streamline content creation processes, reducing time spent on tasks like video editing and voiceover production.",
-      "Easy to use: Intuitive interface makes it easy for users with different technical levels to access.",
-      "Wide range of applications: Wide range of tools suitable for different industries, from marketing to education and entertainment.",
-    ],
-    weaknesses: [
-      "Initial Learning Curve: Some users may need time to explore and fully utilize the rich features.",
-      "Limited Free Trial: The 3-day trial period may not be enough for users to fully experience the platform's capabilities.",
-    ],
-    targetUsers: [
-      "Marketing Team: Use the platform to create engaging ads and promotional content.",
-      "Content Creators: Leverage DupDub to produce high-quality videos and podcasts.",
-      "Teachers: Use tools to create engaging and interactive educational content.",
-      "Audiobook Author: Use text-to-speech to bring books to life with a variety of voices.",
-      "Less common use cases: Adopted by documentary filmmakers to enhance storytelling with AI voiceovers; Integrated by sales teams to improve telemarketing effectiveness with human-like voiceovers.",
-    ],
-  },
-  {
-    key: "technology-it-monica",
+    key: "monica",
     name: "Monica",
-    logo: monicalogo,
+    logo: "https://drive.google.com/uc?export=view&id=1aTDkkbqtuR5QpzWWfIQxf6OVHExUGKGN",
     price: [
       {
         service: "Starter",
@@ -409,7 +279,8 @@ export const botData = [
     link: "https://monica.im/invitation-affiliate?ref=nmqxyjq&ref_aff=nmqxyjq",
     headquarters: "China",
     founded: "2023",
-    summary: "Monica is an AI-powered all-in-one platform that offers advanced productivity tools. It helps users manage their tasks, collaborate with teams, and streamline their productivity.",
+    summary:
+      "Monica is an AI-powered all-in-one platform that offers advanced productivity tools. It helps users manage their tasks, collaborate with teams, and streamline their productivity.",
     tag: [],
     features: [
       "AI-Powered Chat and Writing: Monica uses advanced AI models to provide personalized chat experiences and assist in creating or improving written content quickly and efficiently.",
@@ -437,9 +308,9 @@ export const botData = [
     ],
   },
   {
-    key: "design-creative-logome",
+    key: "logome",
     name: "Logome",
-    logo: logomelogo,
+    logo: "https://drive.google.com/uc?export=view&id=1ptx6SGSuaSwty5KUBf2TPNsZ4c5ndfCK",
     price: [
       {
         service: "Basic",
@@ -457,7 +328,8 @@ export const botData = [
     link: "https://logomeai.partnerlinks.io/bvs4vyo85m7a",
     headquarters: "United Arab Emirates",
     founded: "2023",
-    summary: "Logome is a 2023-launched AI logo maker, offering fast branding solutions.",
+    summary:
+      "Logome is a 2023-launched AI logo maker, offering fast branding solutions.",
     tag: [],
     features: [
       "Custom logo templates",
@@ -486,9 +358,9 @@ export const botData = [
     ],
   },
   {
-    key: "design-creative-logoai",
+    key: "logoai",
     name: "Logoai",
-    logo: logoailogo,
+    logo: "https://drive.google.com/uc?export=view&id=1AsB4vL8VZdx0ORrl6YKyPqtUmapjHMbP",
     price: [
       {
         service: "Basic",
@@ -506,7 +378,8 @@ export const botData = [
     link: "https://www.logoai.com/?coupon=aitooler",
     headquarters: "China",
     founded: "2011",
-    summary: "LogoAI is an AI-powered design platform that generates professional logos, brand kits, and marketing visuals in minutes, tailored for startups and small businesses.",
+    summary:
+      "LogoAI is an AI-powered design platform that generates professional logos, brand kits, and marketing visuals in minutes, tailored for startups and small businesses.",
     tag: [],
     features: [
       "AI powered logo maker",
@@ -539,7 +412,7 @@ export const botData = [
   {
     key: "fliki",
     name: "Fliki",
-    logo: flikiLogo,
+    logo: "https://drive.google.com/uc?export=view&id=16OeqOJRQSZOVESOBugKn3llptmLdkysm",
     price: [
       {
         service: "Standard",
@@ -553,7 +426,8 @@ export const botData = [
     link: "https://fliki.ai/?via=915ec0",
     headquarters: "United States",
     founded: "2021",
-    summary: "Fliki is an AI-powered tool that transforms text into videos and audio with realistic voiceovers, attracting 2.1 million monthly visits.",
+    summary:
+      "Fliki is an AI-powered tool that transforms text into videos and audio with realistic voiceovers, attracting 2.1 million monthly visits.",
     tag: [],
     features: [
       "Text‑to‑Speech AI: Offers 900–2,000+ voices across 75–80+ languages with customizable speed, pitch, emphasis, and even voice cloning",
@@ -591,7 +465,7 @@ export const botData = [
   {
     key: "magiclight",
     name: "MagicLight",
-    logo: magiclightlogo,
+    logo: "https://drive.google.com/uc?export=view&id=166Zqf2spSKMRf0GiHEJ6f5zFgtXUiS9d",
     price: [
       {
         service: "Standard",
@@ -609,7 +483,8 @@ export const botData = [
     link: "https://magiclight.ai/official-website?code=muv2at989",
     headquarters: "China",
     founded: "2023",
-    summary: "MagicLight is an innovative AI video editing platform that simplifies content creation with automated editing, real-time effects, and customizable templates, ideal for creators and marketers.",
+    summary:
+      "MagicLight is an innovative AI video editing platform that simplifies content creation with automated editing, real-time effects, and customizable templates, ideal for creators and marketers.",
     tag: [],
     features: [
       "AI-generated videos from text",
@@ -641,7 +516,7 @@ export const botData = [
   {
     key: "syllaby",
     name: "Syllaby.io",
-    logo: syllapylogo,
+    logo: "https://drive.google.com/uc?export=view&id=1VVGCEHGkBBSkmCIOLPxpLTxmEsQeEkdE",
     price: [
       {
         service: "Basic",
@@ -659,7 +534,8 @@ export const botData = [
     link: "https://syllaby.io/?via=inami",
     headquarters: "",
     founded: "2023",
-    summary: "Syllaby.io is an AI-driven platform that generates viral social media content strategies, including video scripts, captions, and scheduling, perfect for influencers and brands.",
+    summary:
+      "Syllaby.io is an AI-driven platform that generates viral social media content strategies, including video scripts, captions, and scheduling, perfect for influencers and brands.",
     tag: [],
     features: [
       "Content ideas",
@@ -694,7 +570,7 @@ export const botData = [
   {
     key: "klap",
     name: "Klap",
-    logo: klaplogo,
+    logo: "https://drive.google.com/uc?export=view&id=1GyheDhnltS4Z_doWW_Go2509d8ky_BUQ",
     price: [
       {
         service: "Basic",
@@ -712,7 +588,8 @@ export const botData = [
     link: "https://klap.app/?via=inami",
     headquarters: "France",
     founded: "2023",
-    summary: "Klap is an AI-powered video creation tool that helps users produce professional videos quickly. It integrates with various platforms to streamline the video production process.",
+    summary:
+      "Klap is an AI-powered video creation tool that helps users produce professional videos quickly. It integrates with various platforms to streamline the video production process.",
     tag: [],
     features: [
       "One-click clip creation from YouTube links or uploads—AI detects viral-worthy moments and outputs ready-to-publish Shorts, Reels, TikToks",
@@ -748,7 +625,7 @@ export const botData = [
   {
     key: "videogen",
     name: "VideoGen",
-    logo: videogenlogo,
+    logo: "https://drive.google.com/uc?export=view&id=1_5fY9UdRHrxxvFg-NX9CP4R1LlQuXqs2",
     price: [
       {
         service: "Pro",
@@ -762,7 +639,8 @@ export const botData = [
     link: "https://videogen.io/?fpr=inami",
     headquarters: "United States",
     founded: "2022",
-    summary: "VideoGen enables rapid AI video creation from text prompts, drawing 988,366 monthly visitors.",
+    summary:
+      "VideoGen enables rapid AI video creation from text prompts, drawing 988,366 monthly visitors.",
     tag: [],
     features: [
       "Create videos using artificial intelligence",
@@ -795,7 +673,7 @@ export const botData = [
   {
     key: "invideo",
     name: "invideo",
-    logo: invideologo,
+    logo: "https://drive.google.com/uc?export=view&id=1u_YnlkN2UOExx7OYDH08n_Re-88g6P-_",
     price: [
       {
         service: "Plus",
@@ -817,7 +695,8 @@ export const botData = [
     link: "https://invideo.sjv.io/c/6080167/883681/12258",
     headquarters: "United States",
     founded: "2017",
-    summary: "Invideo AI is a transformative AI video creation platform that turns text prompts into polished videos with customizable templates, stock media, and voiceovers, serving over 7 million users globally.",
+    summary:
+      "Invideo AI is a transformative AI video creation platform that turns text prompts into polished videos with customizable templates, stock media, and voiceovers, serving over 7 million users globally.",
     tag: [],
     features: [
       "AI-Powered Video Tools: Article/script-to-video generation, automated video editing (scene selection, transitions, color correction).",
@@ -854,7 +733,7 @@ export const botData = [
   {
     key: "heygen",
     name: "HeyGen",
-    logo: heygenlogo,
+    logo: "https://drive.google.com/uc?export=view&id=1Lv2pKEZqGW8i3qBGnptl3skwvEh2NL3b",
     price: [
       {
         service: "Creator",
@@ -868,7 +747,8 @@ export const botData = [
     link: "https://heygen.com/?sid=rewardful&via=inami",
     headquarters: "United States",
     founded: "2022",
-    summary: "HeyGen is a cutting-edge AI video platform that transforms text into professional videos with realistic avatars and multilingual voiceovers, streamlining content creation for marketers, educators, and businesses.",
+    summary:
+      "HeyGen is a cutting-edge AI video platform that transforms text into professional videos with realistic avatars and multilingual voiceovers, streamlining content creation for marketers, educators, and businesses.",
     tag: [],
     features: [
       "Generation Costumes: Customize your avatar with different costumes.",
@@ -905,7 +785,7 @@ export const botData = [
   {
     key: "synthesia",
     name: "Synthesia",
-    logo: synthesialogo,
+    logo: "https://drive.google.com/uc?export=view&id=1MAuIpoxHIkfWjJiGlWWObtoP-8s6NFG5",
     price: [
       {
         service: "Starter",
@@ -919,7 +799,8 @@ export const botData = [
     link: "https://www.synthesia.io/?via=inami",
     headquarters: "United Kingdom",
     founded: "2017",
-    summary: "Synthesia is a leading AI video creation platform that transforms text into professional videos with lifelike avatars and multilingual voiceovers, perfect for businesses, educators, and creators.",
+    summary:
+      "Synthesia is a leading AI video creation platform that transforms text into professional videos with lifelike avatars and multilingual voiceovers, perfect for businesses, educators, and creators.",
     tag: [],
     features: [
       "AI Avatars and Voiceover: Choose from 230+ AI avatars and create videos with natural voiceovers in 140+ languages, increasing inclusivity and engagement.",
@@ -949,7 +830,7 @@ export const botData = [
   {
     key: "elai",
     name: "Elai.io",
-    logo: elaiiologo,
+    logo: "https://drive.google.com/uc?export=view&id=1Sp1TlalHdwHdI_G2Kps2gV02dArX4WUF",
     price: [
       {
         service: "Basic",
@@ -963,7 +844,8 @@ export const botData = [
     link: "https://elai.io/?via=inami",
     headquarters: "Ukraine",
     founded: "2021",
-    summary: "Elai is an AI video generation platform that creates professional videos from text using customizable avatars and multilingual voiceovers, ideal for training, marketing, and education.",
+    summary:
+      "Elai is an AI video generation platform that creates professional videos from text using customizable avatars and multilingual voiceovers, ideal for training, marketing, and education.",
     tag: [],
     features: [
       "Text to Video: Create videos from text alone. No camera, studio or green screen required.",
@@ -1006,7 +888,7 @@ export const botData = [
   {
     key: "vidai",
     name: "Vid.AI",
-    logo: vidailogo,
+    logo: "https://drive.google.com/uc?export=view&id=1SxlzpiSQELZnkz9KbzDRKGbPx4jFLdKG",
     price: [
       {
         service: "Plus",
@@ -1020,7 +902,8 @@ export const botData = [
     link: "https://vid.ai/?ref=namhc",
     headquarters: "India",
     founded: "2024",
-    summary: "Vid.ai is a powerful AI platform that automates video content creation and monetization, offering tools for clip generation, ad integration, and analytics for publishers and creators.",
+    summary:
+      "Vid.ai is a powerful AI platform that automates video content creation and monetization, offering tools for clip generation, ad integration, and analytics for publishers and creators.",
     tag: [],
     features: [
       "AI Shorts Generator",
@@ -1057,7 +940,7 @@ export const botData = [
   {
     key: "pikzels",
     name: "Pikzels",
-    logo: pikzelslogo,
+    logo: "https://drive.google.com/uc?export=view&id=1GyU5mJ4TD22xxFUWhjNEVr95LYxZTDcJ",
     price: [
       {
         service: "Essential",
@@ -1075,7 +958,8 @@ export const botData = [
     link: "https://pikzels.com?via=nam84",
     headquarters: "United Arab Emirates",
     founded: "2023",
-    summary: "Pikzels.com is an AI-powered platform launched in 2023, specializing in creating high-quality YouTube thumbnails in under 30 seconds.",
+    summary:
+      "Pikzels.com is an AI-powered platform launched in 2023, specializing in creating high-quality YouTube thumbnails in under 30 seconds.",
     tag: [],
     features: [
       "Unlimited Thumbnails",
@@ -1103,7 +987,7 @@ export const botData = [
   {
     key: "workflow-automation-make",
     name: "Make.com",
-    logo: makelogo,
+    logo: "https://drive.google.com/uc?export=view&id=11_-APYnDoUh-a0LZxhA4heKV1kFhhNWf",
     price: [
       {
         service: "Core",
@@ -1121,7 +1005,8 @@ export const botData = [
     link: "https://www.make.com/en/register?pc=aitooler",
     headquarters: "Czech Republic",
     founded: "2022",
-    summary: "Make is a powerful workflow automation platform with 5.76 million monthly visits, launched in 2022.",
+    summary:
+      "Make is a powerful workflow automation platform with 5.76 million monthly visits, launched in 2022.",
     tag: [],
     features: [
       "Intuitive Visual Editor: Create workflows with a beautifully designed visual editor that makes automation accessible to everyone, regardless of technical expertise.",
@@ -1150,7 +1035,7 @@ export const botData = [
   {
     key: "rask-ai",
     name: "Rask AI",
-    logo: raskailogo,
+    logo: "https://drive.google.com/uc?export=view&id=1Xr6nwowuyKinb0mBqcESgrH_xcaCw3nz",
     price: [
       { service: "Creator", price: "$60/ month" },
       { service: "Creator Pro", price: "$150/ month" },
@@ -1160,16 +1045,24 @@ export const botData = [
     headquarters: "United States (US)",
     founded: "2023",
     summary: "Content generation for marketing and creative projects.",
-    tag: ['AI Writing'],
-    features: ['Content generation for marketing and creative projects.'],
-    strengths: ['Fast, high-quality content generation.', 'Easy to use.', 'Generates a variety of content types.'],
-    weaknesses: ['May not be suitable for highly specific niches.', 'Limited customizability for advanced users.', 'Can be expensive for small businesses.'],
-    targetUsers: ['Digital marketers, content creators.'],
+    tag: ["AI Writing"],
+    features: ["Content generation for marketing and creative projects."],
+    strengths: [
+      "Fast, high-quality content generation.",
+      "Easy to use.",
+      "Generates a variety of content types.",
+    ],
+    weaknesses: [
+      "May not be suitable for highly specific niches.",
+      "Limited customizability for advanced users.",
+      "Can be expensive for small businesses.",
+    ],
+    targetUsers: ["Digital marketers, content creators."],
   },
   {
     key: "adcreative",
     name: "Adcreative",
-    logo: adcreativelogo,
+    logo: "https://drive.google.com/uc?export=view&id=1-gWz0eXRlY5Rk3JTbNYpySXt_Oz0ZOTa",
     price: [
       { service: "Starter Plans", price: "$39/ month" },
       { service: "Professional", price: "$249/ month" },
@@ -1178,17 +1071,42 @@ export const botData = [
     link: "https://free-trial.adcreative.ai/inami",
     headquarters: "France (FR)",
     founded: "2021",
-    summary: "Create ads and banners using artificial intelligence Conversion-focused social media posts and ads AI Content...",
-    tag: ['AI Ads'],
-    features: ['Create ads and banners using artificial intelligence', 'Conversion-focused social media posts and ads', 'AI Content Generation for sales-focused copy and headlines', 'Creative Insights to analyze and learn from your best-performing creatives', 'Platform integrations with Google, Facebook, ADOUNEED, and Zapier', 'Create video ads for high ROI', 'White label ready with custom branding', 'Work with up to 25 users', 'Unlimited free stock photos', 'Refund policy and 24/7 support'],
-    strengths: ['Optimizes for high ad performance.', 'Saves time in ad creation.', 'Easily integrates with ad platforms.'],
-    weaknesses: ['Limited design flexibility.', 'Can produce generic results.', 'Requires basic knowledge of ad optimization.'],
-    targetUsers: ['#1 Startups who want to optimize ads and scale', '#2 Ecommerce stores who want to create custom ads for their product catalog', '#3 Marketing companies who want to improve conversion rates for their customers', '#4 Enterprises who want branded ads, AI insights, and collaboration with their teams and agencies'],
+    summary:
+      "Create ads and banners using artificial intelligence Conversion-focused social media posts and ads AI Content...",
+    tag: ["AI Ads"],
+    features: [
+      "Create ads and banners using artificial intelligence",
+      "Conversion-focused social media posts and ads",
+      "AI Content Generation for sales-focused copy and headlines",
+      "Creative Insights to analyze and learn from your best-performing creatives",
+      "Platform integrations with Google, Facebook, ADOUNEED, and Zapier",
+      "Create video ads for high ROI",
+      "White label ready with custom branding",
+      "Work with up to 25 users",
+      "Unlimited free stock photos",
+      "Refund policy and 24/7 support",
+    ],
+    strengths: [
+      "Optimizes for high ad performance.",
+      "Saves time in ad creation.",
+      "Easily integrates with ad platforms.",
+    ],
+    weaknesses: [
+      "Limited design flexibility.",
+      "Can produce generic results.",
+      "Requires basic knowledge of ad optimization.",
+    ],
+    targetUsers: [
+      "#1 Startups who want to optimize ads and scale",
+      "#2 Ecommerce stores who want to create custom ads for their product catalog",
+      "#3 Marketing companies who want to improve conversion rates for their customers",
+      "#4 Enterprises who want branded ads, AI insights, and collaboration with their teams and agencies",
+    ],
   },
   {
     key: "turbologo",
     name: "Turbologo",
-    logo: turbologo,
+    logo: "https://drive.google.com/uc?export=view&id=1Uqu-97GtXEOnD3aYHyddZJGQMZVMBJqL",
     price: [
       { service: "Lite", price: "$7.99/ month" },
       { service: "Standard", price: "$10.99/ month" },
@@ -1198,16 +1116,20 @@ export const botData = [
     headquarters: "United States (US)",
     founded: "2018",
     summary: "AI-based logo creation for branding.",
-    tag: ['AI Design'],
-    features: ['AI-based logo creation for branding.'],
-    strengths: ['Quick and easy logo generation. - Simple interface for beginners. - Cost-effective for startups.'],
-    weaknesses: ['Limited design options and customization. - Not suitable for high-end, complex designs. - Results can be too basic.'],
-    targetUsers: ['Small businesses, startups, entrepreneurs.'],
+    tag: ["AI Design"],
+    features: ["AI-based logo creation for branding."],
+    strengths: [
+      "Quick and easy logo generation. - Simple interface for beginners. - Cost-effective for startups.",
+    ],
+    weaknesses: [
+      "Limited design options and customization. - Not suitable for high-end, complex designs. - Results can be too basic.",
+    ],
+    targetUsers: ["Small businesses, startups, entrepreneurs."],
   },
   {
     key: "vidnoz",
     name: "Vidnoz",
-    logo: vidnozlogo,
+    logo: "https://drive.google.com/uc?export=view&id=1_Ha8xvLvC27Hu1DVQ_LpiqxKn7j65W-c",
     price: [
       { service: "Starter", price: "$26.99/ month" },
       { service: "Business", price: "$74.99/ month" },
@@ -1216,16 +1138,20 @@ export const botData = [
     headquarters: "United States (US)",
     founded: "2016",
     summary: "AI video production and automation.",
-    tag: ['AI Video'],
-    features: ['AI video production and automation.'],
-    strengths: ['Quick video creation from templates. - Easy to use, even for beginners. - Reduces video production time significantly.'],
-    weaknesses: ['Limited customization options for advanced users. - Video quality may not be ideal for all types of content. - Lacks some advanced editing features.'],
-    targetUsers: ['Content creators, marketers.'],
+    tag: ["AI Video"],
+    features: ["AI video production and automation."],
+    strengths: [
+      "Quick video creation from templates. - Easy to use, even for beginners. - Reduces video production time significantly.",
+    ],
+    weaknesses: [
+      "Limited customization options for advanced users. - Video quality may not be ideal for all types of content. - Lacks some advanced editing features.",
+    ],
+    targetUsers: ["Content creators, marketers."],
   },
   {
     key: "sanebox",
     name: "SaneBox",
-    logo: saneboxlogo,
+    logo: "https://drive.google.com/uc?export=view&id=1yal290CcluJzMi3-CUNvWYc9VtlJmpjB",
     price: [
       { service: "Snack", price: "$7/ month" },
       { service: "Lunch", price: "$12/ month" },
@@ -1235,16 +1161,20 @@ export const botData = [
     headquarters: "United States (US)",
     founded: "2010",
     summary: "AI-powered email organization tool.",
-    tag: ['AI Writing'],
-    features: ['AI-powered email organization tool.'],
-    strengths: ['Improves productivity by decluttering inboxes. - Organizes email without manual effort. - Customizable filtering options.'],
-    weaknesses: ['Can be hard to set up initially. - May miss some important emails. - Not fully compatible with all email clients.'],
-    targetUsers: ['Professionals, busy individuals.'],
+    tag: ["AI Writing"],
+    features: ["AI-powered email organization tool."],
+    strengths: [
+      "Improves productivity by decluttering inboxes. - Organizes email without manual effort. - Customizable filtering options.",
+    ],
+    weaknesses: [
+      "Can be hard to set up initially. - May miss some important emails. - Not fully compatible with all email clients.",
+    ],
+    targetUsers: ["Professionals, busy individuals."],
   },
   {
     key: "quso.ai",
     name: "quso.ai",
-    logo: qusologo,
+    logo: "https://drive.google.com/uc?export=view&id=1U6UfnJsdE1mXPyCAT9LUv0e-pYdXGmQe",
     price: [
       { service: "Lite", price: "$29/ month" },
       { service: "Essential", price: "$39/ month" },
@@ -1254,16 +1184,20 @@ export const botData = [
     headquarters: "United States (US)",
     founded: "2021",
     summary: "AI tool for creating chatbots and virtual assistants.",
-    tag: ['AI Video'],
-    features: ['AI tool for creating chatbots and virtual assistants.'],
-    strengths: ['Powerful conversational AI capabilities. - Easy integration with various platforms. - Scalable for businesses of any size.'],
-    weaknesses: ['Requires technical knowledge to fully implement. - Limited customization for specific use cases. - Can be costly for small businesses.'],
-    targetUsers: ['Businesses, customer support teams.'],
+    tag: ["AI Video"],
+    features: ["AI tool for creating chatbots and virtual assistants."],
+    strengths: [
+      "Powerful conversational AI capabilities. - Easy integration with various platforms. - Scalable for businesses of any size.",
+    ],
+    weaknesses: [
+      "Requires technical knowledge to fully implement. - Limited customization for specific use cases. - Can be costly for small businesses.",
+    ],
+    targetUsers: ["Businesses, customer support teams."],
   },
   {
     key: "speakai",
     name: "SpeakAI",
-    logo: speakailogo,
+    logo: "https://drive.google.com/uc?export=view&id=1ENXQGo3clXFARgYGXZYsCTJ2Dfadnod7",
     price: [
       { service: "Starter", price: "$15/ month" },
       { service: "Pro", price: "$50/ month" },
@@ -1273,16 +1207,20 @@ export const botData = [
     headquarters: "Canada (CA)",
     founded: "2019",
     summary: "AI-powered transcription and speech-to-text tool.",
-    tag: ['AI Productivity/ AI audio', 'AI Video'],
-    features: ['AI-powered transcription and speech-to-text tool.'],
-    strengths: ['High transcription accuracy. - Supports multiple languages. - Ideal for podcasts and meetings.'],
-    weaknesses: ['Struggles with heavy accents or background noise. - Accuracy can vary based on the audio quality. - Limited editing features for transcriptions.'],
-    targetUsers: ['Podcasters, professionals, content creators.'],
+    tag: ["AI Productivity/ AI audio", "AI Video"],
+    features: ["AI-powered transcription and speech-to-text tool."],
+    strengths: [
+      "High transcription accuracy. - Supports multiple languages. - Ideal for podcasts and meetings.",
+    ],
+    weaknesses: [
+      "Struggles with heavy accents or background noise. - Accuracy can vary based on the audio quality. - Limited editing features for transcriptions.",
+    ],
+    targetUsers: ["Podcasters, professionals, content creators."],
   },
   {
     key: "latte-social",
     name: "Latte Social",
-    logo: lattesociallogo,
+    logo: "https://drive.google.com/uc?export=view&id=1wTJaPHw6XqEdUzHBoCk3M2eNjHfVOd36",
     price: [
       { service: "Starter", price: "$10/ month" },
       { service: "Grow", price: "$25/ month" },
@@ -1292,16 +1230,20 @@ export const botData = [
     headquarters: "United Kingdom (GB)",
     founded: "2022",
     summary: "AI for social media management and content scheduling.",
-    tag: ['AI Video'],
-    features: ['AI for social media management and content scheduling.'],
-    strengths: ['Simplifies social media post scheduling. - Supports multiple social platforms. - Automates posts and optimizes timing.'],
-    weaknesses: ['Lacks advanced analytics and reporting. - Limited support for video posts. - Some platforms may not be fully supported.'],
-    targetUsers: ['Social media managers, small businesses.'],
+    tag: ["AI Video"],
+    features: ["AI for social media management and content scheduling."],
+    strengths: [
+      "Simplifies social media post scheduling. - Supports multiple social platforms. - Automates posts and optimizes timing.",
+    ],
+    weaknesses: [
+      "Lacks advanced analytics and reporting. - Limited support for video posts. - Some platforms may not be fully supported.",
+    ],
+    targetUsers: ["Social media managers, small businesses."],
   },
   {
     key: "promeai",
     name: "PromeAI",
-    logo: promeailogo,
+    logo: "https://drive.google.com/uc?export=view&id=1CvUKtYdle8B8Rqnyw91b8uLQklWN4DIp",
     price: [
       { service: "Base", price: "$19/ month" },
       { service: "Standard", price: "$39/ month" },
@@ -1311,16 +1253,20 @@ export const botData = [
     headquarters: "China (CN)",
     founded: "2023",
     summary: "AI-based tool for promotional content creation.",
-    tag: ['AI Design'],
-    features: ['AI-based tool for promotional content creation.'],
-    strengths: ['Generates promotional content quickly. - Helps improve marketing campaign efficiency. - User-friendly interface.'],
-    weaknesses: ['Limited customization options for high-end campaigns. - Content can feel generic. - Not ideal for large-scale, multi-channel campaigns.'],
-    targetUsers: ['Marketers, content creators.'],
+    tag: ["AI Design"],
+    features: ["AI-based tool for promotional content creation."],
+    strengths: [
+      "Generates promotional content quickly. - Helps improve marketing campaign efficiency. - User-friendly interface.",
+    ],
+    weaknesses: [
+      "Limited customization options for high-end campaigns. - Content can feel generic. - Not ideal for large-scale, multi-channel campaigns.",
+    ],
+    targetUsers: ["Marketers, content creators."],
   },
   {
     key: "deepbrain-ai",
     name: "DeepBrain AI",
-    logo: deepbrainlogo,
+    logo: "https://drive.google.com/uc?export=view&id=1QV_vAcJDvict7hunUVJ-IcHFThlNalua",
     price: [
       { service: "Personal", price: "$29/ month" },
       { service: "Team", price: "$69/ month" },
@@ -1329,16 +1275,20 @@ export const botData = [
     headquarters: "United States (US)",
     founded: "2021",
     summary: "AI for creating personalized video content.",
-    tag: ['AI Video'],
-    features: ['AI for creating personalized video content.'],
-    strengths: ['Provides personalized video experiences. - Highly targeted and customizable. - Ideal for personalized marketing campaigns.'],
-    weaknesses: ['Needs high-quality data to perform well. - Requires technical expertise to use fully. - Can be expensive for small businesses.'],
-    targetUsers: ['Content creators, advertisers, marketers.'],
+    tag: ["AI Video"],
+    features: ["AI for creating personalized video content."],
+    strengths: [
+      "Provides personalized video experiences. - Highly targeted and customizable. - Ideal for personalized marketing campaigns.",
+    ],
+    weaknesses: [
+      "Needs high-quality data to perform well. - Requires technical expertise to use fully. - Can be expensive for small businesses.",
+    ],
+    targetUsers: ["Content creators, advertisers, marketers."],
   },
   {
     key: "vizard",
     name: "Vizard",
-    logo: vizardlogo,
+    logo: "https://drive.google.com/uc?export=view&id=1h93RQWej7RFCjY793e_V9hvBTD55XSj0",
     price: [
       { service: "Creator", price: "$29/ month" },
       { service: "Business", price: "$39/ month" },
@@ -1347,16 +1297,20 @@ export const botData = [
     headquarters: "United States (US)",
     founded: "2023",
     summary: "AI-based video editing tool.",
-    tag: ['AI Video'],
-    features: ['AI-based video editing tool.'],
-    strengths: ['Automated video editing for speed. - Includes templates and presets. - Great for social media content.'],
-    weaknesses: ['Lacks full customization for professional editing. - Limited advanced features for experienced editors. - Can be less intuitive for new users.'],
-    targetUsers: ['Social media marketers, video creators.'],
+    tag: ["AI Video"],
+    features: ["AI-based video editing tool."],
+    strengths: [
+      "Automated video editing for speed. - Includes templates and presets. - Great for social media content.",
+    ],
+    weaknesses: [
+      "Lacks full customization for professional editing. - Limited advanced features for experienced editors. - Can be less intuitive for new users.",
+    ],
+    targetUsers: ["Social media marketers, video creators."],
   },
   {
     key: "elevenlabs",
     name: "ElevenLabs",
-    logo: elevenlabslogo,
+    logo: "https://drive.google.com/uc?export=view&id=1iYSFneBDLw-uWRgsGqkZFq8o9lb57iNA",
     price: [
       { service: "Starter", price: "$5/ month" },
       { service: "Creator", price: "$22/ month" },
@@ -1366,33 +1320,39 @@ export const botData = [
     headquarters: "United States (US)",
     founded: "2022",
     summary: "AI for creating realistic voiceovers.",
-    tag: ['AI Audio'],
-    features: ['AI for creating realistic voiceovers.'],
-    strengths: ['High-quality, realistic voice generation. - Supports multiple languages and accents. - Customizable voice options.'],
-    weaknesses: ['Requires a lot of processing power. - Can be expensive for high-quality results. - Not ideal for all languages or accents.'],
-    targetUsers: ['Video producers, content creators, marketers.'],
+    tag: ["AI Audio"],
+    features: ["AI for creating realistic voiceovers."],
+    strengths: [
+      "High-quality, realistic voice generation. - Supports multiple languages and accents. - Customizable voice options.",
+    ],
+    weaknesses: [
+      "Requires a lot of processing power. - Can be expensive for high-quality results. - Not ideal for all languages or accents.",
+    ],
+    targetUsers: ["Video producers, content creators, marketers."],
   },
   {
     key: "munch-ai",
     name: "Munch AI",
-    logo: munchlogo,
-    price: [
-      { service: "Pro", price: "$49/ month" },
-    ],
+    logo: "https://drive.google.com/uc?export=view&id=1rh6twy2AixctsK-1KSUTL2jyu5xOnRp3",
+    price: [{ service: "Pro", price: "$49/ month" }],
     link: "https://www.getmunch.com/?utm_campaign=influencers&utm_medium=website&utm_source=rewardful&via=inami",
     headquarters: "Israel (IL)",
     founded: "2019",
     summary: "AI for automating content curation.",
-    tag: ['AI Video'],
-    features: ['AI for automating content curation.'],
-    strengths: ['Automates content creation for blogs and websites. - Time-saving for content marketers. - Helps scale content efforts.'],
-    weaknesses: ['Limited control over final content. - May generate less original content. - Content quality can vary.'],
-    targetUsers: ['Content creators, digital marketers.'],
+    tag: ["AI Video"],
+    features: ["AI for automating content curation."],
+    strengths: [
+      "Automates content creation for blogs and websites. - Time-saving for content marketers. - Helps scale content efforts.",
+    ],
+    weaknesses: [
+      "Limited control over final content. - May generate less original content. - Content quality can vary.",
+    ],
+    targetUsers: ["Content creators, digital marketers."],
   },
   {
     key: "imagineart",
     name: "ImagineArt",
-    logo: imagineartlogo,
+    logo: "https://drive.google.com/uc?export=view&id=1nok7K2RcyHtFgogAZEV6Kdk94lZ0yv1-",
     price: [
       { service: "Basic", price: "$15/ month" },
       { service: "Standard", price: "$30/ month" },
@@ -1403,16 +1363,20 @@ export const botData = [
     headquarters: "United States (US)",
     founded: "2023",
     summary: "AI for generating art from text.",
-    tag: ['AI Design'],
-    features: ['AI for generating art from text.'],
-    strengths: ['Creates high-quality artwork from text. - Ideal for generating unique, custom designs. - Supports multiple art styles.'],
-    weaknesses: ['Limited variety of art styles and formats. - Sometimes produces inconsistent results. - Not suitable for professional-grade art.'],
-    targetUsers: ['Artists, content creators, marketers.'],
+    tag: ["AI Design"],
+    features: ["AI for generating art from text."],
+    strengths: [
+      "Creates high-quality artwork from text. - Ideal for generating unique, custom designs. - Supports multiple art styles.",
+    ],
+    weaknesses: [
+      "Limited variety of art styles and formats. - Sometimes produces inconsistent results. - Not suitable for professional-grade art.",
+    ],
+    targetUsers: ["Artists, content creators, marketers."],
   },
   {
     key: "pictory",
     name: "Pictory",
-    logo: pictorylogo,
+    logo: "https://drive.google.com/uc?export=view&id=1hEyBMRvPR8an-oO4ihlyTbZ9eqKUeiLO",
     price: [
       { service: "Starter", price: "$25/ month" },
       { service: "Professional", price: "$49/ month" },
@@ -1421,12 +1385,853 @@ export const botData = [
     link: "https://pictory.ai/?ref=nam89",
     headquarters: "United States (US)",
     founded: "2020",
-    summary: "Text to Video Conversion: Automatically converts your written content into animated videos, complete with images...",
-    tag: ['AI Video'],
-    features: ['Text to Video Conversion: Automatically converts your written content into animated videos, complete with images and voiceover.', 'Scripted Video Editing: Allows users to edit videos simply by editing the text of the script, making the editing process as easy as editing a document.', 'AI Voiceover: Integrates multiple AI-generated voiceover options for video narration, offering multiple accents and languages.', 'Brand Customization: Allows you to customize videos to match your brand identity, including logos, colors, and fonts.'],
-    strengths: ['Production Efficiency: Significantly reduces video production time by automating editing and formatting tasks.', 'Cost Effective: Reduces the need for expensive video editing software or professional editing services.', 'Accessibility: Simplifies video creation, making it accessible to non-professionals without a complex learning curve.', 'Versatility: Suitable for different types of video content, from marketing videos to educational tutorials.'],
-    weaknesses: ['Internet Dependency: Requires a stable internet connection for all functions.', 'Limited Creative Control: While effective, the automation can limit creative flexibility compared to traditional video editing.', 'Voiceover Limitations: While versatile, AI voiceovers can lack the emotional depth of a narrator.'],
-    targetUsers: ['Content Marketers: Use the tool to quickly produce engaging promotional videos.', 'Educational Institutions: Enhance online learning materials with easy-to-create video content.', 'Social Media Influencers: Create regular video content to engage with followers.', 'Small Business Owners: Produce cost-effective video ads and informational content.', 'Uncommon Use Cases: Used by bloggers to turn articles into video blogs; Used by nonprofits to tell impactful stories in campaigns.'],
+    summary:
+      "Text to Video Conversion: Automatically converts your written content into animated videos, complete with images...",
+    tag: ["AI Video"],
+    features: [
+      "Text to Video Conversion: Automatically converts your written content into animated videos, complete with images and voiceover.",
+      "Scripted Video Editing: Allows users to edit videos simply by editing the text of the script, making the editing process as easy as editing a document.",
+      "AI Voiceover: Integrates multiple AI-generated voiceover options for video narration, offering multiple accents and languages.",
+      "Brand Customization: Allows you to customize videos to match your brand identity, including logos, colors, and fonts.",
+    ],
+    strengths: [
+      "Production Efficiency: Significantly reduces video production time by automating editing and formatting tasks.",
+      "Cost Effective: Reduces the need for expensive video editing software or professional editing services.",
+      "Accessibility: Simplifies video creation, making it accessible to non-professionals without a complex learning curve.",
+      "Versatility: Suitable for different types of video content, from marketing videos to educational tutorials.",
+    ],
+    weaknesses: [
+      "Internet Dependency: Requires a stable internet connection for all functions.",
+      "Limited Creative Control: While effective, the automation can limit creative flexibility compared to traditional video editing.",
+      "Voiceover Limitations: While versatile, AI voiceovers can lack the emotional depth of a narrator.",
+    ],
+    targetUsers: [
+      "Content Marketers: Use the tool to quickly produce engaging promotional videos.",
+      "Educational Institutions: Enhance online learning materials with easy-to-create video content.",
+      "Social Media Influencers: Create regular video content to engage with followers.",
+      "Small Business Owners: Produce cost-effective video ads and informational content.",
+      "Uncommon Use Cases: Used by bloggers to turn articles into video blogs; Used by nonprofits to tell impactful stories in campaigns.",
+    ],
+  },
+  {
+    key: "getresponse",
+    name: "Getresponse",
+    logo: "https://drive.google.com/uc?export=view&id=1yk6gwWAuczT46pYAb_e3KXHfYbWd5_Hm",
+    price: [
+      { service: "Starter", price: "$19/ month" },
+      { service: "Marketer", price: "$59/ month" },
+      { service: "Creator", price: "$69/ month" },
+    ],
+    link: "https://try.getresponsetoday.com/aitooler",
+    headquarters: "Poland",
+    founded: "2021",
+    summary:
+      "All-in-one AI platform for email, landing page, website creation, and marketing automation for small businesses.",
+    tag: ["AI Writing", "AI Website Builder"],
+    features: [
+      "AI Email Generator: Create full emails (content, title, images) integrated with OpenAI for faster campaigns.",
+      "AI Autoresponders & Email Editor: Quickly write and refine email content, change tone, and fix errors.",
+      "AI Campaign Generator: Generate landing pages, welcome emails, and newsletters in minutes, multilingual support.",
+      "AI Landing Page Generator & Website Builder: Automatically create websites or landing pages, drag-and-drop editor, built-in SEO, free hosting, and image libraries.",
+    ],
+    strengths: [
+      "All-in-one platform: email, landing page, website, and marketing automation.",
+      "Built-in AI, easy to use, no need to switch between tools.",
+      "Time-saving: campaigns are auto-created quickly.",
+      "Small business support: user-friendly, many templates, 24/7 support.",
+    ],
+    weaknesses: [
+      "Prompt limit: about 300 characters for AI Assistant.",
+      "Limited free version: No AI, only 30-day trial.",
+      "AI focuses on marketing, less flexible than ChatGPT.",
+      "Basic website design: suitable for small businesses, not for large brands.",
+    ],
+    targetUsers: [
+      "Small businesses and startups: want to deploy marketing campaigns quickly and effectively without a team of experts or code.",
+      "Marketers/email marketers: need fast, easy-to-use tools with AI support from content writing to campaign optimization.",
+      "Content creators and consultants: want to build landing pages, personal websites, courses, newsletters, etc. effectively and with little technical skills.",
+      "Organizations need an “all‑in‑one” marketing solution: from email, automation, analytics, CRM to sales integration (e‑commerce).",
+    ],
+  },
+  {
+    key: "n8n",
+    name: "n8n",
+    logo: "https://drive.google.com/uc?export=view&id=1mczdQi5nUbqv-6X2PhaigEmQamkMvhGV",
+    price: [
+      { service: "Starter", price: "€24/ month" },
+      { service: "Pro", price: "€60/ month" },
+    ],
+    link: "https://n8n.partnerlinks.io/aitooler",
+    headquarters: "Germany",
+    founded: "2019",
+    summary:
+      "Open-source automation platform for building AI-powered workflows and integrations, suitable for all skill levels.",
+    tag: ["AI Workflow"],
+    features: [
+      "Flexible workflow automation: build workflows visually or with code.",
+      "400+ integrations: easily connect with Slack, Salesforce, Asana, and more.",
+      "Custom AI agents: build multi-step AI agents and integrate any language model.",
+      "Self-hosting: users can fully self-host for complete data and workflow control.",
+    ],
+    strengths: [
+      "Highly customizable: build workflows with custom code or drag-and-drop.",
+      "Powerful integration: connect with many popular systems and apps.",
+      "User-friendly interface simplifies automation for non-technical users.",
+      "Large community and abundant support resources.",
+    ],
+    weaknesses: [
+      "Initial learning curve for mastering all features.",
+      "Self-hosted setup and integration management can be resource-intensive for small teams.",
+    ],
+    targetUsers: [
+      "IT Operations: streamline processes like onboarding and IT request management.",
+      "Security Operations Center: automate incident request enrichment and response.",
+      "Developers and DevOps: turn natural language commands into API calls.",
+      "Sales teams: analyze customer reviews to improve sales.",
+      "Educational institutions: teach automation concepts.",
+      "Freelancers: automate client project processes.",
+    ],
+  },
+  {
+    key: "deep-art-effects",
+    name: "Deep Art Effects",
+    logo: "https://drive.google.com/uc?export=view&id=1Zh6hoFFdfmbJPVYIQMPFDLaSG3Ve-TzK",
+    price: [
+      { service: "1 Month Subscription", price: "$9.90" },
+      { service: "3 Month Subscription", price: "$25" },
+      { service: "1 Year Subscription", price: "$80" },
+    ],
+    link: "https://www.kqzyfj.com/click-101370926-13982634",
+    headquarters: "Germany",
+    founded: "2016",
+    summary:
+      "AI tool for transforming photos/videos into artworks, upscaling and colorizing images, and works fully offline.",
+    tag: ["AI Design", "AI Video"],
+    features: [
+      "AI Art Transformation: Converts photos or videos into artworks inspired by famous painters (e.g., van Gogh, Monet, Picasso) using neural style transfer.",
+      "Image Upscaling: Enhances image resolution up to 4× without loss of quality.",
+      "Photo Colorization: Automatically colorizes black-and-white photos using AI.",
+      "Offline Processing: Desktop version works fully offline, protecting privacy and complying with GDPR.",
+      "Custom Style Filters: Users can upload their own images to create personalized artistic filters.",
+      "Mobile Support: Available on iOS and Android with real-time style previews and hundreds of filters.",
+      "API & SDK for Developers: Offers integration for companies to embed Deep Art Effects in their own apps or services.",
+    ],
+    strengths: [
+      "Privacy-First: Offline processing means nothing is uploaded—perfect for users concerned with data security.",
+      "Cross-Platform: Available on Windows, Mac, Linux, Android, iOS, and even Chromebook.",
+      "Creative Customization: Ability to generate unique filters from user-uploaded styles makes it more personal than apps like Prisma.",
+      "Affordable Pricing: Monthly: ~$6–10, Lifetime license: ~$129 with free updates.",
+      "Beginner-Friendly UI: Intuitive design, no technical skills required.",
+      "Batch Processing (desktop): Allows users to apply effects to multiple images simultaneously.",
+    ],
+    weaknesses: [
+      "Slower Rendering: Especially on low-end desktops, high-quality rendering can be slow.",
+      "Free Version Limitations: Fewer filters and lower-quality output unless upgraded.",
+      "Art Filters Can Feel Outdated: Compared to newer AI art tools like Midjourney or DALL·E, the styles might seem less fresh or trendy.",
+      "Limited Fine Control: No granular control over brush stroke styles or specific areas of image transformation.",
+    ],
+    targetUsers: [
+      "Casual creatives: Turn everyday photos into artwork with no design skills needed",
+      "Freelancers / Designers: Generate quick artistic mockups, posters, or photo enhancements",
+      "Privacy-conscious users: Those needing full local processing without cloud uploads",
+      "Small businesses / marketers: Create stylized product visuals or branded social media content",
+      "Developers: Integrate artistic transformation into their apps via API or SDK",
+    ],
+  },
+  {
+    key: "verbalate-ai",
+    name: "Verbalate AI",
+    logo: "https://drive.google.com/uc?export=view&id=1awyJlCKtcD4vfgkdMFW2zp5CVvpG3i_V",
+    price: [
+      { service: "Translator", price: "$9 / Month" },
+      { service: "Creator", price: "$49 / Month" },
+    ],
+    link: "https://verbalate.ai?fpr=inami",
+    headquarters: "Australia",
+    founded: "2023",
+    summary:
+      "AI-powered audio and video translation with dubbing, voice cloning, lip sync, and API access for global content.",
+    tag: ["AI Video", "AI Audio"],
+    features: [
+      "AI Audio & Video Translation: Automatically translates audio and video content into multiple languages with AI-powered dubbing.",
+      "Voice Cloning: Replicates a speaker’s voice using just ~1 minute of original audio. Supports 29 languages and 50+ accents.",
+      "Lip Sync: Aligns translated voice with lip movements for natural-looking results.",
+      "Subtitles & SRT File Management: Generates subtitles in various languages with options for editing and back-translation.",
+      "Background Audio Control: Option to keep or remove ambient sound for clarity or atmosphere.",
+      "AI Avatar Twins: Creates multilingual digital avatars for interactive or localized presentations.",
+      "Human-in-the-Loop Translation: Offers manual review and correction by professional linguists (for enterprise clients).",
+      "API & SDK Access: Enables integration into business workflows, apps, or platforms.",
+      "Supports 230+ Languages and 800+ Language Pairs: Covers over 95% of online content languages.",
+    ],
+    strengths: [
+      "High-Quality Voice & Lip Sync: Maintains tone and realism, resulting in localized videos that feel authentic.",
+      "Extensive Language Coverage: Suitable for global audiences with wide localization needs.",
+      "Versatile Use Cases: Serves creators, educators, businesses, legal/medical professionals, and agencies.",
+      "Flexible Pricing: Includes freemium access, $9/month for light users, $49/month for creators, and scalable enterprise options.",
+      "AI + Human Hybrid Model: Balances speed with precision by allowing human validation.",
+      "Ethical Guardrails: Adds watermarking to AI-generated voice to prevent misuse or impersonation.",
+    ],
+    weaknesses: [
+      "Limited Free Trial: Only allows a few minutes of translation, which restricts hands-on evaluation.",
+      "Can Become Expensive at Scale: Frequent use or long videos may require higher-tier plans quickly.",
+      "Minor Translation or Sync Errors: Occasional issues may require manual review in critical contexts.",
+      "Advanced Features Are Paywalled: Voice avatars, human validation, and API access are only in higher-tier plans.",
+    ],
+    targetUsers: [
+      "Content Creator: Translate and dub YouTube or social media videos to reach international viewers.",
+      "Educator / E‑Learning Producer: Localize online courses into multiple languages while keeping the original speaker's voice.",
+      "Small to Mid‑Size Business: Create multilingual product tutorials or marketing videos without hiring translators.",
+      "Agency / Localization Studio: Streamline high-volume video translation workflows with AI and human review.",
+      "Enterprise / Developer: Integrate Verbalate’s features into internal systems via API for automated video localization.",
+    ],
+  },
+  {
+    key: "1photoai",
+    name: "1PhotoAI",
+    logo: "https://drive.google.com/uc?export=view&id=1PrlhAVojVjMaz1bH0z3TbdYV4uCIhIBH",
+    price: [
+      { service: "30 Photo Credits", price: "$20/ month" },
+      { service: "300 Photo Credits", price: "$36/ month" },
+      { service: "600 Photo Credits", price: "$40/ month" },
+    ],
+    link: "https://1photoai.com/?via=inami",
+    headquarters: "",
+    founded: "2023",
+    summary:
+      "Generate AI-powered headshots and avatars in seconds, with 2,000+ artistic styles and web-based interface.",
+    tag: ["AI Design", "AI Photo"],
+    features: [
+      "AI-generated headshots and avatars from a single selfie in about 10 seconds.",
+      "Over 2,000 styles available: from professional, anime, pixel art, to emoji and fantasy.",
+      "HD enhancement: turns blurry or old images into high-definition versions.",
+      "Face-to-many conversion: creates multiple artistic versions of one face (e.g., emoji, sticker, 3D render).",
+      "100% web-based; works in browser without app download.",
+      "Operates on a credit-based pricing system (monthly and one-time options).",
+      "Offers free trial credits to let users test the tool.",
+    ],
+    strengths: [
+      "Fast generation speed (~10 seconds per image).",
+      "Wide variety of styles covering both professional and fun use cases.",
+      "Beginner-friendly UI that doesn’t require technical skills.",
+      "Affordable pricing compared to traditional headshot photography or custom avatar services.",
+      "Supports bulk processing for multiple photos.",
+    ],
+    weaknesses: [
+      "Output depends on selfie quality — poorly lit or blurry photos yield worse results.",
+      "Some styles may look overly artificial or repetitive.",
+      "Lacks manual fine-tuning controls or post-editing features.",
+      "No mobile app or offline version — only usable online.",
+      "Limited transparency around privacy policies and support service.",
+    ],
+    targetUsers: [
+      "Professionals: Generate polished headshots for LinkedIn, resumes, and business profiles",
+      "Content Creators / Influencers: Create stylish, unique avatars for YouTube, TikTok, Instagram, or personal branding",
+      "Gamers / Streamers: Design fantasy-style avatars or personalized profile images for gaming channels",
+      "Casual Users: Restore or enhance personal selfies and vintage photos in high definition",
+    ],
+  },
+  {
+    key: "createstudio",
+    name: "CreateStudio",
+    logo: "https://drive.google.com/uc?export=view&id=1WK-c6TgYWkVnRQ_MsWLnbT-2Skg6LK1s",
+    price: [
+      { service: "Standard", price: "$27/ month" },
+      { service: "Platinum", price: "$37/ month" },
+      { service: "All Access", price: "$47/ month" },
+    ],
+    link: "https://aff.vidello.com/37289/161819",
+    headquarters: "United Kingdom",
+    founded: "2018",
+    summary:
+      "Desktop video editor for 2D/3D animation, templates, and AI-powered features, ideal for marketers and creators.",
+    tag: ["AI Video"],
+    features: [
+      "Desktop-based video editor for Windows and macOS using drag-and-drop timeline interface",
+      "Supports both 2D and 3D animation with simple scene and character building tools",
+      "Includes hundreds of pre-built templates: intros, explainers, ads, social media layouts",
+      "Offers a customizable character library with adjustable clothing, actions, and expressions",
+      "Built-in animation tools: keyframes, preset motions, doodle effects, green screen, text animation",
+      "AI-powered features: image generation, background removal, text-to-speech, video scripts",
+      "Multiple export formats including HD/4K, square and vertical formats, and alpha channel video",
+      "Regular updates with new characters, scenes, and visual elements",
+    ],
+    strengths: [
+      "Extremely user-friendly interface suitable for beginners and non-designers",
+      "Large asset library with templates, characters, music, and backgrounds",
+      "One-time lifetime license option available, along with commercial use rights",
+      "Active tutorial ecosystem and responsive customer support",
+      "Versatile content creation options: explainers, promo videos, social shorts, sales videos",
+      "AI automation reduces time spent on repetitive tasks like voiceovers and edits",
+    ],
+    weaknesses: [
+      "Only available as a desktop app — no mobile or web version",
+      "Lip-syncing functionality is basic and lacks precision for detailed voice animation",
+      "Limited advanced motion paths for character positioning and dynamic scenes",
+      "Base version includes restricted asset access; full library requires additional purchases",
+      "Rendering time for large videos may be slow on low-performance machines",
+    ],
+    targetUsers: [
+      "Marketers / Small Businesses: Create explainer videos, product promos, and social media ads",
+      "Content Creators / YouTubers: Build animated video content, tutorials, and branding elements",
+      "Educators / Trainers: Develop instructional videos, doodle explainers, and course summaries",
+      "Freelancers / Agencies: Deliver professional animated videos to clients with commercial licensing",
+      "Startups / Entrepreneurs: Produce high-quality video pitches, walkthroughs, and landing page content",
+    ],
+  },
+  {
+    key: "uphex",
+    name: "Uphex",
+    logo: "https://drive.google.com/uc?export=view&id=1iIqxYjYb2fHIshJlsQb-eCKpnVLiCtR4",
+    price: [
+      { service: "Starter", price: "$97/ month" },
+      { service: "Growth", price: "$297/ month" },
+      { service: "Unlimited", price: "$497/ month" },
+    ],
+    link: "https://uphex.com?fpr=inami",
+    headquarters: "United States",
+    founded: "2013",
+    summary:
+      "All-in-one AI ad automation platform for agencies, centralizing Facebook and Google Ads with templates and analytics.",
+    tag: ["AI Ads", "AI Social Media"],
+    features: [
+      "All-in-one advertising automation platform designed specifically for agencies",
+      "Centralizes Facebook and Google Ads management into one unified dashboard",
+      "AI-powered ad assistant (Uppie AI) generates high-converting copy and creatives based on proven campaigns",
+      "Blueprint system allows agencies to templatize campaigns for quick duplication across clients",
+      "Three-click campaign launch from blueprint to live ad deployment",
+      "Client portal gives clients access to real-time campaign performance and metrics",
+      "Deep integration with GoHighLevel for lead routing, automation, and CRM workflows",
+      "Real-time analytics and aggregated performance insights across all ad accounts",
+    ],
+    strengths: [
+      "Significantly reduces ad creation time using AI and reusable templates",
+      "Ensures consistency in ad quality with training data from top-performing campaigns",
+      "Easy to scale across dozens or hundreds of clients with blueprint-based automation",
+      "Transparent performance reporting builds trust with clients",
+      "Seamless integration with GoHighLevel helps manage leads and follow-ups effectively",
+      "Active support ecosystem with onboarding, documentation, and live training",
+    ],
+    weaknesses: [
+      "Focused mainly on Facebook and Google Ads — lacks support for other major platforms like TikTok or LinkedIn",
+      "Optimized for users within the HighLevel ecosystem — standalone users may miss out on full capabilities",
+      "Automation may limit customization for complex or niche ad strategies",
+      "Not ideal for one-person operations or businesses managing only one or two clients",
+      "Creative control is limited if users want unique, highly customized visuals or copy",
+    ],
+    targetUsers: [
+      "Marketing Agencies / SMMAs: Automate and manage multi-client ad campaigns efficiently across Facebook and Google",
+      "HighLevel-Based Agencies: Leverage direct integration to connect ads with CRM pipelines, lead capture, and automation flows",
+      "Freelance Ad Managers: Launch consistent, proven campaigns using templates and AI without manual setup",
+      "White-Label SaaS Agencies: Resell ad services powered by UpHex without needing in-house fulfillment teams",
+      "Data-Driven Teams: Analyze and optimize ads using real-time aggregated performance data from client portfolios",
+    ],
+  },
+  {
+    key: "riverside",
+    name: "Riverside",
+    logo: "https://drive.google.com/uc?export=view&id=1Ra1uPE7xE0NncarfzYgVTp1xC0QXV1wV",
+    price: [
+      { service: "Standard", price: "$19/ month" },
+      { service: "Pro", price: "$29/ month" },
+    ],
+    link: "https://www.riverside.fm/?utm_campaign=campaign_5&utm_medium=affiliate&utm_source=rewardful&via=inami",
+    headquarters: "Israel",
+    founded: "2020",
+    summary:
+      "Studio-quality local recording platform with AI tools for video/audio, transcription, and live streaming.",
+    tag: ["AI Video"],
+    features: [
+      "Records audio and video locally per participant, supporting up to 4K video and 48 kHz WAV audio",
+      "Provides separate audio and video tracks for each speaker, enabling advanced editing and noise removal",
+      "AI-powered tools including transcription in over 100 languages, text-based video editing, and automatic removal of filler words",
+      "Magic Clips feature extracts short-form highlights automatically for social media repurposing",
+      "Transcript-based editor allows intuitive timeline control and speaker layout customization",
+      "Built-in live streaming with branding options and multi-platform simulcasting",
+      "Mobile apps available for iOS and Android, enabling guest participation or remote recording on the go",
+    ],
+    strengths: [
+      "High-quality recording unaffected by internet connection thanks to local capture on each device",
+      "Robust AI tools accelerate editing and production workflows with transcription, trimming, and auto-generated clips",
+      "Access to individual tracks gives editors flexibility in sound balancing, cleanup, and precision cuts",
+      "User-friendly interface ideal for non-technical creators with transcript-based editing",
+      "Enables both content creation and real-time broadcasting from a single platform",
+    ],
+    weaknesses: [
+      "Files can be lost or corrupted if users close the browser before upload is completed",
+      "Limited for complex post-production needs compared to full-featured video/audio editing software",
+      "Lower-tier plans restrict recording hours and storage capacity",
+      "Support response time may lag during periods of high traffic or technical demand",
+    ],
+    targetUsers: [
+      "Podcasters / Interview Hosts: Record remote interviews in studio quality and edit faster using AI-enhanced transcription and editing tools",
+      "Content Creators / YouTubers: Capture high-resolution videos, edit via transcripts, and extract clips for social platforms",
+      "Educators / Online Instructors: Deliver lectures or webinars remotely with local recording quality and AI-assisted post-processing",
+      "Live Streamers / Event Hosts: Broadcast branded events live while retaining clean recordings for future editing and republishing",
+      "Journalists / Researchers: Record remote conversations with transcription and speaker separation for efficient quoting and archiving",
+    ],
+  },
+  {
+    key: "exemplary-ai",
+    name: "Exemplary AI",
+    logo: "https://drive.google.com/uc?export=view&id=178o1L3AWdYm9Pq2adx6k5tuxvdBbUw69",
+    price: [
+      { service: "Starter", price: "$12/ month" },
+      { service: "Pro", price: "$39/ month" },
+    ],
+    link: "https://exemplary.ai/?via=inami",
+    headquarters: "United States",
+    founded: "2019",
+    summary:
+      "AI-driven platform for repurposing long-form video/audio into multiple formats, with transcript-based editing.",
+    tag: ["AI Video"],
+    features: [
+      "AI-powered platform that repurposes long-form video or audio into multiple content formats",
+      "Transcription engine supports over 120 languages with high accuracy",
+      "Text-based video editor allows cutting and adjusting directly through the transcript",
+      "Automatically generates short-form clips, audiograms, summaries, and social-media-ready content",
+      "AI writer creates show notes, episode titles, blog posts, and video descriptions",
+      "Tools for adding branded elements like B-roll, captions, templates, and dynamic audiograms",
+      "Integrated AI Chat assistant for generating follow-up content or variations based on transcript prompts",
+      "Export options include subtitles, formatted text, summaries, and clips",
+    ],
+    strengths: [
+      "Dramatically reduces time and cost for content production and repurposing",
+      "High transcription accuracy across multiple languages and dialects",
+      "Centralized workflow from raw file to finished content without switching platforms",
+      "Beginner-friendly interface with document-style transcript editing",
+      "Wide variety of outputs: from subtitles and social reels to full articles and audiograms",
+      "Built-in integration with major platforms like YouTube, Zoom, Google Drive, and Dropbox",
+    ],
+    weaknesses: [
+      "Pricing may not be ideal for solo creators or casual users",
+      "Some advanced features have a learning curve, especially prompt-based content generation",
+      "Editing flexibility is limited compared to professional video editors",
+      "Processing large or lengthy files can require notable time or system resources",
+    ],
+    targetUsers: [
+      "Content Creators / Marketers: Repurpose podcasts, interviews, and webinars into clips, posts, and blog content for multichannel distribution",
+      "Educators / Trainers: Generate multilingual transcripts, lesson highlights, captions, and summaries from recorded lectures",
+      "Media Teams / Journalists: Produce written articles, short videos, and quotes from interviews or event recordings",
+      "Business Teams / Researchers: Automate transcription, subtitle creation, and content summarization for meetings, trainings, or documentation",
+      "Podcasters: Quickly generate show notes, promotional snippets, and episode summaries from full-length recordings",
+    ],
+  },
+  {
+    key: "aragon-ai",
+    name: "Aragon.ai",
+    logo: "https://drive.google.com/uc?export=view&id=18EbsJXvZTRE4s_L5ainuYNQ33EhcgnJC",
+    price: [
+      { service: "Basic", price: "$44/ month" },
+      { service: "Standard", price: "$56/ month" },
+      { service: "Executive", price: "$94/ month" },
+    ],
+    link: "https://www.aragon.ai/?via=inami",
+    headquarters: "United States",
+    founded: "2023",
+    summary:
+      "AI-powered platform for generating professional headshots from selfies, with privacy focus and fast turnaround.",
+    tag: ["AI Photo", "AI Design"],
+    features: [
+      "AI-powered platform that generates professional headshots from user-submitted selfies",
+      "Supports multiple styles including formal, casual, and business-themed backdrops and outfits",
+      "High-resolution outputs up to 2048×2560 pixels with clear facial detail",
+      "Batch generation produces 20 to 100 headshots in one session depending on the selected plan",
+      "Simple workflow: upload selfies, choose style or profession, and receive edited headshots in 30–60 minutes",
+      "Offers optional tools like unblurring, sharpening, and branded email signature templates",
+      "Emphasizes data privacy: complies with GDPR/CCPA, encrypts data, and deletes images after processing",
+    ],
+    strengths: [
+      "Delivers high-quality headshots in under one hour, much faster than traditional photoshoots",
+      "Generates a wide variety of poses, styles, and expressions per photo session",
+      "Cost-effective alternative to hiring a professional photographer",
+      "Clean and intuitive user interface, easy for non-technical users",
+      "Strong focus on data privacy and user consent, making it suitable for professional use",
+    ],
+    weaknesses: [
+      "Output quality is highly dependent on the quality of uploaded selfies",
+      "Limited manual control — no detailed photo retouching or advanced customization options",
+      "Occasional issues with facial distortions or unnatural lighting in some generated images",
+      "Does not support group photos or collaborative scenes",
+      "Not ideal for users with niche styling needs beyond the available presets",
+    ],
+    targetUsers: [
+      "Professionals / Job Seekers: Create polished headshots for LinkedIn profiles, resumes, and job applications",
+      "Entrepreneurs / Business Owners: Produce consistent personal branding photos for websites and marketing assets",
+      "Content Creators / Influencers: Refresh social profile images with new, studio-style visuals",
+      "Corporate Teams / HR Departments: Generate a unified set of headshots for team bios and directories",
+      "Busy Individuals: Obtain professional-looking portraits quickly without scheduling a photographer",
+    ],
+  },
+  {
+    key: "remove-bg",
+    name: "remove.bg",
+    logo: "https://drive.google.com/uc?export=view&id=1nOHZ63SWDTlS2MKunuEgEePXOySuGuH1",
+    price: [
+      { service: "Lite", price: "$8.10/ month" },
+      { service: "Pro", price: "$35.10/ month" },
+      { service: "Volume+", price: "$80.10/ month" },
+    ],
+    link: "https://www.remove.bg/r/JJ5zk8epCMYouxBTjqZcaG6x?locale=vi",
+    headquarters: "Austria",
+    founded: "2018",
+    summary:
+      "AI tool for fast, automatic background removal from images, supporting high-res, batch, and API integration.",
+    tag: ["AI Photo", "AI Design"],
+    features: [
+      "AI-powered tool that removes backgrounds from images automatically in seconds",
+      "Supports high-resolution output up to 50 megapixels with export formats including PNG, JPG, and WebP",
+      "Batch processing capabilities for removing backgrounds from multiple images at once",
+      "Available on web, desktop apps (Windows, macOS, Linux), Android mobile app, and as a Photoshop plugin",
+      "Offers API access for automation in custom applications or workflows",
+      "Includes Magic Brush tool for manual refinements, background replacement, blur effects, and shadow adjustments",
+      "Focus on secure image handling with policies for deletion and privacy compliance",
+    ],
+    strengths: [
+      "Fast and accurate background removal, even around fine details like hair and transparent edges",
+      "Extremely easy to use with no design experience required",
+      "Wide range of integrations including Photoshop, Shopify, WooCommerce, Figma, and Zapier",
+      "Suitable for high-volume workflows through batch uploads and developer-friendly API",
+      "Cross-platform availability allows flexibility across desktop, mobile, and web environments",
+    ],
+    weaknesses: [
+      "Limited to background removal; lacks advanced photo editing or design capabilities",
+      "Free version only supports low-resolution downloads",
+      "Struggles occasionally with transparent or reflective surfaces, causing artifacts",
+      "Requires internet connection; no offline functionality for core features",
+    ],
+    targetUsers: [
+      "Photographers / Creatives: Quickly isolate subjects from backgrounds for portfolio shots or design work",
+      "E-Commerce Sellers: Clean up product images in bulk for online listings on platforms like Amazon and Shopify",
+      "Marketing Teams / Designers: Prepare ad creatives, thumbnails, and branded visuals without manual editing",
+      "Developers / Automation Engineers: Integrate background removal into applications or backend pipelines using the API",
+      "Content Creators / Influencers: Generate clean and professional-looking profile images or social content",
+      "Businesses / Agencies: Process large sets of visuals efficiently for campaigns, documents, and presentations",
+    ],
+  },
+  {
+    key: "headshotpro",
+    name: "HeadshotPro",
+    logo: "https://drive.google.com/uc?export=view&id=1NsN2vxPgf_ekiBDi1snycKFxdUhHhn-Z",
+    price: [
+      { service: "Basic", price: "$29" },
+      { service: "Professional", price: "$39" },
+      { service: "Executive", price: "$59" },
+    ],
+    link: "https://www.headshotpro.com/?via=inami",
+    headquarters: "Netherlands",
+    founded: "2023",
+    summary:
+      "Transform selfies into studio-quality headshots with AI, fast delivery and commercial rights, for teams and individuals.",
+    tag: ["AI Photo", "AI Design"],
+    features: [
+      "AI platform that transforms selfies into professional-quality headshots",
+      "Generates up to 100–200 images per session with varied backgrounds and outfits",
+      "Turnaround typically between 1 to 3 hours depending on plan",
+      "Offers multiple background options and wardrobe styles per package",
+      "Users own full commercial rights to all generated images",
+      "Includes basic editing credits for regenerations if initial results are unsatisfactory",
+      "Secure handling of uploaded images with guaranteed deletion once processing is complete",
+    ],
+    strengths: [
+      "Produces realistic, studio-like headshots with consistent lighting and sharpness",
+      "Very fast delivery compared to traditional photoshoots—usually within a couple of hours",
+      "Cost-effective: starting around $29 for dozens of high-quality headshots",
+      "Clear process guidelines (e.g., photo quality, angles) help users optimize results",
+      "Good options for both individual and team orders, with volume plan upgrades",
+      "Offers refund guarantee if no usable headshot is delivered",
+    ],
+    weaknesses: [
+      "Requires uploading a large number of selfies (around 12–20) for best performance",
+      "Customization options are limited—poses, expressions, and backgrounds are predefined",
+      "Some output photos may include facial inconsistencies or minor distortions",
+      "Less personalization than a live photoshoot, including lack of creative direction",
+      "Dependent on input quality—poor lighting or framing in selfies impacts final results",
+    ],
+    targetUsers: [
+      "Professionals / Job Seekers: Quickly generate polished headshots for LinkedIn, resumes, or job applications",
+      "Remote Teams / HR Departments: Standardize team portrait style for corporate directories without needing on-site photoshoots",
+      "Entrepreneurs / Small Business Owners: Create high-quality personal branding images affordably and efficiently",
+      "Content Creators / Freelancers: Generate multiple headshots in varied styles for social media profiles or portfolios",
+      "Event Speakers / Panelists: Easily produce consistent promo headshots for conferences or online profiles",
+    ],
+  },
+  {
+    key: "tinderprofile-ai",
+    name: "TinderProfile.ai",
+    logo: "https://drive.google.com/uc?export=view&id=19FStBZRMsKU_5dEP7SDKenLMKW2Blnco",
+    price: [{ service: "Single Plan", price: "$29" }],
+    link: "https://tinderprofile.ai/?via=inami",
+    headquarters: "Germany",
+    founded: "2023",
+    summary:
+      "AI tool for generating and enhancing dating profile images with professional quality, customizable scenes, and fast delivery.",
+    tag: ["AI Social Media", "AI Photo"],
+    features: [
+      "AI-powered tool designed to enhance online dating profiles by generating professional-quality images",
+      "Users upload ~10–30 selfies; AI creates over 100 realistic photos in multiple outfits, settings, and styles",
+      "Supports custom scene creation via text prompts so users can appear in specific scenarios",
+      "Fast turnaround—typically delivers AI-enhanced images within 1 hour",
+      "Privacy-focused: original photos stored for up to 30 days then deleted; users may request earlier removal",
+      "Money-back guarantee if users are not satisfied with the generated images",
+      "Additional tools include AI-based bio generator in some offerings",
+    ],
+    strengths: [
+      "Transforms ordinary selfies into a large selection of high-quality profile photos tailored for dating apps",
+      "Fast and affordable—significantly cheaper and quicker than hiring a photographer",
+      "Provides variety of looks and backgrounds without needing actual location shoots",
+      "Supports customization via prompt-driven scenes to match user personality",
+      "Backs up service with satisfaction guarantee and data privacy policies",
+      "Trusted by many users, with overall positive ratings (e.g. Trustpilot average ~4.4 stars)",
+    ],
+    weaknesses: [
+      "Quality and likeness depend heavily on quality of uploaded selfies",
+      "AI-generated outputs may include minor facial inconsistencies or unrealistic elements in some images",
+      "Very limited manual editing or creative direction beyond stylistic templates",
+      "Not suited for full-body or group photos—focus is individual dating profile images",
+      "Designed primarily for dating/profile use; limited broader image editing features",
+    ],
+    targetUsers: [
+      "Singles / Dating App Users: Improve match rates on Tinder, Bumble, Hinge, and other apps by using AI-generated photos that enhance first impressions",
+      "Content Creators / Social Influencers: Obtain diverse, branded images for other platforms like Instagram or personal portfolios using stylized portrait sets",
+      "Professionals / Personal Branding: Update online presence with polished, consistent images without costly studio sessions",
+      "Busy Individuals / Refreshers: Get a full set of fresh profile photos quickly before events or dating app relaunches",
+      "People Seeking Visual Variety: Generate images in different outfits and scenes via prompt-driven customization without needing multiple photoshoots",
+    ],
+  },
+  {
+    key: "hypernatural",
+    name: "Hypernatural",
+    logo: "https://drive.google.com/uc?export=view&id=1-x56MNZZLDLadUuQwFrDK6Fl3h0exfnq",
+    price: [
+      { service: "Creater", price: "$12/ month" },
+      { service: "Pro", price: "$22/ month" },
+      { service: "Unlimited", price: "$48/ month" },
+    ],
+    link: "https://hypernatural.ai/?via=inami",
+    headquarters: "United States",
+    founded: "2023",
+    summary:
+      "Web-based platform for converting scripts, audio, or ideas into short-form videos with 200+ visual styles and AI voices.",
+    tag: ["AI Video", "AI Audio"],
+    features: [
+      "Web-based platform that converts scripts, audio, or rough ideas into polished short-form videos",
+      "Offers over 200 pre-designed visual styles including anime, sketch, comic, photorealistic, and more",
+      "AI-powered B-roll generation that aligns automatically with script content",
+      "Includes a character creator to ensure consistent avatars across videos or content series",
+      "Realistic AI voiceovers with customizable voices and auto-generated captions",
+      "Text-to-video functionality supports script input, uploaded content, and AI-driven storyboarding",
+      "No software installation needed—everything runs in the browser and exports are available in HD",
+    ],
+    strengths: [
+      "Produces full short-form videos in under two minutes, optimized for speed and ease",
+      "No video editing experience required; designed for non-technical creators",
+      "Wide customization range: scenes, voiceovers, styles, and visual elements like stickers or logos",
+      "Free plan available with watermark exports for testing, and paid plans for commercial use",
+      "Includes commercial rights, enabling users to create monetizable branded content",
+    ],
+    weaknesses: [
+      "Output quality may vary depending on how well the script or input is crafted",
+      "Limited editing depth—users cannot fine-tune visuals frame-by-frame",
+      "Free version restricts video length and adds watermarks",
+      "Credit-based model can get expensive when producing longer videos frequently",
+      "Some users may want more granular design control than the platform currently allows",
+    ],
+    targetUsers: [
+      "Content Creators / Influencers: Turn ideas or scripts into ready-to-publish short-form content for platforms like TikTok, Reels, and YouTube Shorts",
+      "Writers / Podcasters: Transform written or audio content into engaging videos for repurposing and broader reach",
+      "Entrepreneurs / Marketers: Produce brand-aligned promotional content quickly without hiring video teams",
+      "Educators / Trainers: Create short explainer videos or educational content using characters, narration, and stylized visuals",
+      "Agencies / Collaborative Teams: Deliver high-volume branded video content to clients using consistent templates and characters",
+    ],
+  },
+  {
+    key: "murf-ai",
+    name: "Murf AI",
+    logo: "https://drive.google.com/uc?export=view&id=1CwnjIFeapnTExf5_qxEvdJUdVV-r3fRL",
+    price: [
+      { service: "Creater", price: "$19/ month" },
+      { service: "Business", price: "$66/ month" },
+    ],
+    link: "https://get.murf.ai/qr7zni6me2kd",
+    headquarters: "United States",
+    founded: "2020",
+    summary:
+      "AI-powered text-to-speech platform with 120+ voices, voice cloning, and voice customization for all content needs.",
+    tag: ["AI Audio"],
+    features: [
+      "AI-powered text-to-speech platform with over 120 natural-sounding voices across 20+ languages and accents",
+      "Voice customization tools including pitch, speed, emphasis, pauses, and emotional tone control",
+      "Advanced features like voice cloning and voice changing for branded or personal voice replication",
+      "Integrated script editor with a timeline-based drag-and-drop interface for full voiceover control",
+      "Supports API integration for embedding voice generation into external apps and workflows",
+      "Browser-based, no installation required, with support for team collaboration and cloud storage",
+      "Commercial usage rights included across most plans",
+      "Free plan available with limited character usage, and paid tiers with expanded access",
+    ],
+    strengths: [
+      "Produces high-quality, natural voiceovers with human-like tone and emotion",
+      "Offers granular control over speech pacing, word emphasis, and intonation",
+      "Extensive language and accent coverage ideal for global or multilingual content",
+      "Intuitive UI makes it accessible to beginners and non-technical users",
+      "Suitable for individuals or teams with collaboration and version control tools",
+      "Scalable for developers and businesses through API and voice branding",
+    ],
+    weaknesses: [
+      "Free version has limited characters and lacks access to premium voices or advanced tools",
+      "High-tier features like voice cloning and translation are locked behind more expensive plans",
+      "Some voices may still sound slightly robotic or inconsistent in longer or complex scripts",
+      "No visual sync features for animation or lip-sync, requiring external editing tools",
+      "Interface can occasionally feel cluttered for new users",
+    ],
+    targetUsers: [
+      "Content Creators / YouTubers: Produce professional voiceovers for videos, explainers, and intros using expressive, customizable AI voices",
+      "Educators / Trainers: Narrate courses and lessons in multiple languages with clear pronunciation and natural pacing",
+      "Marketing Teams / Agencies: Create promotional videos, product demos, and ad voiceovers without recording sessions",
+      "Podcasters / Audio Creators: Generate intros, segments, and narration without needing studio-quality recordings",
+      "Developers / SaaS Builders: Integrate AI voice into apps, virtual assistants, or customer communication via API access",
+    ],
+  },
+  {
+    key: "lucidpic",
+    name: "LucidPic",
+    logo: "https://drive.google.com/uc?export=view&id=17PNk0wwgFJR1v03YZ9z4GaP4lBXdKonW",
+    price: [
+      { service: "Small Plan", price: "$8 / month" },
+      { service: "Medium Plan", price: "$28 / month" },
+      { service: "Large Plan", price: "$76 / month" },
+    ],
+    link: "https://lucidpic.com/?via=inami",
+    headquarters: "United Kingdom",
+    founded: "2023",
+    summary:
+      "AI photo studio for hyper-realistic human images, avatars, and bulk photo generation for branding and content.",
+    tag: ["AI Photo", "AI Design"],
+    features: [
+      "AI photo studio that generates hyper-realistic human images, including headshots, full-body portraits, and avatars",
+      "AI Person Generator allows detailed customization such as age, skin tone, hairstyle, clothing, and expression",
+      "Supports keyword-based prompt generation and fine-tuning of visual themes",
+      "Bulk image generation allows users to create dozens or hundreds of unique images at once",
+      "HD upscaling available for high-resolution output up to 4K",
+      "All generated visuals come with royalty-free commercial usage rights",
+      "Optional animation tools available to turn still images into short videos",
+      "Offers a freemium model with basic credits and paid plans for extended usage",
+    ],
+    strengths: [
+      "Fast generation of professional-quality visuals without requiring a photoshoot",
+      "Highly customizable avatars and portraits, suitable for diverse identity representation",
+      "Scales well for users needing bulk image creation for content, branding, or product displays",
+      "Simple and user-friendly interface suitable for both creatives and non-technical users",
+      "Ideal for creating consistent visual identities across media or digital platforms",
+    ],
+    weaknesses: [
+      "Some poses or facial expressions can appear generic or slightly artificial",
+      "Output quality depends on prompt clarity and input photo quality",
+      "Web-based only; no offline or mobile app support",
+      "Free version is limited in image quantity and export resolution",
+      "Limited editing tools compared to advanced design software",
+    ],
+    targetUsers: [
+      "Designers / Agencies: Create realistic headshots, stock photos, or stylized visuals for websites, campaigns, or client work",
+      "Content Creators / Influencers: Generate high-quality avatars and portraits for branding, thumbnails, or personal pages",
+      "Marketers / eCommerce Sellers: Produce consistent model images or product shots across various ads and listings",
+      "Game Developers / Digital Artists: Build realistic or stylized characters for prototyping, storyboards, or character design",
+      "Corporate Teams / Educators: Generate professional-looking staff photos or teaching visuals with minimal setup",
+    ],
+  },
+  {
+    key: "getimg-ai",
+    name: "getimg.ai",
+    logo: "https://drive.google.com/uc?export=view&id=1z5xD9yxWqjoGowS5UKw8pF7rz3BKnbcA",
+    price: [
+      { service: "Entry", price: "$10" },
+      { service: "Core", price: "$30" },
+      { service: "Plus", price: "$65" },
+      { service: "Ultra", price: "$175" },
+    ],
+    link: "https://getimg.ai/?via=inami",
+    headquarters: "Poland",
+    founded: "2022",
+    summary:
+      "AI platform for instant image generation, editing, upscaling, and video conversion, with batch and API support.",
+    tag: ["AI Photo", "AI Design"],
+    features: [
+      "Generates images from text prompts instantly using AI models like Stable Diffusion",
+      "Provides image-to-image editing including inpainting and outpainting for seamless modifications",
+      "Offers DreamBooth custom model training for personalized styles using reference images",
+      "Includes AI-powered editor with tools like background removal, blend, upscale, and face enhancement",
+      "Converts static images into short video clips using built-in image-to-video tools",
+      "Supports batch processing: generate multiple images at once with high speed",
+      "Runs entirely in the browser—no download needed—and supports integration via API",
+      "High-resolution export up to around 6K depending on plan; commercial usage rights included",
+    ],
+    strengths: [
+      "Rapid image generation with high fidelity to prompt details, typically within seconds",
+      "Broad toolset: creation, editing, upscaling, inpainting, and video conversion all in one platform",
+      "User-friendly interface well-suited for both beginners and professionals",
+      "DreamBooth training enables style consistency and custom output tailored to personal visuals",
+      "Batch and bulk generation capabilities make it efficient for high-volume image workflows",
+      "Offers free monthly allowance (~100 images with limited resolution) and scalable paid tiers",
+    ],
+    weaknesses: [
+      "High-resolution and advanced features are limited to paid plans",
+      "Fine-grained retouching or frame-by-frame editing requires external image editors",
+      "Occasional inconsistency in output realism—some renderings can appear stylized or slightly artificial",
+      "Only browser-based; lacks offline functionality or mobile app support",
+      "DreamBooth training requires multiple reference images and some prompt tuning effort",
+    ],
+    targetUsers: [
+      "Content Creators / Designers: Quickly generate concept visuals, illustrations, thumbnails, or marketing images from text or reference prompts",
+      "E-Commerce Teams / Marketers: Produce varied product or lifestyle visuals in bulk for catalogs, ads, or social campaigns",
+      "Developers / Automation Engineers: Integrate AI-powered visual generation or editing into applications and pipelines via API",
+      "Digital Artists / Illustrators: Build custom characters or scenes using DreamBooth models for consistent style across projects",
+      "Social Media Managers: Create stylized backgrounds, inpaint edits, or short promotional videos without manual graphic editing",
+      "Visual Teams for SMBs: Streamline visual ideation and production with fast generation and built-in editing tools",
+    ],
+  },
+  {
+    key: "claid-ai",
+    name: "claid.ai",
+    logo: "https://drive.google.com/uc?export=view&id=1eGpSxmu8ic7KxbtNw-490n5A2muC0oNb",
+    price: [
+      { service: "Essentials", price: "$9/ month" },
+      { service: "Pro", price: "$35/ month" },
+    ],
+    link: "https://claid.ai?via=inami",
+    headquarters: "United States",
+    founded: "2017",
+    summary:
+      "AI photo studio for e-commerce, enhancing and generating product images with automation, templates, and API integration.",
+    tag: ["AI Photo", "AI Design"],
+    features: [
+      "AI-powered photo studio specialized in enhancing and generating product images for e-commerce",
+      "Includes tools for background removal, smart framing, drop shadows, color correction, and upscaling",
+      "Offers an AI background generator to place products in lifestyle or branded template-based environments",
+      "Supports model generation for fashion or apparel products without needing a photoshoot",
+      "Allows object removal, generative fill, and aspect-ratio adjustments to match platform requirements",
+      "Provides browser-based editor as well as API and Zapier integration for batch processing and automation",
+      "Commercial usage rights and brand-consistent templates available for scalable deployment",
+    ],
+    strengths: [
+      "Designed specifically for marketplaces and online sellers needing consistent, high-quality visuals",
+      "Enables rapid image enhancement at scale, ideal for businesses managing large inventories",
+      "Allows brand teams to lock in color themes, framing styles, and scene aesthetics",
+      "Speeds up content production with automation-ready workflows and customizable templates",
+      "Improves conversion rates by elevating product image quality with minimal manual input",
+    ],
+    weaknesses: [
+      "Optimized only for product and catalog imagery—less effective for creative or artistic photo work",
+      "Lacks offline or mobile functionality; all operations require web or API access",
+      "Custom scene generation may require prompt tuning or setup effort",
+      "Pricing and usage tiers are not transparently listed; may require direct contact for enterprise plans",
+      "Advanced editing features are geared toward product-focused visuals, not general photography",
+    ],
+    targetUsers: [
+      "E-Commerce Sellers / Brands: Automatically enhance and standardize product images for consistent listings across marketplaces",
+      "Marketplace Operators / Aggregators: Scale image processing and apply brand-level visual quality across user-uploaded content",
+      "Marketing Teams / Designers: Create clean, promotional visuals and social-ready assets using templates and AI-enhanced scenes",
+      "Apparel Brands / Fashion Retailers: Generate on-model images and lifestyle backdrops without the cost of physical photoshoots",
+      "Developers / Automation Engineers: Integrate image processing into backend systems using Claid’s API for large-scale visual workflows",
+    ],
   },
 ];
 
@@ -1478,7 +2283,7 @@ export const categories = [
       {
         key: "office-ai-ai-productivity",
         name: "AI Productivity",
-        tools: [{ key: "speakai", nam: "SpeakAI"}],
+        tools: [{ key: "speakai", nam: "SpeakAI" }],
       },
       {
         key: "ai-document",
@@ -1543,10 +2348,11 @@ export const categories = [
         key: "writing-editing-ai-writing",
         name: "AI Writing",
         tools: [
-          { key: "writing-editing-beehiiv-ai", name: "beehiiv AI" },
-          { key: "writing-editing-dupdub", name: "DupDub" },
+          { key: "beehiiv-ai", name: "beehiiv AI" },
+          { key: "dupdub", name: "DupDub" },
           { key: "rask-ai", name: "Rask AI" },
           { key: "sanebox", name: "SaneBox" },
+          { key: "getresponse", name: "Getresponse" },
         ],
       },
       {
@@ -1569,7 +2375,7 @@ export const categories = [
       {
         key: "technology-it-ai-all-in-one",
         name: "AI All In One",
-        tools: [{ key: "technology-it-monica", name: "Monica" }],
+        tools: [{ key: "monica", name: "Monica" }],
       },
       {
         key: "ai-website-builder",
@@ -1579,7 +2385,7 @@ export const categories = [
       {
         key: "ai-detector",
         name: "AI Detector",
-        tools: [],
+        tools: [{ key: "getresponse", name: "Getresponse" }],
       },
       {
         key: "ai-data",
@@ -1597,8 +2403,8 @@ export const categories = [
         key: "design-creative-ai-design",
         name: "AI Design",
         tools: [
-          { key: "design-creative-logome", name: "Logome" },
-          { key: "design-creative-logoai", name: "Logoai" },
+          { key: "logome", name: "Logome" },
+          { key: "logoai", name: "Logoai" },
           { key: "turbologo", name: "Turbologo" },
           { key: "promeai", name: "PromeAI" },
           { key: "imagineart", name: "ImagineArt" },
@@ -1668,7 +2474,10 @@ export const categories = [
       {
         key: "workflow-automation-ai-workflow",
         name: "AI Workflow",
-        tools: [{ key: "workflow-automation-make", name: "Make.com" }],
+        tools: [
+          { key: "workflow-automation-make", name: "Make.com" },
+          { key: "n8n", name: "n8n" },
+        ],
       },
       {
         key: "ai-chatbot",
@@ -1678,3 +2487,94 @@ export const categories = [
     ],
   },
 ];
+
+// export const botData = [
+//   {
+//     key: "",
+//     name: "",
+//     logo: "",
+//     price: [
+//       {
+//         service: "",
+//         price: "",
+//       },
+//       {
+//         service: "",
+//         price: "",
+//       },
+//       {
+//         service: "",
+//         price: "",
+//       },
+//     ],
+//     link: "",
+//     headquarters: "",
+//     founded: "",
+//     summary: "",
+//     tag: [],
+//     features: [
+//       "",
+//       "",
+//       "",
+//     ],
+//     strengths: [
+//       "",
+//       "",
+//       "",
+//     ],
+//     weaknesses: [
+//       "",
+//       "",
+//       "",
+//     ],
+//     targetUsers: [
+//       "",
+//       "",
+//       "",
+//     ],
+//   },
+//   {
+//     key: "",
+//     name: "",
+//     logo: "",
+//     price: [
+//       {
+//         service: "",
+//         price: "",
+//       },
+//       {
+//         service: "",
+//         price: "",
+//       },
+//       {
+//         service: "",
+//         price: "",
+//       },
+//     ],
+//     link: "",
+//     headquarters: "",
+//     founded: "",
+//     summary: "",
+//     tag: [],
+//     features: [
+//       "",
+//       "",
+//       "",
+//     ],
+//     strengths: [
+//       "",
+//       "",
+//       "",
+//     ],
+//     weaknesses: [
+//       "",
+//       "",
+//       "",
+//     ],
+//     targetUsers: [
+//       "",
+//       "",
+//       "",
+//     ],
+//   },
+// ]
