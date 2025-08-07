@@ -60,7 +60,7 @@ const Services = ({
   ],
 }: ServicesProps) => {
   return (
-    <section className="py-48 bg-[#f5f5f5]" id="services">
+    <section className="py-24 sm:py-48 px-8 bg-[#f5f5f5]" id="services">
       <div className="container">
         <div className="mb-10 md:mb-20">
           <h2 className="mb-2 text-center text-3xl font-semibold lg:text-5xl dark:text-gray-900">

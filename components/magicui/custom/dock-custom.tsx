@@ -23,33 +23,18 @@ const DATA = {
   ],
   aiTool: {
     social: {
-      GitHub: {
+      Category: {
         name: "Category",
         url: "/category/all",
         icon: Rows3,
       },
-      // LinkedIn: {
-      //   name: "LinkedIn",
-      //   url: "#",
-      //   icon: Icons.linkedin,
-      // },
-      // X: {
-      //   name: "X",
-      //   url: "#",
-      //   icon: Icons.x,
-      // },
-      // email: {
-      //   name: "Send Email",
-      //   url: "#",
-      //   icon: Icons.email,
-      // },
     },
   },
 };
 
 export function DockCustom() {
   return (
-    <div className="flex flex-col items-center justify-center scale-105">
+    <div className="flex flex-col items-center justify-center md:scale-105 scale-95">
       <TooltipProvider>
         <Dock direction="middle">
           {DATA.navbar.map((item) => (

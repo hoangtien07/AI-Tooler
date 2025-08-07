@@ -2,48 +2,55 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
 import '@/components/magicui/custom/marquee-custom.scss';
-import CatImg from "@/public/AI-gallery/cat.jpg";
-import CityImg from "@/public/AI-gallery/city.jpg";
-import Man from "@/public/AI-gallery/man-1.jpg";
-import Home from "@/public/AI-gallery/home.jpg";
-import Woman from "@/public/AI-gallery/woman.jpg";
-import Chicken from "@/public/AI-gallery/chicken.jpg";
+import AI1 from "@/public/AI-gallery/ai-1.jpg";
+import AI2 from "@/public/AI-gallery/ai-2.jpg"
+import AI3 from "@/public/AI-gallery/ai-3.jpg"
+import AI4 from "@/public/AI-gallery/ai-4.jpg"
+import AI5 from "@/public/AI-gallery/ai-5.jpg"
+import AI6 from "@/public/AI-gallery/ai-6.jpg"
+import AI7 from "@/public/AI-gallery/ai-7.jpg"
+import AI8 from "@/public/AI-gallery/ai-8.jpg"
 
 const reviews = [
   {
     name: "ChatGPT",
     body: "Mind-Blown by the Precision – This Chat is on Another Level!",
-    img: CatImg.src,
+    img: AI1.src,
   },
   {
     name: "Gemini",
     body: "Gemini Just Blew My Mind – Insightful and Lightning Fast!",
-    img: CityImg.src,
+    img: AI2.src,
   },
   {
     name: "Gemini`",
     body: "Gemini Just Blew My Mind – Insightful and Lightning Fast!",
-    img: CityImg.src,
+    img: AI3.src,
   },
   {
     name: "Gemini1",
     body: "Gemini Just Blew My Mind – Insightful and Lightning Fast!",
-    img: Man.src,
+    img: AI4.src,
   },
   {
     name: "ChatGPT`",
     body: "Mind-Blown by the Precision – This Chat is on Another Level!",
-    img: Home.src,
+    img: AI5.src,
   },
   {
     name: "ChatGPT1",
     body: "Mind-Blown by the Precision – This Chat is on Another Level!",
-    img: Woman.src,
+    img: AI6.src,
   },
   {
     name: "ChatGPT2",
     body: "Mind-Blown by the Precision – This Chat is on Another Level!",
-    img: Chicken.src,
+    img: AI7.src,
+  },
+  {
+    name: "ChatGPT3",
+    body: "Mind-Blown by the Precision – This Chat is on Another Level!",
+    img: AI8.src,
   },
 ];
 

@@ -9,12 +9,12 @@ import {Services} from "@/components/Layout/Services/Services";
 export default function Home() {
   return (
     <div>
-      <div className="h-[100vh]">
+      <div>
         <div className="absolute inset-0 -z-10">
           <FlickeringGridCustom />
         </div>
         <div className="container flex items-center h-fit w-full relative">
-          <div className="mt-[160px] mb-2">
+          <div className="mt-[160px] mb-2 ml-8 md:ml-0">
             <MorphingTextCustom />
             <p className="text-[38px] mt-[80px] font-bold">Effortlessly create with </p>
             <p className="text-[38px] font-bold mt-[-8px]">Our <span className="text-[#6938ef]">AI Tools</span></p>
@@ -27,7 +27,7 @@ export default function Home() {
               <li className="flex items-start gap-2">
                 <CheckCircledIcon className="h-6 w-6 text-[#6938ef]" />
                 <span>
-                  <strong className="text-[#6938ef]">Discover</strong> a hand-picked vault of 100+ cutting-edge AI bots, organized by use case
+                  <strong className="text-[#6938ef]">Discover</strong> a hand-picked vault of 50+ cutting-edge AI bots, organized by use case
                 </span>
               </li>
 
@@ -53,7 +53,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className="absolute right-[-100px] top-1/2 transform -translate-y-1/3 z-[-1]">
+          <div className="absolute hidden right-[-100px] top-1/2 transform -translate-y-1/3 z-[-1] md:block">
             <Marquee3D />
           </div>
         </div>

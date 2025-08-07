@@ -49,48 +49,46 @@ const GalleryBotSuggest = ({
     };
   }, [carouselApi]);
   return (
-    <section className="py-32 mt-8">
+    <section className="md:py-32 sm:mt-8 pt-0 pb-32 m-0">
       <div className="container">
-        <div className="mb-8 flex flex-col justify-between md:mb-14 md:flex-row md:items-center lg:mb-16">
-          <div className="flex flex-col justify-self-center-center">
-            <h2 className="mb-3 text-3xl font-semibold md:mb-4 md:text-4xl lg:mb-6">
-              {heading}
-            </h2>
-            <a
-              href={toolUrl}
-              className="group flex items-center gap-1 text-sm font-medium md:text-base lg:text-lg"
-            >
-              Explore all AI Tools
-              <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1" />
-            </a>
-          </div>
-          <div className="mt-8 flex shrink-0 items-center justify-start gap-2">
-            <Button
-              size="icon"
-              variant="outline"
-              onClick={() => {
-                carouselApi?.scrollPrev();
-              }}
-              disabled={!canScrollPrev}
-              className="disabled:pointer-events-auto"
-            >
-              <ArrowLeft className="size-5" />
-            </Button>
-            <Button
-              size="icon"
-              variant="outline"
-              onClick={() => {
-                carouselApi?.scrollNext();
-              }}
-              disabled={!canScrollNext}
-              className="disabled:pointer-events-auto"
-            >
-              <ArrowRight className="size-5" />
-            </Button>
-          </div>
+        <div className="flex flex-col items-center">
+          <h2 className="mb-3 text-3xl font-bold md:mb-4 md:text-4xl lg:mb-6">
+            {heading}
+          </h2>
+          <a
+            href={toolUrl}
+            className="group flex items-center gap-1 text-sm font-medium md:text-base lg:text-lg"
+          >
+            Explore all AI Tools
+            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1" />
+          </a>
+        </div>
+        <div className="mt-8 flex shrink-0 items-center justify-end gap-2">
+          <Button
+            size="icon"
+            variant="outline"
+            onClick={() => {
+              carouselApi?.scrollPrev();
+            }}
+            disabled={!canScrollPrev}
+            className="disabled:pointer-events-auto cursor-pointer"
+          >
+            <ArrowLeft className="size-5" />
+          </Button>
+          <Button
+            size="icon"
+            variant="outline"
+            onClick={() => {
+              carouselApi?.scrollNext();
+            }}
+            disabled={!canScrollNext}
+            className="disabled:pointer-events-auto cursor-pointer"
+          >
+            <ArrowRight className="size-5" />
+          </Button>
         </div>
       </div>
-      <div className="w-full max-w-full">
+      <div className="w-full max-w-full mt-8">
         <Carousel
           setApi={setCarouselApi}
           opts={{
@@ -104,7 +102,7 @@ const GalleryBotSuggest = ({
         >
           <CarouselContent className="hide-scrollbar w-full max-w-full md:-mr-4 md:ml-8 2xl:ml-0 2xl:mr-[max(0rem,calc(50vw-700px-1rem))]">
             {botData.map((item) => (
-              <CarouselItem key={item.key} className="ml-8 md:max-w-[360px]">
+              <CarouselItem key={item.key} className="ml-8 md:max-w-[360px] max-w-[240px]">
                 <a
                   href={`/product/${item.key}`}
                   className="group flex flex-col justify-between "

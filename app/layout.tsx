@@ -28,8 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>  
-       <meta name="impact-site-verification" content="b94e4353-3cd6-40b7-a0ef-00378e410a02" />
-       <meta name="value" content="b94e4353-3cd6-40b7-a0ef-00378e410a02" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="impact-site-verification" content="b94e4353-3cd6-40b7-a0ef-00378e410a02" />
+        <meta name="value" content="b94e4353-3cd6-40b7-a0ef-00378e410a02" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}

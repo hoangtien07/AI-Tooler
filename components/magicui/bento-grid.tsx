@@ -23,7 +23,7 @@ const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
   return (
     <div
       className={cn(
-        "grid w-full auto-rows-[22rem] grid-cols-4 gap-4",
+        "grid w-full sm:grid-cols-4 gap-4 grid-cols-1",
         className,
       )}
       {...props}
@@ -46,7 +46,7 @@ const BentoCard = ({
   <div
     key={props.key}
     className={cn(
-      "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl",
+      "group relative col-span-2 flex flex-col justify-between overflow-hidden rounded-xl h-full",
       // light styles
       "bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
       // dark styles
@@ -60,7 +60,7 @@ const BentoCard = ({
       <div className="p-4">
         <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 transition-all duration-300 lg:group-hover:-translate-y-10">
           <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-700 dark:text-inherit transition-all duration-300 ease-in-out group-hover:scale-75" />
-          <h3 className="text-xl font-semibold text-neutral-600 dark:text-inherit">
+          <h3 className="text-xl font-semibold text-neutral-600 dark:text-inherit clamp-1-lines">
             {name}
           </h3>
           <p className="max-w-lg text-neutral-400 clamp-2-lines">{description}</p>

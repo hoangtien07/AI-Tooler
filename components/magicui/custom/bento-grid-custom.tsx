@@ -12,7 +12,7 @@ const features = [
     href: "/category/growth-marketing",
     cta: "Explore",
     background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-2",
+    className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2",
   },
   {
     Icon: LineSquiggle,
@@ -21,7 +21,7 @@ const features = [
     href: "/category/design-creative",
     cta: "Explore",
     background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-3",
+    className: "lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2",
   },
   {
     Icon: Dock,
@@ -39,7 +39,7 @@ const features = [
     href: "/category/writing-editing",
     cta: "Explore",
     background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3",
+    className: "lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-2",
   },
   {
     Icon: Cpu,
@@ -48,7 +48,7 @@ const features = [
     href: "/category/technology-it",
     cta: "Explore",
     background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3",
+    className: "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3",
   },
   {
     Icon: Workflow,
@@ -57,7 +57,7 @@ const features = [
     href: "/category/workflow-automation",
     cta: "Explore",
     background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-4 lg:col-end-5 lg:row-start-2 lg:row-end-3",
+    className: "lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3",
   },
   {
     Icon: HeartPlus,
@@ -66,7 +66,7 @@ const features = [
     href: "/category/customer-support",
     cta: "Explore",
     background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2",
+    className: "lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-3",
   },
   {
     Icon: School,
@@ -75,13 +75,13 @@ const features = [
     href: "/category/ai-education",
     cta: "Explore",
     background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2",
+    className: "lg:col-start-4 lg:col-end-5 lg:row-start-2 lg:row-end-3",
   },
 ];
 
 export function BentoCustom() {
   return (
-    <div className="container">
+    <div className="container sm:translate-y-0 translate-y-[-80px]">
      <BentoGrid className="lg:grid-rows-2 scale-85">
        {features.map((feature) => (
          <BentoCard key={feature.name} {...feature} />

@@ -4,6 +4,7 @@ import Image from "next/image";
 import DataNotFound from "@/public/nodata-img.jpg"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import React from "react";
 
 type Bot = {
   key: string;
@@ -19,6 +20,13 @@ interface BotListProps {
 }
 
 export function BotList({ bots }: BotListProps) {
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+  if (!mounted) return null // Chỉ render khi đã mounted
+
   if (!bots.length) {
     // return <p>No results found.</p>
     return <div className="flex-1 flex justify-center items-center flex-wrap">
@@ -27,6 +35,7 @@ export function BotList({ bots }: BotListProps) {
       <Button className="cursor-pointer mt-8"><Link href="/category/all">Back to Category</Link></Button>
     </div>
   }
+  
   return (
     <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-4 pr-0">
       {bots.map(item => (

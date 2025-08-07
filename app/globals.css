@@ -146,3 +146,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.clamp-1-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Số dòng muốn hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
