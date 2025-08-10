@@ -2,9 +2,6 @@
   "name": "ai-tooler",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=18 <20"
-  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
