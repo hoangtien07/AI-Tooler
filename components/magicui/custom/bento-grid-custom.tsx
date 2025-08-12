@@ -81,8 +81,8 @@ const features = [
 
 export function BentoCustom() {
   return (
-    <div className="container sm:translate-y-0 translate-y-[-80px]">
-     <BentoGrid className="lg:grid-rows-2 scale-85">
+    <div className="container !mt-[20px]">
+     <BentoGrid>
        {features.map((feature) => (
          <BentoCard key={feature.name} {...feature} />
        ))}

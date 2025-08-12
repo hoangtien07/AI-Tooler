@@ -14,11 +14,9 @@ export default function Home() {
           <FlickeringGridCustom />
         </div>
         <div className="container flex items-center h-fit w-full relative">
-          <div className="mt-[160px] mb-2 ml-8 md:ml-0">
-            <MorphingTextCustom />
-            <p className="text-[38px] mt-[80px] font-bold">Effortlessly create with </p>
-            <p className="text-[38px] font-bold mt-[-8px]">Our <span className="text-[#6938ef]">AI Tools</span></p>
-            
+          <div className="mt-[20px] mb-2">
+            <MorphingTextCustom />            
+            <p className="text-[32px] mt-[80px] font-bold">Effortlessly create with<br className="sm:block hidden"/><span className="text-[38x] font-bold mt-[-8px] sm:ml-0 ml-2">Our <span className="text-[#6938ef]">AI Tools</span></span></p>
             <p className="mt-2 font-semibold text-lg text-gray-800 dark:text-gray-300">
               The only all-in-one gateway to every top-performing tool
             </p>
@@ -53,7 +51,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className="absolute hidden right-[-100px] top-1/2 transform -translate-y-1/3 z-[-1] md:block">
+          <div className="flex-1 h-fit overflow-y-hidden z-[-1] md:block hidden">
             <Marquee3D />
           </div>
         </div>

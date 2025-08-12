@@ -49,10 +49,10 @@ const GalleryBotSuggest = ({
     };
   }, [carouselApi]);
   return (
-    <section className="md:py-32 sm:mt-8 pt-0 pb-32 m-0">
+    <section className="mt-24 md:mt-32 pb-32 m-0">
       <div className="container">
         <div className="flex flex-col items-center">
-          <h2 className="mb-3 text-3xl font-bold md:mb-4 md:text-4xl lg:mb-6">
+          <h2 className="mb-3 text-3xl font-bold md:mb-4 md:text-5xl lg:mb-6">
             {heading}
           </h2>
           <a

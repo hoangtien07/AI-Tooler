@@ -23,7 +23,7 @@ const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
   return (
     <div
       className={cn(
-        "grid w-full sm:grid-cols-4 gap-4 grid-cols-1",
+        "grid w-full grid-cols-4 gap-4",
         className,
       )}
       {...props}

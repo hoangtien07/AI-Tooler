@@ -137,6 +137,8 @@
 .container {
   width: 100%;
   max-width: 1400px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
 }
 .clamp-2-lines {
@@ -154,4 +156,3 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-

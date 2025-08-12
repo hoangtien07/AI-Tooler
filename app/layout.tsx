@@ -33,7 +33,7 @@ export default function RootLayout({
         <meta name="value" content="b94e4353-3cd6-40b7-a0ef-00378e410a02" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative overflow-x-hidden`}
       >
         <div className="absolute bottom-[100%]">
         Impact-Site-Verification: b94e4353-3cd6-40b7-a0ef-00378e410a02
@@ -44,14 +44,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="sticky top-0 left-1/2 transform -translate-x-1/2 z-10">
-            <NavBar />
-          </div>
+          <NavBar />
           <main className="main-content">
             <div>{children}</div>
           </main>
           <footer className="footer bg-black text-white">
-            <div className="container flex justify-between items-center py-3 text-center">
+            <div className="container flex flex-col sm:flex-row justify-between items-center py-3 text-center">
               <p>Email contact: support@aitooler.io</p>
               <p>© 2025 AI Tooler. All rights reserved.</p>
             </div>

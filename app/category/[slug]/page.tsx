@@ -41,7 +41,7 @@ const CategoryPage = () => {
       <div className="container mb-24 min-h-[100vh]">
         <div className="breadcrumb mt-[120px]"><BreadcrumbCustom /></div>
         <div className="sm:flex md:flex-row lg:flex-row gap-4 mt-[20px] relative">
-          <div className="mt-4 mr-6">
+          <div className="mt-4 sm:mr-6 mr-0">
             <input
               type="text"
               value={query}

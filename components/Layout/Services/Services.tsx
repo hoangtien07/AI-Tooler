@@ -60,10 +60,10 @@ const Services = ({
   ],
 }: ServicesProps) => {
   return (
-    <section className="py-24 sm:py-48 px-8 bg-[#f5f5f5]" id="services">
+    <section className="py-24 sm:py-36 px-8 dark:bg-[#171717] dark:text-white bg-[#f5f5f5] text-inherit" id="services">
       <div className="container">
-        <div className="mb-10 md:mb-20">
-          <h2 className="mb-2 text-center text-3xl font-semibold lg:text-5xl dark:text-gray-900">
+        <div className="mb-16 md:mb-20">
+          <h2 className="text-center text-3xl font-bold lg:text-5xl">
             {heading}
           </h2>
         </div>
@@ -73,8 +73,8 @@ const Services = ({
               <div className="mb-5 flex size-16 items-center justify-center rounded-full bg-accent">
                 {reason.icon}
               </div>
-              <h3 className="mb-2 text-xl font-semibold dark:text-gray-700">{reason.title}</h3>
-              <p className="text-muted-foreground dark:text-gray-600">{reason.description}</p>
+              <h3 className="mb-2 text-xl font-semibold dark:text-white">{reason.title}</h3>
+              <p className="text-muted-foreground dark:text-neutral-400">{reason.description}</p>
             </div>
           ))}
         </div>
