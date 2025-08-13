@@ -7,6 +7,8 @@ import { botData, categories } from "@/data/groupsData";
 import { RadioGroupCustom } from "@/components/magicui/custom/radio-group-custom";
 import { BotList } from "@/components/Layout/BotList/BotList";
 import { BreadcrumbCustom } from "@/components/Layout/Breadcrumb/Breadcrum";
+import {SelectCustom} from "@/components/magicui/custom/select-custom";
+
 
 function getBotsByCategory(slug: string) {
   if (!slug || slug === "all") return botData;
@@ -39,7 +41,7 @@ const CategoryPage = () => {
   return (
     <>
       <div className="container mb-24 min-h-[100vh]">
-        <div className="breadcrumb mt-[120px]"><BreadcrumbCustom /></div>
+        <div className="breadcrumb mt-[40px]"><BreadcrumbCustom /></div>
         <div className="sm:flex md:flex-row lg:flex-row gap-4 mt-[20px] relative">
           <div className="mt-4 sm:mr-6 mr-0">
             <input
@@ -49,7 +51,12 @@ const CategoryPage = () => {
               placeholder="Search..."
               className="mb-4 border w-full p-2 rounded-md"
             />
-            <RadioGroupCustom />
+            <div className="hidden sm:block">
+              <RadioGroupCustom />
+            </div>
+            <div className="sm:hidden block">
+              <SelectCustom />
+            </div>
           </div>
           <BotList bots={results} />
         </div>

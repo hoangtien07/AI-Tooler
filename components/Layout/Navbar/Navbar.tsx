@@ -7,12 +7,12 @@ import {MenubarCustom} from "@/components/magicui/custom/menubar-custom";
 const NavBar = () => {
   return (
     <nav className="navbar w-full h-fit sticky top-0 left-0 z-10">
-      <div suppressHydrationWarning>
+      <div suppressHydrationWarning className='hidden sm:block'>
         <DockCustom />
       </div>
-      {/* <div className='block sticky top-0 left-0 p-[8px] w-full h-[40px] bg-neutral-800 border border-b-neutral-900'>
-          <MenubarCustom />
-      </div> */}
+      <div className="block sm:hidden">
+        <MenubarCustom />
+      </div>
     </nav>
   );
 };

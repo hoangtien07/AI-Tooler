@@ -34,7 +34,7 @@ const DATA = {
 
 export function DockCustom() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex-col items-center justify-center">
       <TooltipProvider>
         <Dock direction="middle">
           {DATA.navbar.map((item) => (

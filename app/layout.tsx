@@ -35,7 +35,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative overflow-x-hidden`}
       >
-        <div className="absolute bottom-[100%]">
+        <div className="absolute left-[-100%]">
         Impact-Site-Verification: b94e4353-3cd6-40b7-a0ef-00378e410a02
         </div>
         <ThemeProvider
@@ -49,7 +49,7 @@ export default function RootLayout({
             <div>{children}</div>
           </main>
           <footer className="footer bg-black text-white">
-            <div className="container flex flex-col sm:flex-row justify-between items-center py-3 text-center">
+            <div className="container flex flex-col sm:flex-row justify-between items-center gap-2 p-4 text-center">
               <p>Email contact: support@aitooler.io</p>
               <p>© 2025 AI Tooler. All rights reserved.</p>
             </div>

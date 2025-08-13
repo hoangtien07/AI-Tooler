@@ -37,7 +37,7 @@ export function BotList({ bots }: BotListProps) {
   }
   
   return (
-    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:p-4 sm:mt-0 px-0 mt-8">
+    <div className="flex-1 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:p-4 sm:mt-0 px-0 mt-8">
       {bots.map(item => (
         <CardItem
           key={item.key}

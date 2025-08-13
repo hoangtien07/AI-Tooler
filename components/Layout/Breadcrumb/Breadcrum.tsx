@@ -20,7 +20,7 @@ export const  BreadcrumbCustom = () => {
   }, [pathParts]);
 
   return (
-    <Breadcrumb className="bg-inherit p-4 rounded-lg shadow-md">
+    <Breadcrumb className="bg-inherit p-4 rounded-lg shadow-md ">
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink href="/" className="flex items-center">

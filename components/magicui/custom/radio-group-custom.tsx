@@ -42,23 +42,23 @@ export function RadioGroupCustom() {
                </Label>
           </div>
       {categories.map((category) => (
-  <div key={category.key}>
-    <div className="flex items-center gap-3">
-      <RadioGroupItem value={category.key} id={category.key} />
-      <Label htmlFor={category.key} className="flex-1 mb-1">
-        {category.title} 
-        {/* <span className="text-blue-600">({getTotalTools(category)})</span> */}
-      </Label>
-    </div>
-    {/* <div className="pl-8">
-      {(category.tags ?? []).map(tag => (
-        <div key={tag.key}>
-          {tag.name} <span>({tag.tools.length})</span>
+        <div key={category.key}>
+          <div className="flex items-center gap-3">
+            <RadioGroupItem value={category.key} id={category.key} />
+            <Label htmlFor={category.key} className="flex-1 mb-1">
+              {category.title} 
+              {/* <span className="text-blue-600">({getTotalTools(category)})</span> */}
+            </Label>
+          </div>
+          {/* <div className="pl-8">
+            {(category.tags ?? []).map(tag => (
+              <div key={tag.key}>
+                {tag.name} <span>({tag.tools.length})</span>
+              </div>
+            ))}
+          </div> */}
         </div>
       ))}
-    </div> */}
-  </div>
-))}
 
       </div>
     </RadioGroup>

@@ -33,16 +33,16 @@ export function CardItem({ cardTitle, desc, price, className = "", keyItem, imag
 
   return (
     <div>
-      <Card className={`overflow-hidden border bg-gradient-to-br from-slate-50 to-slate-100 transition-all dark:from-slate-900 dark:to-slate-800 shadow-none flex-row items-center px-6 py-4 h-full ${className}`} {...props} >
-        <div className="w-[25%]">
+      <Card className={`min-w-[200px] overflow-hidden border bg-gradient-to-br from-slate-50 to-slate-100 transition-all dark:from-slate-900 dark:to-slate-800 shadow-none flex-row items-center px-6 py-4 h-full ${className}`} {...props} >
+        <div className="w-[25%] min-w-[40px]">
           <Image src={image ?? "/default-image.png"} width={300} height={300} objectFit="cover" priority={true} alt={typeof cardTitle === "string" ? cardTitle : "Card image"} />
         </div>
-        <div className="flex-col flex-1">
+        <div className="flex-col flex-1 min-w-[80px]">
           <CardContent className="flex-col h-fit items-center justify-center p-2">
             <p className="pointer-events-none text-xl font-medium text-slate-800 dark:text-slate-200 mb-2">
               {cardTitle}
             </p>
-            <CardDescription className="text-sm text-slate-600 dark:text-slate-400 mb-2">
+            <CardDescription className="hidden md:block text-sm min-w-[80px] text-slate-600 dark:text-slate-400 mb-2">
               {desc}
             </CardDescription>      
             {typeof price === "string" || typeof price === "number" ? (

@@ -26,7 +26,7 @@ const CategoryPage = () => {
   }
 
   return (
-    <div className="container !mt-[120px] mx-auto p-4 min-h-[100vh]">
+    <div className="container mx-auto p-4 min-h-[100vh]">
       <BreadcrumbCustom />
       {currentBot ? (                 
       <div className="flex flex-col gap-6 mt-[40px]">
@@ -34,21 +34,23 @@ const CategoryPage = () => {
           <Image src={currentBot.logo} alt={currentBot.name} width={300} height={440} className="h-72 w-full rounded-md object-cover lg:h-auto" />
           <Card className="col-span-2 justify-center p-6">
             <div className="flex flex-col gap-4 px-4">
-              <div className="flex justify-between pr-4">
+              <div className="flex flex-col sm:flex-row justify-between pr-4">
                 <p className="text-xl font-medium lg:text-3xl pl-5">{currentBot.name}</p> 
-                <p className="flex items-end">
+                <div className="flex mt-4 sm:mt-0 sm:items-center items-start">
                   {currentCategory.length > 0
                     ? (<>
                       <span className="ml-[20px] mr-[8px]">Category: </span>
-                      {currentCategory.map((category, index) => (
-                        <span key={category.key} className="text-blue-600">
-                          <Link href={`/category/${category.key}`}>{category.title}</Link>
-                          {index < currentCategory.length - 1 && ", "}
-                        </span>
-                      ))}
+                        <div className="flex flex-col sm:flex-row ">
+                          {currentCategory.map((category, index) => (
+                            <span key={category.key} className="text-blue-600">
+                              <Link href={`/category/${category.key}`}>{category.title}</Link>
+                              {index < currentCategory.length - 1 && ", "}
+                            </span>
+                          ))}
+                        </div>
                       </>)
                     : ""}
-                </p>
+                </div>
               </div>
               <div className="flex flex-col items-start min-h-[200px] justify-center mb-2">
                 <div>{currentBot.features.map((feature, index) => <li key={index}>{feature}</li>)}</div>

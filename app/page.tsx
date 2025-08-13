@@ -14,7 +14,7 @@ export default function Home() {
           <FlickeringGridCustom />
         </div>
         <div className="container flex items-center h-fit w-full relative">
-          <div className="mt-[20px] mb-2">
+          <div className="sm:mt-[20px] mt-[80px] mb-2">
             <MorphingTextCustom />            
             <p className="text-[32px] mt-[80px] font-bold">Effortlessly create with<br className="sm:block hidden"/><span className="text-[38x] font-bold mt-[-8px] sm:ml-0 ml-2">Our <span className="text-[#6938ef]">AI Tools</span></span></p>
             <p className="mt-2 font-semibold text-lg text-gray-800 dark:text-gray-300">
@@ -23,28 +23,28 @@ export default function Home() {
 
             <ul className="mt-4 space-y-2 text-left text-gray-700 dark:text-gray-300">
               <li className="flex items-start gap-2">
-                <CheckCircledIcon className="h-6 w-6 text-[#6938ef]" />
+                <CheckCircledIcon className="h-6 min-w-6 text-[#6938ef]" />
                 <span>
                   <strong className="text-[#6938ef]">Discover</strong> a hand-picked vault of 50+ cutting-edge AI bots, organized by use case
                 </span>
               </li>
 
               <li className="flex items-start gap-2">
-                <CheckCircledIcon className="h-6 w-6 text-[#6938ef]" />
+                <CheckCircledIcon className="h-6 min-w-6 text-[#6938ef]" />
                 <span>
                   <strong className="text-[#6938ef]">Jump </strong>straight to each platform with one-click affiliate links
                 </span>
               </li>
 
               <li className="flex items-start gap-2">
-                <CheckCircledIcon className="h-6 w-6 text-[#6938ef]" />
+                <CheckCircledIcon className="h-6 min-w-6 text-[#6938ef]" />
                 <span>
                   <strong className="text-[#6938ef]">Unlock </strong>exclusive deals, trials, and bonuses from leading AI providers
                 </span>
               </li>
 
               <li className="flex items-start gap-2">
-                <CheckCircledIcon className="h-6 w-6 text-[#6938ef]" />
+                <CheckCircledIcon className="h-6 min-w-6 text-[#6938ef]" />
                 <span>
                   <strong className="text-[#6938ef]">Empower </strong>your workflow with the perfect AI partner for every task
                 </span>
