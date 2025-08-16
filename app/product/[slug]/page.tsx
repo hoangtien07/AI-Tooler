@@ -10,9 +10,11 @@ import { ShieldPlus, ShieldMinus, MoveRight, CircleDollarSign } from 'lucide-rea
 import { Button } from "@/components/ui/button"
 import Link from "next/link";
 import { GalleryBotSuggest } from "@/components/Layout/BotSuggest/BotSuggest";
+import { useTranslation } from "react-i18next";
 
 const CategoryPage = () => {
   const pathname = usePathname();
+  const { t } = useTranslation();
 
   const currentBot = botData.find((bot) => bot.key === pathname.split("/").pop());
    const currentCategory = categories.filter((category) =>
@@ -34,12 +36,12 @@ const CategoryPage = () => {
           <Image src={currentBot.logo} alt={currentBot.name} width={300} height={440} className="h-72 w-full rounded-md object-cover lg:h-auto" />
           <Card className="col-span-2 justify-center p-6">
             <div className="flex flex-col gap-4 px-4">
-              <div className="flex flex-col sm:flex-row justify-between pr-4">
-                <p className="text-xl font-medium lg:text-3xl pl-5">{currentBot.name}</p> 
+              <div className="flex flex-col sm:flex-row justify-between pl-0  sm:pl-5 pr-4">
+                <p className="text-2xl font-medium lg:text-3xl">{currentBot.name}</p> 
                 <div className="flex mt-4 sm:mt-0 sm:items-center items-start">
                   {currentCategory.length > 0
-                    ? (<>
-                      <span className="ml-[20px] mr-[8px]">Category: </span>
+                    ? (<div className="flex">
+                      <p className="mr-[8px]">{t('product.category')} : </p>
                         <div className="flex flex-col sm:flex-row ">
                           {currentCategory.map((category, index) => (
                             <span key={category.key} className="text-blue-600">
@@ -48,14 +50,14 @@ const CategoryPage = () => {
                             </span>
                           ))}
                         </div>
-                      </>)
+                      </div>)
                     : ""}
                 </div>
               </div>
               <div className="flex flex-col items-start min-h-[200px] justify-center mb-2">
                 <div>{currentBot.features.map((feature, index) => <li key={index}>{feature}</li>)}</div>
               </div>
-              <Button className="cursor-pointer py-4 transition-all text-base duration-300 hover:opacity-90" onClick={goOriginBot}>Go to website <MoveRight /></Button>
+              <Button className="cursor-pointer py-4 transition-all text-base duration-300 hover:opacity-90" onClick={goOriginBot}>{t('buttons.goToWebsite')} <MoveRight /></Button>
             </div>
           </Card>
         </div>
@@ -67,7 +69,7 @@ const CategoryPage = () => {
                   <ShieldPlus />
                 </Avatar>
                 <div className="text-xl">
-                  <p className="font-medium">Strengths</p>
+                  <p className="font-medium">{t('product.title.strengths')}</p>
                 </div>
               </div>
             </CardHeader>
@@ -82,7 +84,7 @@ const CategoryPage = () => {
                   <ShieldMinus />
                 </Avatar>
                 <div className="text-xl">
-                  <p className="font-medium">Weaknesses</p>
+                  <p className="font-medium">{t('product.title.weaknesses')}</p>
                 </div>
               </div>
             </CardHeader>
@@ -97,7 +99,7 @@ const CategoryPage = () => {
                   <CircleDollarSign />
                 </Avatar>
                 <div className="text-xl">
-                  <p className="font-medium">Price</p>
+                  <p className="font-medium">{t('product.title.price')}</p>
                 </div>
               </div>
             </CardHeader>
@@ -113,7 +115,7 @@ const CategoryPage = () => {
         </div>
         </div>
       ) : (
-        <p className="text-center">Bot not found</p>
+        <p className="text-center">{t('botNotFound')}</p>
       )}
       <GalleryBotSuggest />
     </div>

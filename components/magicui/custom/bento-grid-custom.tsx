@@ -1,91 +1,95 @@
-import {
-  FileTextIcon,
-} from "@radix-ui/react-icons";
-import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
-import {HeartPlus, Dock, Cpu, LineSquiggle, ChartColumnIncreasing, Workflow, School } from "lucide-react";
+"use client";
 
-const features = [
-  {
-    Icon: ChartColumnIncreasing,
-    name: "Growth & Marketing AI",
-    description: "Support brand growth, content creation, and digital marketing.",
-    href: "/category/growth-marketing",
-    cta: "Explore",
-    background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2",
-  },
-  {
-    Icon: LineSquiggle,
-    name: "Design & Creative AI",
-    description: "For creators producing visuals, videos, music, and digital art.",
-    href: "/category/design-creative",
-    cta: "Explore",
-    background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2",
-  },
-  {
-    Icon: Dock,
-    name: "Office AI",
-    description: "Boost productivity, manage notes and documents in a professional setting.",
-    href: "/category/office-ai",
-    cta: "Explore",
-    background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2",
-  },
-  {
-    Icon: FileTextIcon,
-    name: "Writing & Editing AI",
-    description: "For blogging, copywriting, editing, and document generation.",
-    href: "/category/writing-editing",
-    cta: "Explore",
-    background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-2",
-  },
-  {
-    Icon: Cpu,
-    name: "Technology & IT",
-    description: "For developers, data analysts, and IT teams to build, analyze, and test systems.",
-    href: "/category/technology-it",
-    cta: "Explore",
-    background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3",
-  },
-  {
-    Icon: Workflow,
-    name: "Workflow Automation",
-    description: "Automate repetitive tasks and streamline operational processes.",
-    href: "/category/workflow-automation",
-    cta: "Explore",
-    background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3",
-  },
-  {
-    Icon: HeartPlus,
-    name: "Customer Service & Support",
-    description: "Tools for communicating with customers, handling inquiries, and automating support.",
-    href: "/category/customer-support",
-    cta: "Explore",
-    background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-3",
-  },
-  {
-    Icon: School,
-    name: "AI Education",
-    description: "Transforming the way students learn and teachers teach, making education more personalized and efficient",
-    href: "/category/ai-education",
-    cta: "Explore",
-    background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
-    className: "lg:col-start-4 lg:col-end-5 lg:row-start-2 lg:row-end-3",
-  },
-];
+import { FileTextIcon } from "@radix-ui/react-icons";
+import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
+import { HeartPlus, Dock, Cpu, LineSquiggle, ChartColumnIncreasing, Workflow, School } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import "@/lib/i18n";
 
 export function BentoCustom() {
+  const { t } = useTranslation("common");
+
+  const features = [
+    {
+      Icon: ChartColumnIncreasing,
+      name: t("bento.features.growth.name"),
+      description: t("bento.features.growth.desc"),
+      href: "/category/growth-marketing",
+      cta: t("bento.cta"),
+      background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
+      className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2",
+    },
+    {
+      Icon: LineSquiggle,
+      name: t("bento.features.design.name"),
+      description: t("bento.features.design.desc"),
+      href: "/category/design-creative",
+      cta: t("bento.cta"),
+      background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
+      className: "lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2",
+    },
+    {
+      Icon: Dock,
+      name: t("bento.features.office.name"),
+      description: t("bento.features.office.desc"),
+      href: "/category/office-ai",
+      cta: t("bento.cta"),
+      background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
+      className: "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2",
+    },
+    {
+      Icon: FileTextIcon,
+      name: t("bento.features.writing.name"),
+      description: t("bento.features.writing.desc"),
+      href: "/category/writing-editing",
+      cta: t("bento.cta"),
+      background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
+      className: "lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-2",
+    },
+    {
+      Icon: Cpu,
+      name: t("bento.features.tech.name"),
+      description: t("bento.features.tech.desc"),
+      href: "/category/technology-it",
+      cta: t("bento.cta"),
+      background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
+      className: "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3",
+    },
+    {
+      Icon: Workflow,
+      name: t("bento.features.workflow.name"),
+      description: t("bento.features.workflow.desc"),
+      href: "/category/workflow-automation",
+      cta: t("bento.cta"),
+      background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
+      className: "lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3",
+    },
+    {
+      Icon: HeartPlus,
+      name: t("bento.features.support.name"),
+      description: t("bento.features.support.desc"),
+      href: "/category/customer-support",
+      cta: t("bento.cta"),
+      background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
+      className: "lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-3",
+    },
+    {
+      Icon: School,
+      name: t("bento.features.education.name"),
+      description: t("bento.features.education.desc"),
+      href: "/category/ai-education",
+      cta: t("bento.cta"),
+      background: <div className="absolute -right-20 -top-20 opacity-60"></div>,
+      className: "lg:col-start-4 lg:col-end-5 lg:row-start-2 lg:row-end-3",
+    },
+  ];
+
   return (
     <div className="container !mt-[20px]">
-     <BentoGrid>
-       {features.map((feature) => (
-         <BentoCard key={feature.name} {...feature} />
-       ))}
+      <BentoGrid>
+        {features.map((f) => (
+          <BentoCard key={f.name as string} {...f} />
+        ))}
       </BentoGrid>
     </div>
   );

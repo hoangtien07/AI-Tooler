@@ -3,6 +3,7 @@ import { ComponentPropsWithoutRef, ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ShineBorder } from "@/components/magicui/shine-border";
 
 interface BentoGridProps extends ComponentPropsWithoutRef<"div"> {
   children: ReactNode;
@@ -42,7 +43,7 @@ const BentoCard = ({
   href,
   cta,
   ...props
-}: BentoCardProps) => (
+}: BentoCardProps) =>(
   <div
     key={props.key}
     className={cn(
@@ -57,6 +58,7 @@ const BentoCard = ({
   >
     <div>{background}</div>
     <a href={href}>
+      <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} className="rounded-xl borderWidth-2" />
       <div className="p-4">
         <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 transition-all duration-300 lg:group-hover:-translate-y-10">
           <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-700 dark:text-inherit transition-all duration-300 ease-in-out group-hover:scale-75" />

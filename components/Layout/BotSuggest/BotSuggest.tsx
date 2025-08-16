@@ -2,16 +2,13 @@
 
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
-
 import { Button } from "@/components/ui/button";
 import type { CarouselApi } from "@/components/ui/carousel";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Image from "next/image";
 import { botData } from "@/data/groupsData";
+import { useTranslation } from "react-i18next";
+import "@/lib/i18n";
 
 interface GalleryItem {
   id: string;
@@ -20,24 +17,20 @@ interface GalleryItem {
   url: string;
   image: string;
 }
-
 interface GalleryBotSuggestProps {
   heading?: string;
   toolUrl?: string;
   items?: GalleryItem[];
 }
 
-const GalleryBotSuggest = ({
-  heading = "GALLERY",
-  toolUrl = "/category/all",
-}: GalleryBotSuggestProps) => {
+const GalleryBotSuggest = ({ heading, toolUrl = "/category/all" }: GalleryBotSuggestProps) => {
+  const { t } = useTranslation("common");
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+
   useEffect(() => {
-    if (!carouselApi) {
-      return;
-    }
+    if (!carouselApi) return;
     const updateSelection = () => {
       setCanScrollPrev(carouselApi.canScrollPrev());
       setCanScrollNext(carouselApi.canScrollNext());
@@ -48,28 +41,28 @@ const GalleryBotSuggest = ({
       carouselApi.off("select", updateSelection);
     };
   }, [carouselApi]);
+
   return (
     <section className="mt-24 md:mt-32 pb-32 m-0">
       <div className="container">
         <div className="flex flex-col items-center">
           <h2 className="mb-3 text-3xl font-bold md:mb-4 md:text-5xl lg:mb-6">
-            {heading}
+            {heading ?? t("botSuggest.heading")}
           </h2>
           <a
             href={toolUrl}
             className="group flex items-center gap-1 text-sm font-medium md:text-base lg:text-lg"
           >
-            Explore all AI Tools
+            {t("botSuggest.exploreAll")}
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1" />
           </a>
         </div>
+
         <div className="mt-8 flex shrink-0 items-center justify-end gap-2">
           <Button
             size="icon"
             variant="outline"
-            onClick={() => {
-              carouselApi?.scrollPrev();
-            }}
+            onClick={() => carouselApi?.scrollPrev()}
             disabled={!canScrollPrev}
             className="disabled:pointer-events-auto cursor-pointer"
           >
@@ -78,9 +71,7 @@ const GalleryBotSuggest = ({
           <Button
             size="icon"
             variant="outline"
-            onClick={() => {
-              carouselApi?.scrollNext();
-            }}
+            onClick={() => carouselApi?.scrollNext()}
             disabled={!canScrollNext}
             className="disabled:pointer-events-auto cursor-pointer"
           >
@@ -88,30 +79,23 @@ const GalleryBotSuggest = ({
           </Button>
         </div>
       </div>
+
       <div className="w-full max-w-full mt-8">
         <Carousel
           setApi={setCarouselApi}
-          opts={{
-            breakpoints: {
-              "(max-width: 768px)": {
-                dragFree: true,
-              },
-            },
-          }}
+          opts={{ breakpoints: { "(max-width: 768px)": { dragFree: true } } }}
           className="relative w-full max-w-full md:left-[-1rem]"
         >
           <CarouselContent className="hide-scrollbar w-full max-w-full md:-mr-4 md:ml-8 2xl:ml-0 2xl:mr-[max(0rem,calc(50vw-700px-1rem))]">
             {botData.map((item) => (
               <CarouselItem key={item.key} className="ml-8 md:max-w-[360px] max-w-[240px]">
-                <a
-                  href={`/product/${item.key}`}
-                  className="group flex flex-col justify-between "
-                >
+                <a href={`/product/${item.key}`} className="group flex flex-col justify-between ">
                   <div>
                     <div className="aspect-3/2 flex overflow-clip rounded-xl">
                       <div className="flex-1 flex justify-center items-center">
                         <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
-                          <Image src={item.logo}
+                          <Image
+                            src={item.logo}
                             alt={item.key}
                             width={300}
                             height={300}
@@ -128,7 +112,7 @@ const GalleryBotSuggest = ({
                     {item.summary}
                   </div>
                   <div className="flex items-center text-sm">
-                    Read more{" "}
+                    {t("buttons.readMore")}
                     <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
                   </div>
                 </a>

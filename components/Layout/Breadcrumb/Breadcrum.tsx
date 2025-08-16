@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -7,8 +9,11 @@ import {
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { HomeIcon } from "lucide-react";
+// import { useTranslation } from "react-i18next";
+// import "@/lib/i18n";
 
-export const  BreadcrumbCustom = () => {
+export const BreadcrumbCustom = () => {
+  // const { t } = useTranslation("common");
   const pathname = usePathname();
   const pathParts = pathname.split("/").filter(Boolean);
 
@@ -29,20 +34,22 @@ export const  BreadcrumbCustom = () => {
           </BreadcrumbLink>
           <span className="mx-2">/</span>
         </BreadcrumbItem>
+
         {breadcrumbItems.map((item, index) => (
           <BreadcrumbItem key={index}>
-            {index===0 ? <BreadcrumbLink href={'#'} className="capitalize">
-              {item.label}
-            </BreadcrumbLink> : <BreadcrumbLink href={item.href} className="capitalize">
-              {item.label}
-            </BreadcrumbLink>
-            }            
-            {index < breadcrumbItems.length - 1 && (
-              <span className="mx-2">/</span>
+            {index === 0 ? (
+              <BreadcrumbLink href="#" className="capitalize">
+                {item.label}
+              </BreadcrumbLink>
+            ) : (
+              <BreadcrumbLink href={item.href} className="capitalize">
+                {item.label}
+              </BreadcrumbLink>
             )}
+            {index < breadcrumbItems.length - 1 && <span className="mx-2">/</span>}
           </BreadcrumbItem>
         ))}
       </BreadcrumbList>
     </Breadcrumb>
   );
-}
+};

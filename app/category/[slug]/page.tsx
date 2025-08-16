@@ -9,13 +9,12 @@ import { BotList } from "@/components/Layout/BotList/BotList";
 import { BreadcrumbCustom } from "@/components/Layout/Breadcrumb/Breadcrum";
 import {SelectCustom} from "@/components/magicui/custom/select-custom";
 
-
 function getBotsByCategory(slug: string) {
   if (!slug || slug === "all") return botData;
   const category = categories.find(c => c.key === slug);
   if (!category) return [];
   const toolKeys = (category.tags ?? [])
-    .flatMap(tag => tag.tools?.map(tool => tool.key) ?? []);
+  .flatMap(tag => tag.tools?.map(tool => tool.key) ?? []);
   return botData.filter(bot => toolKeys.includes(bot.key));
 }
 

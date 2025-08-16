@@ -15,6 +15,8 @@ import {
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { Dock, DockIcon } from "@/components/magicui/dock";
+import i18n from "@/lib/i18n";
+
 
 const DATA = {
   navbar: [
@@ -31,6 +33,12 @@ const DATA = {
     },
   },
 };
+
+function toggleLanguage() {
+  const currentLanguage = i18n.language;
+  const newLanguage = currentLanguage === 'en' ? 'vi' : 'en';
+  i18n.changeLanguage(newLanguage);
+}
 
 export function DockCustom() {
   return (
@@ -83,13 +91,24 @@ export function DockCustom() {
             </DockIcon>
           ))}
           <Separator orientation="vertical" className="h-full ml-2" />
-          <DockIcon>
+          <DockIcon className="!p-0">
             <Tooltip>
               <TooltipTrigger asChild>
                 <ModeToggle />
               </TooltipTrigger>
               <TooltipContent>
                 <p>Theme</p>
+              </TooltipContent>
+            </Tooltip>
+          </DockIcon>
+          <Separator orientation="vertical" className="h-full" />
+          <DockIcon className="!p-2 !w-[54px] !h-[54px]">
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="bg-inherit w-[36px] h-[36px] rounded-md hover:bg-gray-200 flex justify-center items-center text-gray-800 dark:text-white border border-b-gray-50" onClick={toggleLanguage}>{i18n.language === 'en' ? 'EN' : 'VI'}</div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Language</p>
               </TooltipContent>
             </Tooltip>
           </DockIcon>
