@@ -228,10 +228,10 @@ export default async function BlogsPage({
                 <Link href={`/blogs/${encodeURIComponent(post.slug)}`}>
                   <figure className="relative aspect-[16/9] overflow-hidden">
                     {post.image ? (
-                      <Image
+                      <Image unoptimized 
                         src={post.image}
                         alt={post.title}
-                        fill
+                        fill 
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         className="object-cover transition duration-300 group-hover:scale-[1.02]"
                       />

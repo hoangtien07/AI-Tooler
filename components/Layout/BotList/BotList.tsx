@@ -33,7 +33,7 @@ export function BotList({ bots }: BotListProps) {
   if (!bots.length) {
     return (
       <div className="flex-1 flex justify-center items-center flex-wrap">
-        <Image src={DataNotFound} alt="no-data" />
+        <Image unoptimized  src={DataNotFound} alt="no-data" />
         <div className="w-full"></div>
         <Button className="cursor-pointer mt-8">
           <Link href="/category/all">{t("botList.backToCategory")}</Link>

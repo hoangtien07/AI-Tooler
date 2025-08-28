@@ -63,7 +63,7 @@ export default async function ProductDetailPage(props: {
       <BreadcrumbCustom />
       <div className="flex flex-col gap-6 mt-[40px]">
         <div className="grid grid-cols-1 items-stretch gap-x-0 gap-y-4 lg:grid-cols-3 lg:gap-4">
-          <Image
+          <Image unoptimized 
             src={bot.image || "/placeholder.png"}
             alt={bot.name}
             width={300}

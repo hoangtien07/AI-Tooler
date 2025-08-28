@@ -162,7 +162,7 @@ export default async function BlogDetail({
           <div className="absolute -bottom-24 -right-24 h-96 w-96 rounded-full blur-3xl bg-[radial-gradient(circle_at_70%_50%,rgba(236,72,153,0.10),transparent_60%)] dark:bg-[radial-gradient(circle_at_70%_50%,rgba(236,72,153,0.22),transparent_60%)]" />
         </div>
 
-        <div className="mx-auto max-w-[1200px] px-4 pb-8 pt-8 md:pt-28 md:pt-32">
+        <div className="mx-auto max-w-[1200px] px-4 pb-8 pt-8 md:pt-28">
           <nav className="mb-4 text-sm text-neutral-600 dark:text-neutral-300">
             <Link href="/" className="hover:underline">Home</Link> /{" "}
             <Link href="/blog" className="hover:underline">Blog</Link> /{" "}

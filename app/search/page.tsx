@@ -211,7 +211,7 @@ export default async function SearchPage({
                           <Link href={`/bots/${encodeURIComponent(b.slug)}`}>
                             <figure className="relative aspect-[16/9] overflow-hidden">
                               {b.image ? (
-                                <Image
+                                <Image unoptimized 
                                   src={b.image}
                                   alt={b.name}
                                   fill

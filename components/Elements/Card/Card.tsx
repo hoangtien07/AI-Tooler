@@ -40,7 +40,7 @@ export function CardItem({
         {...props}
       >
         <div className="w-[25%] min-w-[60px]">
-          <Image
+          <Image unoptimized 
             src={image ?? "/default-image.png"}
             width={300}
             height={300}
