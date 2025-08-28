@@ -1,0 +1,131 @@
+{
+  "services": {
+    "heading": "OUR SERVICES",
+    "reasons": [
+      {
+        "title": "AI Tool Explorer",
+        "description": "Discover and access the most powerful AI tools tailored to your industry and needs. We test, review, and recommend the best tools so you don’t have to."
+      },
+      {
+        "title": "Custom AI Integration",
+        "description": "We help you embed AI into your workflow — from data analysis to content creation and automation. No coding needed, just results."
+      },
+      {
+        "title": "AI Agent Development",
+        "description": "Build your own intelligent AI Agent that works like a real assistant: automating tasks, answering messages, generating reports, and more."
+      },
+      {
+        "title": "Business Automation Strategy",
+        "description": "Let us analyze your current workflow and show you how to automate repetitive tasks using AI – saving time, reducing costs, increasing speed."
+      },
+      {
+        "title": "Personal AI Assistant Setup",
+        "description": "Want a virtual assistant that books meetings, writes emails, or manages your documents? We set it up – fully personalized for you."
+      },
+      {
+        "title": "1-on-1 AI Onboarding & Training",
+        "description": "New to AI? Our experts walk you through how to use AI tools, step-by-step – for teams or individuals, in English or your native language."
+      }
+    ]
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "Effortlessly create with",
+      "titleLine2_prefix": "Our",
+      "titleLine2_highlight": "AI Tools",
+      "subtitle": "The only all-in-one gateway to every top-performing tool",
+      "bullets": {
+        "discover": {
+          "bold": "Discover",
+          "text": "a hand-picked vault of 50+ cutting-edge AI bots, organized by use case"
+        },
+        "jump": {
+          "bold": "Jump",
+          "text": "straight to each platform with one-click access"
+        },
+        "unlock": {
+          "bold": "Unlock",
+          "text": "exclusive deals, trials, and bonuses from leading AI providers"
+        },
+        "empower": {
+          "bold": "Empower",
+          "text": "your workflow with the perfect AI partner for every task"
+        }
+      }
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "category": "Category"
+  },
+  "botSuggest": {
+    "heading": "GALLERY",
+    "exploreAll": "Explore all AI Tools"
+  },
+  "botList": {
+    "noDescription": "No description available",
+    "backToCategory": "Back to Category"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "category": "Category",
+    "product": "Product"
+  },
+  "product": {
+    "category": "Category",
+    "title": {
+      "strengths": "Strengths",
+      "weaknesses": "Weaknesses",
+      "price": "Price"
+    }
+  },
+  "card": { "alt": "Card image" },
+  "buttons": {
+    "details": "Details",
+    "readMore": "Read more",
+    "goToWebsite": "Go to Website"
+  },
+  "bento": {
+    "cta": "Explore",
+    "features": {
+      "growth": {
+        "name": "Growth & Marketing AI",
+        "desc": "Support brand growth, content creation, and digital marketing."
+      },
+      "design": {
+        "name": "Design & Creative AI",
+        "desc": "For creators producing visuals, videos, music, and digital art."
+      },
+      "office": {
+        "name": "Office AI",
+        "desc": "Boost productivity, manage notes and documents in a professional setting."
+      },
+      "writing": {
+        "name": "Writing & Editing AI",
+        "desc": "For blogging, copywriting, editing, and document generation."
+      },
+      "tech": {
+        "name": "Technology & IT",
+        "desc": "For developers, data analysts, and IT teams to build, analyze, and test systems."
+      },
+      "workflow": {
+        "name": "Workflow Automation",
+        "desc": "Automate repetitive tasks and streamline operational processes."
+      },
+      "support": {
+        "name": "Customer Service & Support",
+        "desc": "Tools for communicating with customers, handling inquiries, and automating support."
+      },
+      "education": {
+        "name": "AI Education",
+        "desc": "Transforming the way students learn and teachers teach, making education more personalized and efficient"
+      }
+    }
+  },
+  "filter": {
+    "title": "Filter by Category",
+    "all": "All Categories",
+    "search": "Search Categories"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "services": {
+    "heading": "DỊCH VỤ CỦA CHÚNG TÔI",
+    "reasons": [
+      {
+        "title": "Khám phá Công cụ AI",
+        "description": "Tìm và sử dụng các công cụ AI mạnh nhất, phù hợp ngành và nhu cầu của bạn. Chúng tôi kiểm thử, đánh giá và đề xuất — bạn không phải mất công."
+      },
+      {
+        "title": "Tích hợp AI Theo Yêu Cầu",
+        "description": "Giúp bạn đưa AI vào quy trình làm việc — từ phân tích dữ liệu đến tạo nội dung và tự động hóa. Không cần viết code, chỉ cần kết quả."
+      },
+      {
+        "title": "Phát triển AI Agent",
+        "description": "Xây dựng AI Agent thông minh như trợ lý thật: tự động hóa tác vụ, trả lời tin nhắn, tạo báo cáo và nhiều hơn thế."
+      },
+      {
+        "title": "Chiến lược Tự động hóa Doanh nghiệp",
+        "description": "Phân tích quy trình hiện tại và đề xuất cách tự động hóa các tác vụ lặp lại bằng AI — tiết kiệm thời gian, giảm chi phí, tăng tốc độ."
+      },
+      {
+        "title": "Thiết lập Trợ lý AI Cá nhân",
+        "description": "Muốn có trợ lý ảo đặt lịch, viết email, quản lý tài liệu? Chúng tôi thiết lập trọn gói — cá nhân hóa theo nhu cầu của bạn."
+      },
+      {
+        "title": "Hướng dẫn & Đào tạo AI 1-1",
+        "description": "Mới làm quen với AI? Chúng tôi hướng dẫn từng bước cách dùng công cụ — cho cá nhân/đội nhóm, bằng tiếng Anh hoặc ngôn ngữ của bạn."
+      }
+    ]
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "Tạo nội dung thật dễ dàng",
+      "titleLine2_prefix": "với",
+      "titleLine2_highlight": "các công cụ AI",
+      "subtitle": "Cổng vào tất cả công cụ hiệu suất cao — gói gọn trong một nơi",
+      "bullets": {
+        "discover": {
+          "bold": "Khám phá",
+          "text": "kho 50+ AI bot chọn lọc, phân loại theo nhu cầu"
+        },
+        "jump": {
+          "bold": "Truy cập",
+          "text": "thẳng tới nền tảng chỉ với một cú nhấp"
+        },
+        "unlock": {
+          "bold": "Mở khóa",
+          "text": "ưu đãi độc quyền, bản dùng thử và bonus từ các nhà cung cấp hàng đầu"
+        },
+        "empower": {
+          "bold": "Tăng lực",
+          "text": "cho quy trình với trợ thủ AI phù hợp từng đầu việc"
+        }
+      }
+    }
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "services": "Dịch vụ",
+    "category": "Danh mục"
+  },
+  "botSuggest": {
+    "heading": "GALLERY",
+    "exploreAll": "Khám phá tất cả AI Tools"
+  },
+  "botList": {
+    "noDescription": "Chưa có mô tả",
+    "backToCategory": "Quay lại danh mục"
+  },
+  "breadcrumb": { "home": "Trang chủ" },
+  "product": {
+    "category": "Danh mục",
+    "title": {
+      "strengths": "Điểm mạnh",
+      "weaknesses": "Điểm yếu",
+      "price": "Giá"
+    }
+  },
+  "card": { "alt": "Hình minh họa thẻ" },
+  "buttons": {
+    "details": "Chi tiết",
+    "readMore": "Xem thêm",
+    "goToWebsite": "Truy cập website"
+  },
+  "bento": {
+    "cta": "Khám phá",
+    "features": {
+      "growth": {
+        "name": "Growth & Marketing AI",
+        "desc": "Hỗ trợ tăng trưởng thương hiệu, sáng tạo nội dung & marketing số."
+      },
+      "design": {
+        "name": "Design & Creative AI",
+        "desc": "Dành cho creator làm ảnh, video, nhạc và nghệ thuật số."
+      },
+      "office": {
+        "name": "Office AI",
+        "desc": "Tăng năng suất, quản lý ghi chú và tài liệu chuyên nghiệp."
+      },
+      "writing": {
+        "name": "Writing & Editing AI",
+        "desc": "Viết blog, copy, biên tập và tạo tài liệu."
+      },
+      "tech": {
+        "name": "Technology & IT",
+        "desc": "Cho dev, data analyst và IT để xây, phân tích, kiểm thử hệ thống."
+      },
+      "workflow": {
+        "name": "Workflow Automation",
+        "desc": "Tự động hóa tác vụ lặp lại và tối ưu vận hành."
+      },
+      "support": {
+        "name": "Customer Service & Support",
+        "desc": "Công cụ giao tiếp khách hàng, xử lý yêu cầu và tự động hoá hỗ trợ."
+      },
+      "education": {
+        "name": "AI Education",
+        "desc": "Cá nhân hóa việc dạy & học, nâng hiệu quả giáo dục."
+      }
+    }
+  },
+  "filter": {
+    "title": "Lọc theo Danh mục",
+    "all": "Tất cả Danh mục",
+    "search": "Tìm kiếm Danh mục"
+  }
+}
