@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import "@/lib/i18n";
 import { Input } from "@/components/ui/input"
 import { useRouter } from 'next/navigation';
+import { SparklesText } from "@/components/magicui/sparkles-text";
 
 interface GalleryItem {
   id: string;
@@ -65,13 +66,15 @@ const GalleryBotSuggest = ({ heading, toolUrl = "/category/all" }: GalleryBotSug
           {/* <h2 className="mb-3 text-3xl font-bold md:mb-4 md:text-5xl lg:mb-6" suppressHydrationWarning >
             {heading ?? t("botSuggest.heading")}
           </h2> */}
+          <SparklesText>
           <a
             href={toolUrl}
-            className="group flex items-center gap-1 text-sm font-medium md:text-base lg:text-xl underline"
+            className="group flex items-center gap-1 text-sm font-medium md:text-base lg:text-2xl underline"
           >
             {t("botSuggest.exploreAll")}
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1" />
           </a>
+          </SparklesText>
         </div>
         
         <form onSubmit={handleSearch} className="max-w-[800px] flex m-auto h-[48px] mt-8">

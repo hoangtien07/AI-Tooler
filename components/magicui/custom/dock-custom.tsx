@@ -107,7 +107,7 @@ export function DockCustom({ initialLocale }: Props) {
           <DockIcon className="!p-0">
             <Tooltip>
               {/* <TooltipTrigger asChild><ModeToggle /></TooltipTrigger> */}
-              <TooltipTrigger asChild><AnimatedThemeToggler /></TooltipTrigger>
+              <TooltipTrigger asChild><AnimatedThemeToggler className="p-3 cursor-pointer" /></TooltipTrigger>
               <TooltipContent><p>Theme</p></TooltipContent>
             </Tooltip>
           </DockIcon>

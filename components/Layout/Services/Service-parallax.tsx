@@ -205,19 +205,19 @@ export default function Page() {
 
 
       {/* Hero */}
-      <section className="relative mx-auto container px-4 pb-10 pt-28 md:pt-32">
+      <section id="services" className="relative mx-auto container px-4 pb-10 pt-28">
         <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/70 p-10 backdrop-blur
                         dark:border-white/10 dark:bg-white/[0.03]">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: 'easeOut' }}>
-            <div className="flex flex-wrap items-center text-sm text-neutral-600 dark:text-white/70">
+            <div className="flex flex-wrap justify-center items-center text-sm text-neutral-600 dark:text-white/70">
               <SectionBadge>Service</SectionBadge>
               <DotDivider />
               <span>About AI Tooler&#39;s Website</span>
             </div>
-            <h1 className="mt-4 text-balance text-4xl font-bold leading-tight text-neutral-900 dark:text-white md:text-5xl">
+            <h1 className="mt-4 text-center text-balance text-4xl font-bold leading-tight text-neutral-900 dark:text-white md:text-5xl">
               Unlock AI for your business with elegant, scroll-linked storytelling
             </h1>
-            <p className="mt-4 max-w-3xl text-pretty text-neutral-700 dark:text-white/80">
+            <p className="mt-4 text-center mx-auto max-w-4xl text-pretty text-neutral-700 dark:text-white/80">
               {SERVICE_CONTENT.sections[0].summary}
             </p>
           </motion.div>
