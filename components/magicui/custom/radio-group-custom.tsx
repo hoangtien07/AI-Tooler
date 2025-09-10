@@ -6,7 +6,7 @@ import {
 import {categories} from "@/data/groupsData"
 import { useRouter, usePathname } from "next/navigation"
 import { useState } from "react"
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import "@/libs/i18n";
 
 // const count = categories.length;
@@ -28,7 +28,7 @@ export function RadioGroupCustom() {
 //  const getTotalTools = (category: Category) =>
 //   (category.tags ?? []).reduce((acc, tag) => acc + (tag.tools?.length || 0), 0);
 
-  const { t } = useTranslation("common");
+  // const { t } = useTranslation("common");
 
   return (
     <RadioGroup defaultValue={selectedValue} onValueChange={handleChange} className="mb-4">

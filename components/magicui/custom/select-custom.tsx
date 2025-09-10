@@ -13,7 +13,6 @@ import {categories} from "@/data/groupsData"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { usePathname } from "next/navigation";
-import { SelectItemText } from "@radix-ui/react-select"
 
 export function SelectCustom() {
   const router = useRouter();
