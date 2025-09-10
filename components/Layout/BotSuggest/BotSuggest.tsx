@@ -8,7 +8,7 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import Image from "next/image";
 import { botData } from "@/data/groupsData";
 import { useTranslation } from "react-i18next";
-import "@/lib/i18n";
+import "@/libs/i18n";
 import { Input } from "@/components/ui/input"
 import { useRouter } from 'next/navigation';
 import { SparklesText } from "@/components/magicui/sparkles-text";

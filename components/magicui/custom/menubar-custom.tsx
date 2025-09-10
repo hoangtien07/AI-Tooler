@@ -3,7 +3,7 @@
 import { Menubar, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
 import Link from "next/link";
 import { ModeToggle } from "@/components/ui/mode-toggle";
-import i18n from "@/lib/i18n";
+import i18n from "@/libs/i18n";
 import { useEffect, useState } from "react";
 
 type Props = { initialLocale: "en" | "vi" };

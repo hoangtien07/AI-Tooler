@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Image, { StaticImageData } from "next/legacy/image";
 import { useTranslation } from "react-i18next";
-import "@/lib/i18n";
+import "@/libs/i18n";
 
 type CardItemProps = React.ComponentProps<typeof Card> & {
   cardTitle?: React.ReactNode;

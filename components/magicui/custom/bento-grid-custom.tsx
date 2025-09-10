@@ -5,7 +5,7 @@ import { FileTextIcon } from "@radix-ui/react-icons";
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import { HeartPlus, Dock, Cpu, LineSquiggle, ChartColumnIncreasing, Workflow, School } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import "@/lib/i18n";
+import "@/libs/i18n";
 
 export function BentoCustom() {
   const { t } = useTranslation("common");

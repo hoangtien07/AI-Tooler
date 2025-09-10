@@ -6,7 +6,7 @@ import i18n from "./i18n";
 
 type Props = {
   children: React.ReactNode;
-  initialLocale?: "en" | "vi";
+  initialLocale?: "vi" | "en";
 };
 
 export function I18nProvider({ children, initialLocale }: Props) {

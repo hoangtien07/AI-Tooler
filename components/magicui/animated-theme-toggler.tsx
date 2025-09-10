@@ -3,7 +3,7 @@
 import { Moon, SunDim } from "lucide-react";
 import { useState, useRef } from "react";
 import { flushSync } from "react-dom";
-import { cn } from "@/lib/utils";
+import { cn } from "@/libs/utils/css";
 
 type props = {
   className?: string;

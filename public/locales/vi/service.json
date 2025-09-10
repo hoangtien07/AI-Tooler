@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badge": "Dịch vụ",
+    "about": "Giới thiệu về AI Tooler",
+    "title": "Khai mở sức mạnh AI cho doanh nghiệp với kho công cụ đầy đủ hơn bao giờ hết",
+    "summary": "Tích hợp AI vào quy trình — từ phân tích dữ liệu, tạo nội dung đến tự động hoá và xây dựng AI agent thông minh: trả lời tin nhắn, tạo báo cáo, xử lý tác vụ… Không cần code, chỉ cần kết quả."
+  },
+  "s1": {
+    "eyebrow": "Automation & Agents",
+    "heading": "Phát triển AI Agent & Tự động hoá bằng AI",
+    "intro": "Nâng tầm doanh nghiệp với AI Agent và tự động hoá. AI Tooler xây dựng agent thông minh và tối ưu quy trình để tăng hiệu suất, giảm thao tác thủ công và cải thiện trải nghiệm khách hàng.",
+    "why": {
+      "title": "Vì sao cần AI Agent & Automation?",
+      "points": [
+        {
+          "title": "Tự động hoá việc lặp lại",
+          "description": "Để AI xử lý nhập liệu, tạo báo cáo, hỗ trợ khách hàng… giúp đội ngũ tập trung vào chiến lược."
+        },
+        {
+          "title": "Tăng hiệu suất",
+          "description": "Thu gọn quy trình, giảm lỗi và tăng năng suất."
+        },
+        {
+          "title": "Cải thiện trải nghiệm",
+          "description": "Phản hồi nhanh, chính xác 24/7 nhờ tương tác AI."
+        },
+        {
+          "title": "Khả năng mở rộng",
+          "description": "Giải pháp phù hợp từ startup đến doanh nghiệp lớn."
+        }
+      ]
+    },
+    "services": {
+      "title": "Dịch vụ của chúng tôi",
+      "items": [
+        {
+          "title": "Phát triển AI Agent tuỳ chỉnh",
+          "description": "Agent phù hợp quy trình: hỗ trợ khách hàng, đặt lịch, xử lý lead…"
+        },
+        {
+          "title": "Giải pháp tự động hoá bằng AI",
+          "description": "Tự động hoá quy trình để tăng tốc, chính xác và nhất quán."
+        },
+        {
+          "title": "Hỗ trợ & tối ưu liên tục",
+          "description": "Theo dõi và tối ưu khi doanh nghiệp phát triển."
+        }
+      ]
+    },
+    "cta": "Hãy để AI Tooler giúp bạn khai thác AI hiệu quả. Liên hệ để bắt đầu hành trình AI ngay hôm nay!"
+  },
+  "s2": {
+    "eyebrow": "Tool Explorer",
+    "heading": "AI Tool Explorer: Tìm công cụ AI phù hợp nhất với nhu cầu",
+    "summary": "Khám phá và sử dụng các công cụ AI mạnh mẽ, phù hợp ngành và mục tiêu.",
+    "paragraphs": [
+      "Thế giới công cụ AI rất rộng và dễ rối. AI Tool Explorer là nơi giúp bạn khám phá, truy cập và triển khai các công cụ AI tốt nhất cho doanh nghiệp.",
+      "Chúng tôi kiểm thử, đánh giá và tuyển chọn kỹ lưỡng. Dù bạn cần tự động hoá, nâng chất lượng CSKH hay khai thác dữ liệu, AI Tool Explorer sẽ dẫn bạn tới lựa chọn đúng."
+    ],
+    "why": {
+      "title": "Vì sao chọn AI Tool Explorer?",
+      "points": [
+        {
+          "title": "Đề xuất phù hợp",
+          "description": "Công cụ khớp chính xác yêu cầu của bạn."
+        },
+        {
+          "title": "Đánh giá chuyên sâu",
+          "description": "Phân tích khách quan dựa trên kịch bản thực tế."
+        },
+        {
+          "title": "Bao phủ toàn diện",
+          "description": "Từ marketing automation đến analytics ở nhiều ngành."
+        },
+        {
+          "title": "Tiết kiệm thời gian",
+          "description": "Bớt công tìm kiếm — nhận ngay lựa chọn tốt."
+        }
+      ]
+    },
+    "cta": "Bắt đầu khám phá tương lai AI cùng AI Tooler và khai mở tối đa giá trị cho doanh nghiệp."
+  },
+  "s3": {
+    "eyebrow": "Training",
+    "heading": "Onboarding & Training AI 1-kèm-1",
+    "intro": "Mới dùng AI? Chuyên gia của chúng tôi hướng dẫn từng bước cho cá nhân hoặc đội nhóm, hỗ trợ tiếng Anh hoặc tiếng Việt.",
+    "benefits": [
+      {
+        "title": "Cá nhân hoá",
+        "description": "Học theo tốc độ của bạn cùng chuyên gia."
+      },
+      {
+        "title": "Phù hợp nhu cầu",
+        "description": "Cho cá nhân hoặc đội nhóm, nhiều phong cách học."
+      },
+      {
+        "title": "Linh hoạt ngôn ngữ",
+        "description": "Tiếng Anh hoặc tiếng Việt để tiếp thu dễ dàng."
+      }
+    ],
+    "cta": "Bắt đầu hành trình AI ngay hôm nay và khai thác tối đa công cụ AI!",
+    "banner": {
+      "title": "Sẵn sàng bứt phá với AI?",
+      "desc": "Đặt lịch discovery call — chúng tôi thiết kế lộ trình riêng cho bạn.",
+      "button": "Bắt đầu"
+    }
+  }
+}

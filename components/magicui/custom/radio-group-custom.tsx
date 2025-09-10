@@ -7,7 +7,7 @@ import {categories} from "@/data/groupsData"
 import { useRouter, usePathname } from "next/navigation"
 import { useState } from "react"
 import { useTranslation } from "react-i18next";
-import "@/lib/i18n";
+import "@/libs/i18n";
 
 // const count = categories.length;
 // type Tool = { key: string; name: string };

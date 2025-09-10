@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import ScrollMotionClient from "@/components/Elements/ScrollMotion/ScrollMotion.client";
-import { SearchApi, type SearchBlogItem, type SearchBotItem } from "@/lib/api-client";
+import { SearchApi, type SearchBlogItem, type SearchBotItem } from "@/libs/api-client";
 
 export const revalidate = 300;
 

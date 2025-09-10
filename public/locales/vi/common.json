@@ -67,7 +67,11 @@
     "noDescription": "Chưa có mô tả",
     "backToCategory": "Quay lại danh mục"
   },
-  "breadcrumb": { "home": "Trang chủ" },
+  "breadcrumb": {
+    "home": "Trang chủ",
+    "category": "Danh mục",
+    "product": "Sản phẩm"
+  },
   "product": {
     "category": "Danh mục",
     "title": {
@@ -76,7 +80,9 @@
       "price": "Giá"
     }
   },
-  "card": { "alt": "Hình minh họa thẻ" },
+  "card": {
+    "alt": "Hình minh họa thẻ"
+  },
   "buttons": {
     "details": "Chi tiết",
     "readMore": "Xem thêm",

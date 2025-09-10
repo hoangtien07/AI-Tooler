@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badge": "Service",
+    "about": "About AI Tooler’s Website",
+    "title": "Unlock AI for your business with the most comprehensive suite of AI tools ever built",
+    "summary": "Integrate AI into your workflow — from data analysis and content creation to task automation and building intelligent AI agents that automate tasks, answer messages, generate reports, and more. No coding required, just results."
+  },
+  "s1": {
+    "eyebrow": "Automation & Agents",
+    "heading": "AI Agent and AI Automation Development",
+    "intro": "Take your business to the next level with AI Agent and AI Automation Development. At AI Tooler, we build intelligent AI agents and automate workflows to optimize efficiency, reduce manual labor, and enhance customer experience.",
+    "why": {
+      "title": "Why AI Agent and AI Automation?",
+      "points": [
+        {
+          "title": "Automate Repetitive Tasks",
+          "description": "Let AI handle time-consuming tasks like data entry, report generation, and customer support."
+        },
+        {
+          "title": "Boost Efficiency",
+          "description": "AI agents streamline workflows, improving productivity and minimizing errors."
+        },
+        {
+          "title": "Enhance Customer Experience",
+          "description": "Provide faster and more accurate responses 24/7 with AI-powered interactions."
+        },
+        {
+          "title": "Scalable Solutions",
+          "description": "From startups to enterprises, our AI solutions scale with your needs."
+        }
+      ]
+    },
+    "services": {
+      "title": "Our Services",
+      "items": [
+        {
+          "title": "Custom AI Agent Development",
+          "description": "Tailored AI agents for support, scheduling, lead handling, and more."
+        },
+        {
+          "title": "AI Automation Solutions",
+          "description": "Automate processes with robust AI tools for speed, accuracy, and consistency."
+        },
+        {
+          "title": "Ongoing Support",
+          "description": "Continuous monitoring and optimization as your business evolves."
+        }
+      ]
+    },
+    "cta": "Let AI Tooler help you harness the power of AI. Contact us to start your AI development journey!"
+  },
+  "s2": {
+    "eyebrow": "Tool Explorer",
+    "heading": "AI Tool Explorer: Discover the Best AI Tools Tailored to Your Needs",
+    "summary": "Discover and access the most powerful AI tools tailored to your industry and needs.",
+    "paragraphs": [
+      "Navigating the world of AI tools can be overwhelming. AI Tool Explorer is your go-to platform to discover, access, and implement the best AI tools for your business.",
+      "We test, review, and handpick AI solutions to high standards. Whether you need automation, better customer service, or data insights, AI Tool Explorer guides you to the right choice."
+    ],
+    "why": {
+      "title": "Why Choose AI Tool Explorer?",
+      "points": [
+        {
+          "title": "Tailored Recommendations",
+          "description": "Find tools that align perfectly with your requirements."
+        },
+        {
+          "title": "In-Depth Reviews",
+          "description": "Expert, unbiased insights based on real-world use."
+        },
+        {
+          "title": "Comprehensive Coverage",
+          "description": "From marketing automation to analytics across industries."
+        },
+        {
+          "title": "Save Time and Effort",
+          "description": "Skip the research—get the best options quickly."
+        }
+      ]
+    },
+    "cta": "Start exploring the future of AI with AI Tooler and unlock its full potential for your business."
+  },
+  "s3": {
+    "eyebrow": "Training",
+    "heading": "1-on-1 AI Onboarding & Training",
+    "intro": "New to AI? Our experts guide you step-by-step. For individuals or teams, available in English or your native language.",
+    "benefits": [
+      {
+        "title": "Personalized Training",
+        "description": "Learn at your own pace with expert guidance."
+      },
+      {
+        "title": "Tailored to Your Needs",
+        "description": "For individuals or teams with different learning styles."
+      },
+      {
+        "title": "Flexible Language Options",
+        "description": "English or your native language for smooth learning."
+      }
+    ],
+    "cta": "Start your AI journey today with AI Tooler and unlock the full potential of AI tools!",
+    "banner": {
+      "title": "Ready to elevate with AI?",
+      "desc": "Book a discovery call and we’ll tailor a plan for you.",
+      "button": "Get Started"
+    }
+  }
+}

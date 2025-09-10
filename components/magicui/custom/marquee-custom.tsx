@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { cn } from "@/lib/utils";
+import { cn } from "@/libs/utils/css";
 import { Marquee } from "@/components/magicui/marquee";
 import '@/components/magicui/custom/marquee-custom.scss';
 import AI1 from "@/public/AI-gallery/ai-1.jpg";

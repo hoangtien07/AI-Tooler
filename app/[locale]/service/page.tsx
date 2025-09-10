@@ -1,5 +1,5 @@
 // app/services/page.tsx
-import ServicesSection from "@/components/Layout/Services/Service-section";
+import ServiceParallaxPage from "@/components/Layout/Services/Service-parallax";
 
 export const metadata = {
   title: "Services — AI Tooler",
@@ -8,5 +8,5 @@ export const metadata = {
 };
 
 export default function ServicesPage() {
-  return <ServicesSection />;
+  return <ServiceParallaxPage />;
 }

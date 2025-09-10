@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import "@/lib/i18n";
+import "@/libs/i18n";
 
 type Bot = {
   key: string;

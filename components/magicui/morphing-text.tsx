@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/libs/utils/css";
 
 const morphTime = 1.5;
 const cooldownTime = 0.5;

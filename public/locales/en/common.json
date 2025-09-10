@@ -80,7 +80,9 @@
       "price": "Price"
     }
   },
-  "card": { "alt": "Card image" },
+  "card": {
+    "alt": "Card image"
+  },
   "buttons": {
     "details": "Details",
     "readMore": "Read more",
