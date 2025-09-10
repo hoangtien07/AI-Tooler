@@ -8,7 +8,7 @@ import ScrollMotion from "@/components/Elements/ScrollMotion/ScrollMotion";
 import { Marquee3D } from "@/components/magicui/custom/marquee-custom";
 import { MorphingTextCustom } from "@/components/magicui/custom/morphing-text-custom";
 import { BentoCustom } from "@/components/magicui/custom/bento-grid-custom";
-import { GalleryBotSuggest } from "@/components/Layout/BotSuggest/BotSuggest";
+// import { GalleryBotSuggest } from "@/components/Layout/BotSuggest/BotSuggest";
 import ServiceHeroParallax from "@/components/Layout/Services/Service-parallax";
 
 export default function HomeClient() {
@@ -99,9 +99,9 @@ export default function HomeClient() {
         <BentoCustom />
       </div>
 
-      <div className="container">
+      {/* <div className="container">
         <GalleryBotSuggest />
-      </div>
+      </div> */}
 
       <ServiceHeroParallax />
       {/* <Services /> */}
