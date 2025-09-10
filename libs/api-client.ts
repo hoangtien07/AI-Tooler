@@ -12,11 +12,7 @@ import type {
 import { mapBlogDetail, mapListBlogItem } from "./utils/blog";
 import type { Bot, BotListResponse } from "@/libs/types/bot";
 import { mapBotDetail, mapBotListItem } from "@/libs/utils/bot";
-import type {
-  SearchAllResponse,
-  SearchBlogResponse,
-  Paginated,
-} from "./types/search";
+import type { SearchAllResponse, SearchBlogResponse } from "./types/search";
 
 export const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") ||

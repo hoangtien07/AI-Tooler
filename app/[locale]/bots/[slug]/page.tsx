@@ -8,7 +8,7 @@ import { Avatar } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShieldPlus, ShieldMinus, MoveRight, CircleDollarSign } from "lucide-react";
-import { GalleryBotSuggest } from "@/components/Layout/BotSuggest/BotSuggest";
+// import { GalleryBotSuggest } from "@/components/Layout/BotSuggest/BotSuggest";
 
 import { BotApi } from "@/libs/api-client";
 import type { Bot, Locale } from "@/libs/types/bot";
@@ -173,7 +173,7 @@ export default async function ProductDetailPage(props: {
         </div>
       </div>
 
-      <GalleryBotSuggest />
+      {/* <GalleryBotSuggest /> */}
     </div>
   );
 }
