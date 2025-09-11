@@ -2,87 +2,92 @@
 
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-// import LanguageDetector from "i18next-browser-languagedetector";
-// import HttpBackend from "i18next-http-backend";
-export type CommonDict = typeof enCommon;
+import type { InitOptions, Resource, ResourceLanguage } from "i18next";
 
-import enCommon from "@/public/locales/en/common.json";
 import viCommon from "@/public/locales/vi/common.json";
-import enService from "@/public/locales/en/service.json";
+import enCommon from "@/public/locales/en/common.json";
 import viService from "@/public/locales/vi/service.json";
-
-// Chỉ khởi tạo i18n một lần duy nhất
-// if (!i18n.isInitialized) {
-//   i18n
-//     .use(HttpBackend)
-//     .use(LanguageDetector)
-//     .use(initReactI18next)
-//     .init({
-//       backend: {
-//         loadPath: "/locales/{{lng}}/{{ns}}.json",
-//       },
-//       load: "languageOnly",
-//       supportedLngs: ["en", "vi"],
-//       fallbackLng: "en",
-//       ns: ["common"],
-//       defaultNS: "common",
-//       detection: {
-//         order: [
-//           "cookie",
-//           "querystring",
-//           "htmlTag",
-//           "localStorage",
-//           "navigator",
-//         ],
-//         caches: ["cookie"],
-//         lookupQuerystring: "lang",
-//         cookieMinutes: 60 * 24 * 365,
-//       },
-//       interpolation: { escapeValue: false },
-//       react: { useSuspense: false },
-//       returnEmptyString: false,
-//       saveMissing: false,
-//       parseMissingKeyHandler: (key) => key,
-//     });
-// }
-
-if (!i18n.isInitialized) {
-  i18n.use(initReactI18next).init({
-    resources: {
-      en: { common: enCommon, service: enService },
-      vi: { common: viCommon, service: viService },
-    },
-    lng: "en",
-    fallbackLng: "en",
-    ns: ["common", "service"],
-    defaultNS: "common",
-    interpolation: { escapeValue: false },
-  });
-}
-export default i18n;
+import enService from "@/public/locales/en/service.json";
 
 export const LOCALES = ["vi", "en"] as const;
 export type Locale = (typeof LOCALES)[number];
-export const DEFAULT_LOCALE: Locale = "en";
+export const DEFAULT_LOCALE: Locale = "vi";
 
-export function ensureLocale(input?: string): Locale {
-  const l = (input || "").toLowerCase();
-  return (LOCALES as readonly string[]).includes(l)
-    ? (l as Locale)
-    : DEFAULT_LOCALE;
+/* ---------- detect + persist ---------- */
+function readCookie(name: string): string | null {
+  if (typeof document === "undefined") return null;
+  const m = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+  return m ? decodeURIComponent(m[1]) : null;
 }
+function writeCookie(name: string, value: string, days = 365) {
+  if (typeof document === "undefined") return;
+  const maxAge = days * 24 * 60 * 60;
+  document.cookie = `${name}=${encodeURIComponent(
+    value
+  )}; path=/; max-age=${maxAge}`;
+}
+function detectLocale(): Locale {
+  // 1) cookie (đã set khi user từng chọn)
+  const fromCookie = readCookie("locale");
+  if (fromCookie && (LOCALES as readonly string[]).includes(fromCookie))
+    return fromCookie as Locale;
 
-// Hàm load dictionary cho server components (nếu cần)
-export async function getDictionary(locale: Locale): Promise<CommonDict> {
+  // 2) localStorage (client)
   try {
-    if (locale === "vi") {
-      const vi = await import("@/public/locales/vi/common.json");
-      return vi.default;
-    }
-    const en = await import("@/public/locales/en/common.json");
-    return en.default;
-  } catch (error) {
-    console.error("Error loading dictionary:", error);
-    throw error;
-  }
+    const ls = localStorage.getItem("locale");
+    if (ls && (LOCALES as readonly string[]).includes(ls)) return ls as Locale;
+  } catch {}
+
+  // 3) Accept-Language của trình duyệt
+  const nav = typeof navigator !== "undefined" ? navigator.language || "" : "";
+  const base = nav.split("-")[0].toLowerCase();
+  if ((LOCALES as readonly string[]).includes(base)) return base as Locale;
+
+  return DEFAULT_LOCALE;
 }
+function persistLocale(lng: string) {
+  const locale = (LOCALES as readonly string[]).includes(lng)
+    ? (lng as Locale)
+    : DEFAULT_LOCALE;
+  try {
+    localStorage.setItem("locale", locale);
+  } catch {}
+  writeCookie("locale", locale);
+  try {
+    document.documentElement.lang = locale;
+  } catch {}
+}
+
+/* ---------- init i18next ---------- */
+
+if (!i18n.isInitialized) {
+  const startLocale = detectLocale();
+
+  // ⬇️ Khai báo resources có type rõ ràng, KHÔNG dùng any
+  const resources: Resource = {
+    vi: {
+      common: viCommon as unknown as ResourceLanguage,
+      service: viService as unknown as ResourceLanguage,
+    },
+    en: {
+      common: enCommon as unknown as ResourceLanguage,
+      service: enService as unknown as ResourceLanguage,
+    },
+  };
+
+  const options: InitOptions = {
+    lng: startLocale,
+    fallbackLng: "vi",
+    interpolation: { escapeValue: false },
+    resources, // ✅ truyền resources đã gõ type
+    ns: ["common"],
+    defaultNS: "common",
+  };
+
+  i18n.use(initReactI18next).init(options);
+
+  // Lưu lại mỗi khi đổi ngôn ngữ
+  i18n.on("languageChanged", persistLocale);
+}
+
+export default i18n;

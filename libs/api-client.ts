@@ -177,24 +177,44 @@ export const BotApi = {
       page?: number;
       limit?: number;
       sort?: string;
+      category?: string | string[];
       status?: "active" | "inactive" | string;
     }
   ): Promise<BotListResponse<L>> {
-    const raw = await get<{
-      page: number;
-      limit: number;
-      total: number;
-      pages: number;
-      lang: string;
-      items: unknown[];
-    }>("/bots", { params: { lang, ...params } });
+    type Raw = {
+      page?: number;
+      limit?: number;
+      total?: number;
+      pages?: number;
+      lang?: string;
+      items?: unknown[];
+    };
+
+    // Chuẩn hoá category: mảng -> "a,b,c"
+    const categoryParam = Array.isArray(params?.category)
+      ? params!.category.filter(Boolean).join(",")
+      : params?.category;
+
+    // Chỉ truyền các param có giá trị
+    const query: Record<string, string | number | undefined> = {
+      lang,
+      q: params?.q,
+      tag: params?.tag,
+      page: params?.page,
+      limit: params?.limit,
+      sort: params?.sort,
+      status: params?.status,
+      category: categoryParam,
+    };
+
+    const raw = await get<Raw>("/bots", { params: query });
 
     return {
-      page: Number(raw.page ?? 1),
+      page: Number(raw.page ?? params?.page ?? 1),
       limit: Number(raw.limit ?? params?.limit ?? 12),
       total: Number(raw.total ?? 0),
       pages: Number(raw.pages ?? 1),
-      lang: (raw.lang as L) ?? lang,
+      lang: (raw.lang ?? lang) as L,
       items: (raw.items ?? []).map((x) => mapBotListItem<L>(x)),
     };
   },
@@ -275,6 +295,7 @@ export const SearchApi = {
       skipBots?: number;
       limitBots?: number;
       lang?: Locale;
+      headers?: Record<string, string>;
     }
   ) =>
     get<SearchAllResponse>("/search", {

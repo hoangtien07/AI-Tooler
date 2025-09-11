@@ -1,8 +1,7 @@
-// app/[locale]/bots/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BotApi } from "@/libs/api-client";
-import type { Locale } from "@/libs/types/blog"; // giữ nguyên theo dự án
+import type { Locale } from "@/libs/types/blog";
 import { toPlain } from "@/libs/utils/blog";
 import type { BotListItem } from "@/libs/types/bot";
 
@@ -11,7 +10,24 @@ export const revalidate = 300;
 type SearchParams = Record<string, string | string[] | undefined>;
 const SITE = process.env.NEXT_PUBLIC_SITE_ORIGIN || "http://localhost:3000";
 
+// ===== Category constants (key trùng BE) =====
+const CATEGORIES = [
+  { key: "growth-marketing", vi: "Growth & Marketing AI", en: "Growth & Marketing AI" },
+  { key: "design-creative", vi: "Design & Creative AI", en: "Design & Creative AI" },
+  { key: "office-ai", vi: "Office AI", en: "Office AI" },
+  { key: "writing-editing", vi: "Writing & Editing AI", en: "Writing & Editing AI" },
+  { key: "technology-it", vi: "Technology & IT", en: "Technology & IT" },
+  { key: "workflow-automation", vi: "Workflow Automation", en: "Workflow Automation" },
+  { key: "customer-support", vi: "Customer Service & Support", en: "Customer Service & Support" },
+  { key: "ai-education", vi: "AI Education", en: "AI Education" },
+];
+
 const excerpt = (s: string, max = 120) => (s.length > max ? s.slice(0, max).trimEnd() + "…" : s);
+const parseMulti = (v: string | string[] | undefined): string[] =>
+  (Array.isArray(v) ? v.join(",") : typeof v === "string" ? v : "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
 
 export const metadata: Metadata = {
   title: "Bots",
@@ -28,6 +44,10 @@ export default async function BotsPage(props: {
 
   const q = typeof sp.q === "string" ? sp.q : "";
   const tag = typeof sp.tag === "string" ? sp.tag : "";
+
+  // --- NEW: parse multi-category (chấp nhận "category" hoặc "categories")
+  const categorySelected = parseMulti(sp.category ?? sp.categories);
+
   const pageNum = Math.max(1, parseInt(typeof sp.page === "string" ? sp.page : "1", 10));
   const pageSize = 12;
 
@@ -35,6 +55,7 @@ export default async function BotsPage(props: {
     (await BotApi.list(locale, {
       q: q || undefined,
       tag: tag || undefined,
+      category: categorySelected,          // 👈 gửi nhiều category
       page: pageNum,
       limit: pageSize,
       sort: "-createdAt",
@@ -44,17 +65,35 @@ export default async function BotsPage(props: {
 
   const totalPages = Math.max(1, Math.ceil((res.total || 0) / (res.limit || pageSize)));
 
-  const withQuery = (patch: Record<string, string | number | undefined>): string => {
+  // helper build URL giữ nguyên query cũ
+  const withQuery = (patch: Record<string, string | number | string[] | undefined>): string => {
     const p = new URLSearchParams();
+
     if (q) p.set("q", q);
     if (tag) p.set("tag", tag);
+    if (categorySelected.length) p.set("category", categorySelected.join(","));
     p.set("page", String(pageNum));
+
     Object.entries(patch).forEach(([k, v]) => {
-      if (v === undefined || v === "") p.delete(k);
-      else p.set(k, String(v));
+      if (v === undefined || v === "" || (Array.isArray(v) && v.length === 0)) {
+        p.delete(k);
+      } else if (Array.isArray(v)) {
+        p.set(k, v.join(","));
+      } else {
+        p.set(k, String(v));
+      }
     });
+
     const qs = p.toString();
     return `/${locale}/bots${qs ? `?${qs}` : ""}`;
+  };
+
+  // toggle 1 category trong mảng đang chọn
+  const toggleCategory = (key: string): string[] => {
+    const set = new Set(categorySelected);
+    if (set.has(key)) set.delete(key);
+    else set.add(key);
+    return [...set];
   };
 
   const tagSet = new Set<string>();
@@ -68,9 +107,10 @@ export default async function BotsPage(props: {
             AI Bots
           </h1>
           <p className="mt-3 max-w-2xl text-neutral-700 dark:text-neutral-300">
-            Tìm kiếm (full-text), lọc theo chủ đề, và khám phá công cụ AI phù hợp.
+            Tìm kiếm (full-text), lọc theo chủ đề (category), và khám phá công cụ AI phù hợp.
           </p>
 
+          {/* Search box */}
           <form action={`/${locale}/bots`} method="get" className="mt-6 flex flex-col gap-3 md:flex-row md:items-center">
             <input
               type="text"
@@ -79,7 +119,11 @@ export default async function BotsPage(props: {
               placeholder="Search bots…"
               className="w-full rounded-xl border border-neutral-200 bg-white/90 px-4 py-3 text-[15px] text-neutral-800 shadow-sm outline-none placeholder:text-neutral-500 focus:ring-2 focus:ring-indigo-400 dark:border-white/10 dark:bg-white/5 dark:text-white"
             />
+            {/* giữ tag & category hiện tại khi submit */}
             <input type="hidden" name="tag" value={tag} />
+            {categorySelected.length ? (
+              <input type="hidden" name="category" value={categorySelected.join(",")} />
+            ) : null}
             <button
               type="submit"
               className="inline-flex h-[48px] min-w-[100px] items-center justify-center rounded-xl bg-neutral-900 px-5 py-3 text-sm font-medium text-white hover:opacity-95 dark:bg-white dark:text-neutral-900"
@@ -88,6 +132,38 @@ export default async function BotsPage(props: {
             </button>
           </form>
 
+          {/* NEW: category pills (đa chọn) */}
+          <div className="mt-5 flex flex-wrap gap-2">
+            <Link
+              href={withQuery({ category: undefined, page: 1 })}
+              className={`rounded-full border px-3 py-1 text-sm shadow-sm ${
+                categorySelected.length === 0
+                  ? "border-neutral-900 bg-neutral-900 text-white dark:border-white dark:bg-white dark:text-neutral-900"
+                  : "border-neutral-200 bg-white dark:border-white/10 dark:bg-white/5 dark:text-white/80"
+              }`}
+            >
+              All categories
+            </Link>
+
+            {CATEGORIES.map((c) => {
+              const active = categorySelected.includes(c.key);
+              return (
+                <Link
+                  key={c.key}
+                  href={withQuery({ category: toggleCategory(c.key), page: 1 })}
+                  className={`rounded-full border px-3 py-1 text-sm shadow-sm ${
+                    active
+                      ? "border-neutral-900 bg-neutral-900 text-white dark:border-white dark:bg-white dark:text-neutral-900"
+                      : "border-neutral-200 bg-white dark:border-white/10 dark:bg-white/5 dark:text-white/80"
+                  }`}
+                >
+                  {c[locale]}
+                </Link>
+              );
+            })}
+          </div>
+
+          {/* tag chips (giữ như cũ) */}
           {tagSet.size > 0 && (
             <div className="mt-4 flex gap-2 overflow-x-auto pb-2">
               <Link
@@ -98,7 +174,7 @@ export default async function BotsPage(props: {
                     : "border-neutral-200 bg-white dark:border-white/10 dark:bg-white/5 dark:text-white/80"
                 }`}
               >
-                All
+                All tags
               </Link>
               {[...tagSet].map((t) => (
                 <Link
@@ -118,6 +194,7 @@ export default async function BotsPage(props: {
         </div>
       </section>
 
+      {/* LIST */}
       <section className="mx-auto max-w-6xl px-4 pb-20">
         {res.items.length === 0 ? (
           <div className="rounded-2xl border border-neutral-200 bg-white p-8 text-neutral-600 shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-neutral-300">
@@ -127,10 +204,13 @@ export default async function BotsPage(props: {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {res.items.map((item) => {
               const name = item.name[locale];
-              const sum = item.summary?.[locale] ?? ""; // ✅ an toàn
+              const sum = item.summary?.[locale] ?? "";
               const text = toPlain(sum);
               return (
-                <article key={item.slug} className="group overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition hover:shadow-lg dark:border-white/10 dark:bg-white/5">
+                <article
+                  key={item.slug}
+                  className="group overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition hover:shadow-lg dark:border-white/10 dark:bg-white/5"
+                >
                   <Link href={`/${locale}/bots/${encodeURIComponent(item.slug)}`}>
                     <figure className="relative aspect-[16/9] overflow-hidden">
                       {/* eslint-disable-next-line @next/next/no-img-element */}

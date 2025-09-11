@@ -6,11 +6,12 @@ import React, { useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { AnimatedThemeToggler } from "@/components/magicui/animated-theme-toggler";
 import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+// import { Separator } from "@/components/ui/separator";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/libs/utils/css";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import i18n from "@/libs/i18n";
+import Image from "next/image";
 
 type Locale = "vi" | "en";
 
@@ -79,11 +80,23 @@ export function DockCustom({ initialLocale }: Props) {
   };
 
   return (
-    <div className="flex-col items-center justify-center">
+    <div className="flex-col items-center justify-center border-b">
       <TooltipProvider>
-        <Dock direction="middle" className="w-full rounded-none">
+        <Dock direction="middle" className="w-full rounded-none max-w-[1400px] border-none">
+          <DockIcon>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link href={withLocale("/", locale)} aria-label="AI Tooler Home" className="size-16 rounded-full">
+                  <Image unoptimized src="https://i.ibb.co/mFdXcqLt/favicon-8.jpg" alt="AI Tooler" width={40} height={40} className="rounded-full m-3" />
+                </Link>
+              </TooltipTrigger>
+            </Tooltip>
+          </DockIcon>
+
+          <div className="flex-1"></div>
+
           {DATA.navbar.map((item) => (
-            <DockIcon key={item.label}>
+            <DockIcon key={item.label} className="mr-3">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link
@@ -100,10 +113,8 @@ export function DockCustom({ initialLocale }: Props) {
             </DockIcon>
           ))}
 
-          <Separator orientation="vertical" className="h-full mr-4" />
-
           {Object.entries(DATA.aiTool.social).map(([name, social]) => (
-            <DockIcon key={name} className="mr-4">
+            <DockIcon key={name} className="mr-4 ml-2">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link
@@ -120,7 +131,7 @@ export function DockCustom({ initialLocale }: Props) {
             </DockIcon>
           ))}
 
-          <Separator orientation="vertical" className="h-full" />
+          {/* <Separator orientation="vertical" className="h-full" /> */}
 
           {Object.entries(DATA.aiTool.blogs).map(([name, blogs]) => (
             <DockIcon key={name}>
@@ -140,7 +151,7 @@ export function DockCustom({ initialLocale }: Props) {
             </DockIcon>
           ))}
 
-          <Separator orientation="vertical" className="h-full ml-2" />
+          <div className="flex-1"></div>
 
           <DockIcon className="!p-0">
             <Tooltip>
@@ -150,8 +161,6 @@ export function DockCustom({ initialLocale }: Props) {
               <TooltipContent><p>Theme</p></TooltipContent>
             </Tooltip>
           </DockIcon>
-
-          <Separator orientation="vertical" className="h-full" />
 
           <DockIcon className="!p-2 !w-[54px] !h-[54px]">
             <Tooltip>

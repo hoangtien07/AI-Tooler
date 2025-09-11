@@ -52,6 +52,11 @@
           "text": "your workflow with the perfect AI partner for every task"
         }
       }
+    },
+    "blog": {
+      "heading": "BLOGS",
+      "subheading": "Stay ahead with the latest AI trends, tips, and insights from our expert team.",
+      "viewAll": "View All Blogs"
     }
   },
   "nav": {

@@ -17,6 +17,7 @@ import {
   slugifyId,
   type TocItem,
 } from "@/libs/utils/blog";
+import Image from "next/image";
 
 const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || "http://localhost:3000";
 export const revalidate = 300;
@@ -138,74 +139,129 @@ export default async function BlogDetail(
     keywords: (blog.tags ?? []).join(", "),
   };
 
+  const latestRes = await BlogApi.list(locale, {
+    status: "active",
+    sort: "-publishedAt",
+    limit: 5,
+    page: 1,
+  });
+  const latest = latestRes.items
+    .filter((b) => b.slug !== blog.slug)
+    .slice(0, 4);
+
   return (
-    <main className="relative">
-      <section className="relative overflow-hidden">
-        <div className="mx-auto max-w-[1200px] px-4 pb-8 pt-8 md:pt-28">
-          <nav className="mb-4 text-sm text-neutral-600 dark:text-neutral-300">
-            <Link href={`/${locale}`} className="hover:underline">Home</Link> /{" "}
-            <Link href={`/${locale}/blogs`} className="hover:underline">Blogs</Link> /{" "}
-            <span className="text-neutral-800 dark:text-neutral-100">{title}</span>
-          </nav>
-
-          <h1 className="text-balance text-4xl font-extrabold">{title}</h1>
-
-          <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
-            {blog.publishedAt && (
-              <>
-                <time dateTime={blog.publishedAt}>{formatDate(blog.publishedAt)}</time>
-                <span>•</span>
-              </>
+    <main className="relative flex md:flex-row flex-col px-4">
+      <aside className="top-28 hidden h-fit max-w-[360px] md:sticky md:block md:mr-[40px]">
+        <div className="rounded-2xl border p-4">
+          <p className="mb-2 text-xs font-medium uppercase">On this page</p>
+          <nav className="space-y-2 text-sm flex  flex-col">
+            {toc.length === 0 ? (
+              <span className="opacity-60">(No sections)</span>
+            ) : (
+              toc.map((i) => (
+                <a key={i.id} href={`#${i.id}`} className={i.level === 3 ? "pl-4" : i.level === 2 ? "pl-2" : ""}>
+                  {i.text}
+                </a>
+              ))
             )}
-            <span>{readingMin} {locale === "vi" ? "phút đọc" : "min read"}</span>
-            {blog.tags?.length ? (
-              <>
-                <span>•</span>
-                <div className="flex flex-wrap gap-2">
-                  {blog.tags.map((t) => <span key={t}>#{t}</span>)}
-                </div>
-              </>
-            ) : null}
-          </div>
+          </nav>
         </div>
-
-        {blog.image && (
-          <div className="mx-auto mb-10 max-w-[1200px] px-4">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={blog.image}
-              alt={title}
-              width={1600}
-              height={900}
-              className="h-auto w-full rounded-3xl object-cover"
-            />
-          </div>
-        )}
-      </section>
-
-      <section className="mx-auto grid max-w-[1200px] grid-cols-1 gap-10 px-4 pb-24 md:grid-cols-[1fr_260px]">
-        <article className="prose prose-neutral max-w-none dark:prose-invert">
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        </article>
-
-        <aside className="top-28 hidden h-fit min-w-[300px] md:sticky md:block">
-          <div className="rounded-2xl border p-4">
-            <p className="mb-2 text-xs font-medium uppercase">On this page</p>
-            <nav className="space-y-2 text-sm">
-              {toc.length === 0 ? (
-                <span className="opacity-60">(No sections)</span>
-              ) : (
-                toc.map((i) => (
-                  <a key={i.id} href={`#${i.id}`} className={i.level === 3 ? "pl-4" : i.level === 2 ? "pl-2" : ""}>
-                    {i.text}
-                  </a>
-                ))
-              )}
+      </aside>
+      <div>
+        
+      </div>
+      <div className="px-4 md:mr-[40px]">
+        <section className="relative overflow-hidden">
+          <div className="mx-auto max-w-[1200px] px-4 pb-8 pt-8 md:pt-28">
+            <nav className="mb-4 text-sm text-neutral-600 dark:text-neutral-300">
+              <Link href={`/${locale}`} className="hover:underline">Home</Link> /{" "}
+              <Link href={`/${locale}/blogs`} className="hover:underline">Blogs</Link> /{" "}
+              <span className="text-neutral-800 dark:text-neutral-100">{title}</span>
             </nav>
+
+            <h1 className="text-balance text-4xl font-extrabold">{title}</h1>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
+              {blog.publishedAt && (
+                <>
+                  <time dateTime={blog.publishedAt}>{formatDate(blog.publishedAt)}</time>
+                  <span>•</span>
+                </>
+              )}
+              <span>{readingMin} {locale === "vi" ? "phút đọc" : "min read"}</span>
+              {blog.tags?.length ? (
+                <>
+                  <span>•</span>
+                  <div className="flex flex-wrap gap-2">
+                    {blog.tags.map((t) => <span key={t}>#{t}</span>)}
+                  </div>
+                </>
+              ) : null}
+            </div>
           </div>
-        </aside>
-      </section>
+
+          {blog.image && (
+            <div className="mx-auto mb-10 max-w-[1200px] px-4">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={blog.image}
+                alt={title}
+                width={1600}
+                height={900}
+                className="h-auto w-full rounded-3xl object-cover"
+              />
+            </div>
+          )}
+        </section>
+
+        <section className="mx-auto grid max-w-[1200px] grid-cols-1 gap-10 px-4 pb-24 md:grid-cols-[1fr_260px]">
+          <article className="prose prose-neutral max-w-none dark:prose-invert">
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+          </article>
+        </section>
+      </div>
+      <aside className="md:sticky md:top-28 h-fit md:max-w-[360px] w-full mb-28">
+        <div className="rounded-2xl border border-neutral-200 p-4 shadow-sm dark:border-white/10 dark:bg-white/5">
+          <h3 className="mb-5 text-base font-semibold">Bài viết mới</h3>
+          <ul className="space-y-4">
+            {latest.map((it) => {
+              const t = pickTitle(it, locale); // pickTitle chấp nhận kiểu Blog/BlogItem
+              return (
+                <li key={it._id} className="flex gap-3">
+                  {it.image ? (
+                    <Image
+                      unoptimized
+                      src={it.image}
+                      alt={t}
+                      width={96}
+                      height={64}
+                      loading="lazy"
+                      className="h-16 w-24 rounded-md object-cover"
+                    />
+                  ) : (
+                    <div className="h-16 w-24 rounded-md bg-neutral-100 dark:bg-white/10" />
+                  )}
+
+                  <div className="min-w-0">
+                    <Link
+                      href={`/${locale}/blogs/${encodeURIComponent(it.slug)}`}
+                      className="line-clamp-2 text-sm font-medium text-neutral-900 hover:underline dark:text-white"
+                    >
+                      {t}
+                    </Link>
+                    {it.publishedAt && (
+                      <div className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                        {formatDate(it.publishedAt)}
+                      </div>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </aside>
     </main>
   );
 }

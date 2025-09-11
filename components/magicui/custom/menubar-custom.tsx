@@ -5,8 +5,20 @@ import Link from "next/link";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import i18n from "@/libs/i18n";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
+type Locale = "vi" | "en";
 type Props = { initialLocale: "en" | "vi" };
+
+/** Ghép locale vào path tương đối. Giữ nguyên hash nếu có. */
+function withLocale(href: string, locale: Locale): string {
+  if (/^https?:\/\//i.test(href)) return href; // external
+  const [path, hash] = href.split("#");
+  const normPath = path.startsWith("/") ? path : `/${path}`;
+  const prefixed = normPath === "/" ? `/${locale}` : `/${locale}${normPath}`;
+  return hash ? `${prefixed}#${hash}` : prefixed;
+}
+
 
 export function MenubarCustom({ initialLocale }: Props) {
   const [locale, setLocale] = useState<"en" | "vi">(initialLocale);
@@ -24,7 +36,13 @@ export function MenubarCustom({ initialLocale }: Props) {
   };
 
   return (
-    <Menubar className="flex justify-center h-14">
+    <Menubar className="flex justify-between h-14">
+      <MenubarMenu>
+        <MenubarTrigger>
+                <Link href={withLocale("/", locale)} aria-label="AI Tooler Home" className="w-[36px] h-[36px] rounded-full">
+                  <Image unoptimized src="https://i.ibb.co/mFdXcqLt/favicon-8.jpg" alt="AI Tooler" width={34} height={34} className="rounded-full" />
+                </Link></MenubarTrigger>
+      </MenubarMenu>
       <MenubarMenu>
         <MenubarTrigger><Link href="/" className="h-full flex items-center">Home</Link></MenubarTrigger>
       </MenubarMenu>
@@ -32,7 +50,7 @@ export function MenubarCustom({ initialLocale }: Props) {
         <MenubarTrigger><Link href="/#services" className="h-full flex items-center">Service</Link></MenubarTrigger>
       </MenubarMenu>
       <MenubarMenu>
-        <MenubarTrigger><Link href="/category/all" className="h-full flex items-center">Category</Link></MenubarTrigger>
+        <MenubarTrigger><Link href="/bots" className="h-full flex items-center">Bots</Link></MenubarTrigger>
       </MenubarMenu>
       <MenubarMenu>
         <MenubarTrigger><Link href="/blogs" className="h-full flex items-center mr-4">Blogs</Link></MenubarTrigger>

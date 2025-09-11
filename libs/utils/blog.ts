@@ -48,9 +48,9 @@ export function htmlFromListItem(item: BlogListItem, locale: Locale): string {
   return item.content ? pickHtml(item.content, locale) : "";
 }
 
-export function pickTitle(item: Blog | BlogListItem, locale: Locale): string {
-  return pickString(item.title, locale);
-}
+// export function pickTitle(item: Blog | BlogListItem, locale: Locale): string {
+//   return pickString(item.title, locale);
+// }
 
 export function pickExcerpt(item: Blog | BlogListItem, locale: Locale): string {
   return pickString(item.excerpt, locale);
@@ -108,4 +108,12 @@ export function mapBlogDetail(src: unknown): Blog {
         : undefined,
     views: typeof d.views === "number" ? (d.views as number) : undefined,
   };
+}
+
+/** Lấy tiêu đề theo locale cho mọi kiểu có field `title` dạng LocalizedString */
+export function pickTitle<T extends { title?: LocalizedString }>(
+  item: T,
+  locale: Locale
+): string {
+  return item.title?.[locale] ?? "";
 }

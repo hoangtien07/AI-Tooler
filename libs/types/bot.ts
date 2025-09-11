@@ -76,3 +76,15 @@ export interface BotListResponse<L extends string = Locale> {
   items: BotListItem<L>[];
   lang: L;
 }
+
+// --- types
+export type BotListParams = {
+  q?: string;
+  tag?: string;
+  /** 1 hoặc nhiều category (BE nhận "a,b,c") */
+  category?: string | string[];
+  page?: number;
+  limit?: number;
+  sort?: string;
+  status?: string;
+};

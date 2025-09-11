@@ -25,6 +25,28 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
   );
 }
 
+/** ---------- Safe translators (type-safe, no any) ---------- */
+type Point = { title: string; description: string };
+
+function toStringArray(v: unknown): string[] {
+  if (!Array.isArray(v)) return [];
+  return v.filter((x): x is string => typeof x === "string");
+}
+function toPoints(v: unknown): Point[] {
+  if (!Array.isArray(v)) return [];
+  const out: Point[] = [];
+  for (const it of v) {
+    if (it && typeof it === "object") {
+      const o = it as Record<string, unknown>;
+      const title = typeof o.title === "string" ? o.title : "";
+      const description = typeof o.description === "string" ? o.description : "";
+      out.push({ title, description });
+    }
+  }
+  return out;
+}
+
+/** ---------- Parallax section ---------- */
 function ParallaxSection({
   eyebrow, title, lead, content, speed = 60, right,
 }: {
@@ -35,7 +57,7 @@ function ParallaxSection({
   const y = useTransform(scrollYProgress, [0, 1], [speed, -speed]);
 
   return (
-    <section ref={ref} className="relative mx-auto container px-4 py-20">
+    <section ref={ref} className="relative mx-auto container px-4 md:py-20" suppressHydrationWarning>
       <div className="pointer-events-none absolute inset-0 -z-10 opacity-70 [background:radial-gradient(800px_400px_at_20%_-10%,rgba(37,99,235,0.08),transparent_50%)] dark:[background:radial-gradient(1000px_500px_at_20%_-10%,rgba(59,130,246,0.15),transparent_50%)]" />
       <div className={`grid items-stretch gap-8 md:grid-cols-2 ${right ? "md:[&>div:first-child]:order-2" : ""}`}>
         <motion.div style={{ y }}>
@@ -43,7 +65,7 @@ function ParallaxSection({
             <div className="mb-4 flex flex-wrap items-center">
               <SectionBadge>{eyebrow}</SectionBadge>
             </div>
-            <h2 className="text-balance text-3xl font-semibold leading-tight text-neutral-900 dark:text-white md:text-4xl">
+            <h2 className="text-balance text-xl sm:text-2xl font-semibold leading-tight text-neutral-900 dark:text-white md:text-4xl">
               {title}
             </h2>
             {lead && <p className="mt-4 text-pretty text-base text-neutral-700 dark:text-white/80">{lead}</p>}
@@ -59,15 +81,15 @@ function ParallaxSection({
 export default function ServiceParallaxPage() {
   const { t } = useTranslation("service");
 
-  // Helpers lấy mảng từ JSON
-  const s1Points = t("s1.why.points", { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const s1Services = t("s1.services.items", { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const s2Paras = t("s2.paragraphs", { returnObjects: true }) as string[];
-  const s2Points = t("s2.why.points", { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const s3Benefits = t("s3.benefits", { returnObjects: true }) as Array<{ title: string; description: string }>;
+  // Lấy & chuẩn hoá dữ liệu từ i18n (không dùng any, luôn fallback về [])
+  const s1Points = toPoints(t("s1.why.points", { returnObjects: true }) as unknown);
+  const s1Services = toPoints(t("s1.services.items", { returnObjects: true }) as unknown);
+  const s2Paras = toStringArray(t("s2.paragraphs", { returnObjects: true }) as unknown);
+  const s2Points = toPoints(t("s2.why.points", { returnObjects: true }) as unknown);
+  const s3Benefits = toPoints(t("s3.benefits", { returnObjects: true }) as unknown);
 
   return (
-    <main className="relative min-h-screen bg-white text-neutral-900 dark:bg-[#0b0f17] dark:text-white" suppressHydrationWarning>
+    <main className="text-sm sm:text-base relative min-h-screen bg-white text-neutral-900 dark:bg-[#0b0f17] dark:text-white" suppressHydrationWarning>
 
       {/* Hero */}
       <section id="services" className="relative mx-auto container px-4 pb-10 pt-28">
@@ -78,7 +100,7 @@ export default function ServiceParallaxPage() {
               <DotDivider />
               <span>{t("hero.about")}</span>
             </div>
-            <h1 className="mt-4 text-center text-balance text-4xl font-bold leading-tight text-neutral-900 dark:text-white md:text-5xl">
+            <h1 className="mt-4 text-center text-balance text-2xl sm:text-3xl font-bold leading-tight text-neutral-900 dark:text-white md:text-5xl">
               {t("hero.title")}
             </h1>
             <p className="mt-4 mx-auto max-w-4xl text-pretty text-center text-neutral-700 dark:text-white/80">
@@ -100,7 +122,7 @@ export default function ServiceParallaxPage() {
         content={
           <div className="space-y-6">
             <Card>
-              <h3 className="text-xl font-semibold">{t("s1.why.title")}</h3>
+              <h3 className="text-sm md:text-xl font-semibold">{t("s1.why.title")}</h3>
               <ul className="mt-4 space-y-3 text-neutral-800 dark:text-white/85">
                 {s1Points.map((p, i) => (
                   <li key={i} className="flex gap-3">
@@ -115,7 +137,7 @@ export default function ServiceParallaxPage() {
             </Card>
 
             <Card>
-              <h3 className="text-xl font-semibold">{t("s1.services.title")}</h3>
+              <h3 className="text-sm md:text-xl font-semibold">{t("s1.services.title")}</h3>
               <div className="mt-4 grid gap-4 md:grid-cols-3">
                 {s1Services.map((s, i) => (
                   <div key={i} className="rounded-2xl border border-black/10 bg-white/80 p-4 dark:border-white/10 dark:bg-white/[0.02]">
@@ -146,7 +168,7 @@ export default function ServiceParallaxPage() {
             </Card>
 
             <Card>
-              <h3 className="text-xl font-semibold">{t("s2.why.title")}</h3>
+              <h3 className="text-base sm:text-xl font-semibold">{t("s2.why.title")}</h3>
               <ul className="mt-4 grid gap-4 md:grid-cols-2">
                 {s2Points.map((p, i) => (
                   <li key={i} className="rounded-2xl border border-black/10 bg-white/80 p-4 dark:border-white/10 dark:bg-white/[0.02]">

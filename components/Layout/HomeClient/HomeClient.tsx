@@ -8,10 +8,14 @@ import ScrollMotion from "@/components/Elements/ScrollMotion/ScrollMotion";
 import { Marquee3D } from "@/components/magicui/custom/marquee-custom";
 import { MorphingTextCustom } from "@/components/magicui/custom/morphing-text-custom";
 import { BentoCustom } from "@/components/magicui/custom/bento-grid-custom";
-// import { GalleryBotSuggest } from "@/components/Layout/BotSuggest/BotSuggest";
+import { GalleryBotSuggest } from "@/components/Layout/BotSuggest/BotSuggest";
 import ServiceHeroParallax from "@/components/Layout/Services/Service-parallax";
+import LatestBlogs from "./BlogSection";
 
-export default function HomeClient() {
+type Locale = "vi" | "en";
+
+export default function HomeClient({ locale }: { locale: Locale }) {
+  // I18nProvider đã bọc ở layout; chỉ cần dùng hook
   const { t } = useTranslation("common");
 
   return (
@@ -21,7 +25,7 @@ export default function HomeClient() {
       <div>
         <div className="absolute inset-0 -z-10">{/* BG effects (optional) */}</div>
 
-        <div className="container relative flex h-fit w-full items-center pt-4">
+        <div className="container relative flex h-fit w-full items-center pt-10 md:pt-20">
           <div className="sm:mt-[20px] mt-[52px] mb-4">
             <MorphingTextCustom />
 
@@ -95,13 +99,15 @@ export default function HomeClient() {
             <Marquee3D />
           </div>
         </div>
+        <GalleryBotSuggest />
+      </div>
 
+      <div className="container">
         <BentoCustom />
       </div>
 
-      {/* <div className="container">
-        <GalleryBotSuggest />
-      </div> */}
+      {/* section bài viết mới */}
+      <LatestBlogs locale={locale} />
 
       <ServiceHeroParallax />
       {/* <Services /> */}

@@ -52,6 +52,11 @@
           "text": "cho quy trình với trợ thủ AI phù hợp từng đầu việc"
         }
       }
+    },
+    "blog": {
+      "heading": "Bài viết",
+      "subheading": "Cập nhật những xu hướng, mẹo và thông tin mới nhất về AI từ đội ngũ chuyên gia của chúng tôi.",
+      "viewAll": "Xem tất cả bài viết"
     }
   },
   "nav": {

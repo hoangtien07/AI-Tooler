@@ -25,9 +25,9 @@ export default async function LocaleLayout(props: {
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
         <I18nProvider initialLocale={locale}>
           <NavBar initialLocale={locale} />
-          <main className="main-content">{props.children}</main>
-          <footer className="footer">
-            <div className="container">
+          <main className="main-content" suppressHydrationWarning>{props.children}</main>
+          <footer className="footer border-t mt-8">
+            <div className="container flex flex-col sm:flex-row justify-between items-center text-sm sm:text-base py-4">
               <p>Email contact: support@aitooler.io</p>
               <p>© 2025 AI Tooler. All rights reserved.</p>
             </div>
