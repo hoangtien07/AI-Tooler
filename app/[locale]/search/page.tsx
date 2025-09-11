@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import type { Locale } from "@/libs/types/blog";
 
 // Nếu bạn đã có Provider ở layout, có thể bỏ import này.
 // import { I18nProvider } from "@/app/I18nProvider";
@@ -54,16 +55,19 @@ export default async function SearchPage({
   params,
   searchParams,
 }: {
-  params: { lang: "vi" | "en" };
+  params: Promise<{ locale: Locale }>;
   searchParams: Promise<PageSearch>;
 }) {
-  const lang = params.lang === "en" ? "en" : "vi";
+  const { locale } = await params;
   const sp = await searchParams;
+  const lang: Locale = locale === "en" ? "en" : "vi";
+
   const q = (sp.q || "").trim();
   const tab = (sp.tab || "blogs").toLowerCase(); // "blogs" | "bots" | "all"
   const pageNum = Math.max(1, parseInt(String(sp.page || "1"), 10));
   const current = { q, tab, page: pageNum };
-  const base = `/${lang}/search`;
+  
+  const base = `/${locale}/search`; 
 
   // DỮ LIỆU
   let blogs: Array<{
