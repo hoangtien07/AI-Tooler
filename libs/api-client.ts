@@ -18,7 +18,7 @@ export const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") ||
   "https://ai-tool-server-production.up.railway.app/api";
 
-const WITH_CREDENTIALS = true;
+const WITH_CREDENTIALS = false;
 
 // Lấy access token (nếu bạn có cơ chế Bearer token cho admin)
 // Không có thì có thể trả undefined.
@@ -34,7 +34,6 @@ export const api = axios.create({
   timeout: 15000,
   headers: {
     "Content-Type": "application/json",
-    "X-Requested-With": "XMLHttpRequest",
   },
 });
 

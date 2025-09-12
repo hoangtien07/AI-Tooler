@@ -68,7 +68,7 @@ function ParallaxSection({
             <h2 className="text-balance text-xl sm:text-2xl font-semibold leading-tight text-neutral-900 dark:text-white md:text-4xl">
               {title}
             </h2>
-            {lead && <p className="mt-4 text-pretty text-base text-neutral-700 dark:text-white/80">{lead}</p>}
+            {lead && <p className="mt-4 text-pretty text-base text-neutral-700 dark:text-white/80 font-sm sm:font-base">{lead}</p>}
           </div>
         </motion.div>
         <motion.div style={{ y }}>{content}</motion.div>
