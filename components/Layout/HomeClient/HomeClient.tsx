@@ -99,7 +99,7 @@ export default function HomeClient({ locale }: { locale: Locale }) {
             <Marquee3D />
           </div>
         </div>
-        <GalleryBotSuggest />
+        <GalleryBotSuggest toolUrl={`/${locale}/bots`} />
       </div>
 
       <div className="container">

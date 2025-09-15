@@ -150,7 +150,7 @@ export default async function BlogDetail(
     .slice(0, 4);
 
   return (
-    <main className="relative flex md:flex-row flex-col px-4">
+    <main className="relative flex md:flex-row flex-col px-0 sm:px-4">
       <aside className="top-28 hidden h-fit max-w-[360px] md:sticky md:block md:mr-[40px]">
         <div className="rounded-2xl border p-4">
           <p className="mb-2 text-xs font-medium uppercase">On this page</p>

@@ -7,6 +7,6 @@ export default async function HomePage({
 }: {
   params: Promise<{ locale: Locale }>;
 }) {
-  const { locale } = await params; // ✅ Next 15 yêu cầu await params
+  const { locale } = await params; 
   return <HomeClient locale={locale} />;
 }

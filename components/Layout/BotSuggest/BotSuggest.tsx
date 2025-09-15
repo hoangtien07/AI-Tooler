@@ -26,7 +26,8 @@ interface GalleryBotSuggestProps {
   items?: GalleryItem[];
 }
 
-const GalleryBotSuggest = ({ heading, toolUrl = "/category/all" }: GalleryBotSuggestProps) => {
+const GalleryBotSuggest = ({ heading, toolUrl }: GalleryBotSuggestProps) => {
+
   const { t } = useTranslation("common");
   const [mounted, setMounted] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
